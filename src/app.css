@@ -1,3 +1,240 @@
 @tailwind base;
+
+:root {
+	/* Color constants */
+	--black: #262626;
+	--white: #ffffff;
+
+	--ehi-neutral-50: #f4f4f4;
+	--ehi-neutral-100: #eceded;
+	--ehi-neutral-200: #dedede;
+	--ehi-neutral-400: #8c8c8c;
+	--ehi-neutral-600: #595959;
+
+	--ehi-danger-600: #dc3545;
+	--ehi-danger-500: #ec474f;
+	--ehi-success-700: #198754;
+	--ehi-success-600: #19a061;
+
+	--ehi-blue-50: #eef1f9;
+	--ehi-blue-100: #e5eaf6;
+	--ehi-blue-500: #0c9deb;
+	--ehi-blue-600: #0073ba;
+	--ehi-blue-800: #005395;
+	--ehi-blue-900: #003270;
+
+	--ehi-gold-300: #f8c74c;
+	--ehi-gold-400: #f4af23;
+
+	--ehi-orange-400: #f76736;
+
+	--ehi-mint-50: #f5faf2;
+	--ehi-mint-100: #ebf5e6;
+	--ehi-mint-300: #addc91;
+
+	--ehi-turquoise-50: #eaf6f5;
+	--ehi-turquoise-600: #00a5ab;
+
+	/* Design Intents */
+
+	/* Semantic Colors */
+
+	/* Defaults */
+	--color-main: var(--black, #000);
+	--color-main-hover: var(--ehi-neutral-600, #555);
+	--color-on-main: var(--white, #fff);
+	/* --_color-main: var(--color-main, blue); */
+	/* --_color-on-main: var(--color-on-main, white); */
+
+	--color-primary: var(--ehi-blue-600);
+	--color-primary-hover: var(--ehi-blue-500);
+	--color-on-primary: var(--white);
+
+	--color-secondary: var(--ehi-gold-400);
+	--color-secondary-hover: var(--ehi-gold-300);
+	--color-on-secondary: var(--white);
+
+	--color-danger: var(--ehi-danger-600);
+	--color-danger-hover: var(--ehi-danger-500);
+	--color-on-danger: var(--white);
+
+	--color-success: var(--ehi-success-700);
+	--color-success-hover: var(--ehi-success-600);
+	--color-on-success: var(--white);
+
+	--link-color: var(--ehi-blue-900);
+	--link-color-hover: var(--ehi-blue-800);
+
+	--button-border-radius: var(--gap-xxs-relative);
+	--button-border-width: 2px;
+	--button-padding-block: var(--gap-xxs-relative);
+	--button-padding-inline: var(--gap-sm-relative);
+	/* --_border-radius: var(--border-radius, 0px); */
+	/* --_border-width: var(--border-width, 1px); */
+
+	/* --card-border-radius: 0px; */
+	--card-border-radius: var(--gap-xs);
+	--card-border-width: 2px;
+	--card-padding-block: var(--gap-md);
+	--card-padding-inline: var(--gap-md);
+
+	/* END Design Intents */
+
+	--font-base: 1rem;
+	--leading-base: 1.5rem;
+	--font-lg: 1.125rem;
+	--leading-lg: 1.625rem;
+	--font-xl: 1.375rem;
+	--leading-xl: 1.875rem;
+	--font-2xl: 1.625rem;
+	--leading-2xl: 2rem;
+	--font-3xl: 2.125rem;
+	--leading-3xl: 2.25rem;
+	--font-4xl: 3.438rem;
+	--leading-4xl: 4.063rem;
+
+	/* Spacing */
+	/* fixed values - not affected by --gap-unit or --text-base-size */
+	--gap-unit: 1rem;
+	--gap-xxs: calc(0.25 * var(--gap-unit));
+	--gap-xs: calc(0.5 * var(--gap-unit));
+	--gap-sm: calc(0.75 * var(--gap-unit));
+	--gap-md: calc(1.25 * var(--gap-unit));
+	--gap-lg: calc(2 * var(--gap-unit));
+	--gap-xl: calc(3.25 * var(--gap-unit));
+	--gap-xxl: calc(5.25 * var(--gap-unit));
+
+	/* relative values */
+	--gap-unit-relative: 1em;
+	--gap-xxs-relative: calc(0.25 * var(--gap-unit-relative));
+	--gap-xs-relative: calc(0.5 * var(--gap-unit-relative));
+	--gap-sm-relative: calc(0.75 * var(--gap-unit-relative));
+	--gap-md-relative: calc(1.25 * var(--gap-unit-relative));
+	--gap-lg-relative: calc(2 * var(--gap-unit-relative));
+	--gap-xl-relative: calc(3.25 * var(--gap-unit-relative));
+	--gap-xxl-relative: calc(5.25 * var(--gap-unit-relative));
+}
+
 @tailwind components;
+a,
+a:visited,
+.link {
+	color: var(--link-color);
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		color: var(--link-color-hover);
+		text-decoration: underline;
+	}
+}
+
+.button {
+	/* background-color: var(--color-main); */
+	border-color: var(--color-main);
+	border-radius: var(--button-border-radius);
+	border-width: var(--button-border-width);
+	/* color: var(--color-on-main); */
+	cursor: pointer;
+	/* display: flex; */
+	/* align-items: center; */
+	padding-block: var(--button-padding-block);
+	padding-inline: var(--button-padding-inline);
+	transition: all 0.3s;
+
+	&.variant-outline {
+		color: var(--color-main);
+	}
+
+	&:hover {
+		background-color: var(--color-main-hover);
+		color: var(--color-on-main);
+
+		.variant-filled& {
+			border-color: var(--color-main-hover);
+		}
+		.variant-outline& {
+			--color-main-hover: var(--color-main);
+		}
+	}
+}
+
+.card {
+	border-color: var(--color-main);
+	border-radius: var(--card-border-radius);
+	border-width: var(--card-border-width);
+	display: block;
+	padding-block: var(--card-padding-block);
+	padding-inline: var(--card-padding-inline);
+
+	& > .stretch {
+		margin-inline: calc(var(--card-padding-inline) * -1);
+
+		&:first-child {
+			border-top-left-radius: var(--card-border-radius);
+			border-top-right-radius: var(--card-border-radius);
+			margin-top: calc(var(--card-padding-block) * -1);
+		}
+
+		&:last-child {
+			border-bottom-left-radius: var(--card-border-radius);
+			border-bottom-right-radius: var(--card-border-radius);
+			margin-bottom: calc(var(--card-padding-block) * -1);
+		}
+	}
+
+	& > .no-padding-inline {
+		margin-inline: calc(var(--card-padding-inline) * -1);
+	}
+	& > .no-padding-left {
+		margin-left: calc(var(--card-padding-inline) * -1);
+	}
+	& > .no-padding-right {
+		margin-right: calc(var(--card-padding-inline) * -1);
+	}
+	& > .no-padding-block {
+		margin-block: calc(var(--card-padding-block) * -1);
+	}
+	& > .no-padding-top {
+		margin-top: calc(var(--card-padding-block) * -1);
+	}
+	& > .no-padding-bottom {
+		margin-bottom: calc(var(--card-padding-block) * -1);
+	}
+}
+
+/* Variants */
+.variant-filled {
+	background-color: var(--color-main);
+	color: var(--color-on-main);
+}
+
+.variant-outline {
+	background-color: var(--color-on-main);
+}
+/* END Variants */
+
+/* Color schemes */
+.primary {
+	--color-main: var(--color-primary);
+	--color-main-hover: var(--color-primary-hover);
+	--color-on-main: var(--color-on-primary);
+}
+.secondary {
+	--color-main: var(--color-secondary);
+	--color-main-hover: var(--color-secondary-hover);
+	--color-on-main: var(--color-on-secondary);
+}
+.danger {
+	--color-main: var(--color-danger);
+	--color-main-hover: var(--color-danger-hover);
+	--color-on-main: var(--color-on-danger);
+}
+.success {
+	--color-main: var(--color-success);
+	--color-main-hover: var(--color-success-hover);
+	--color-on-main: var(--color-on-success);
+}
+/* END Color Schemes */
+
 @tailwind utilities;
