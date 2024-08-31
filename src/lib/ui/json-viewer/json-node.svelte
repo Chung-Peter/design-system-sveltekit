@@ -1,11 +1,10 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	const {
 		data,
 		depth = 0,
-		isLast = true
-	} = $props<{ data: unknown; depth?: number; isLast?: boolean }>();
+		isLast = true,
+		initialOpenDepth = 999
+	} = $props<{ data: unknown; depth?: number; isLast?: boolean; initialOpenDepth?: number }>();
 
 	let sortOrder = $state<'asc' | 'desc' | null>(null);
 	let sortKey = $state<string | null>(null);
@@ -14,7 +13,7 @@
 	const isArray = $derived(Array.isArray(data));
 	const isObject = $derived(typeof data === 'object' && data !== null);
 
-	let accordionIsOpen = $state(depth < 2);
+	let accordionIsOpen = $state(depth < initialOpenDepth);
 
 	const isArrayOfObjects = $derived(
 		Array.isArray(data) && data.length > 0 && typeof data[0] === 'object'
@@ -56,11 +55,14 @@
 {#if isArray || isObject}
 	<details
 		bind:open={accordionIsOpen}
-		class="flex flex-col"
+		class="flex flex-col has-[>summary>.copy-to-clipboard:hover]:bg-gray-100"
 		class:is-array={isArray}
 		class:is-object={isObject}
 	>
-		<summary class="flex gap-x-1">
+		<summary
+			class="group relative flex gap-x-1"
+			title={!accordionIsOpen ? JSON.stringify(data, null, 4) : 'Click to collapse'}
+		>
 			{#if isArray}
 				<div class="whitespace-nowrap">
 					{#if !accordionIsOpen}
@@ -113,18 +115,31 @@
 					</div>
 				{/if}
 			{/if}
+			{#if accordionIsOpen}
+				<button
+					onclick={() => {
+						navigator.clipboard.writeText(JSON.stringify(data));
+					}}
+					class="copy-to-clipboard button absolute right-0 top-0 m-1 opacity-0 transition-all duration-200 group-hover:opacity-100"
+					style="--button-border-width: 1px; --button-padding-block: 0px;"
+					title="Copy to clipboard"
+				>
+					Copy
+				</button>
+			{/if}
 		</summary>
 
 		<div class="accordion-content node-data ml-10">
 			{#if isArray}
 				<div class="is-array entry">
 					{#each filteredData as entry, index}
-						<div class="array-index">[{index}]:</div>
+						<div class="array-index select-none">[{index}]:</div>
 						<!-- <div class="array-data" class:is-last={index === filteredData.length - 1}> -->
 						<div class="value">
 							<svelte:self
 								data={entry}
 								depth={depth + 1}
+								{initialOpenDepth}
 								isLast={index === filteredData.length - 1}
 							/>
 						</div>
@@ -134,7 +149,10 @@
 			{:else if isObject}
 				<div class="is-object entry">
 					{#each Object.entries(filteredData) as [key, value], index}
-						<div class="key">"{key}":</div>
+						<div class=" flex justify-between">
+							<span class="key text-red-800">"{key}"</span>
+							<span class="separator">:</span>
+						</div>
 						<!-- <div
 							class="object-value"
 							class:is-last={index === Object.keys(filteredData).length - 1}
@@ -143,6 +161,7 @@
 							<svelte:self
 								data={value}
 								depth={depth + 1}
+								{initialOpenDepth}
 								isLast={index === Object.keys(filteredData).length - 1}
 							/>
 						</div>
@@ -197,10 +216,6 @@
 
 	.array-index {
 		@apply text-gray-400;
-	}
-	.key {
-		color: #881391;
-		justify-self: flex-end;
 	}
 
 	.value {

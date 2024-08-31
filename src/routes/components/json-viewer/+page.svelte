@@ -24,4 +24,14 @@
 	};
 </script>
 
-<JSONViewer {data} />
+<JSONViewer {data} initialOpenDepth={2} />
+
+<div class="my-4">
+	<div>input data: string</div>
+	<JSONViewer data={'a string'} />
+</div>
+
+<div class="my-4">
+	<div>input data: string[]</div>
+	<JSONViewer data={['a string', 'another string', 'yet another string']} />
+</div>

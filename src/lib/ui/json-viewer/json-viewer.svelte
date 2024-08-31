@@ -1,7 +1,7 @@
 <script lang="ts">
 	import JSONNode from './json-node.svelte';
 
-	const { data } = $props<{ data: unknown }>();
+	const { data, initialOpenDepth = 999 } = $props<{ data: unknown; initialOpenDepth?: number }>();
 
 	const isValid = $derived(isValidJSON(data));
 	const parsedData = $derived(isValid ? JSON.parse(JSON.stringify(data)) : undefined);
@@ -18,7 +18,7 @@
 
 {#if isValid}
 	<div class="json-viewer" role="tree" aria-label="JSON Viewer">
-		<JSONNode data={parsedData} />
+		<JSONNode data={parsedData} {initialOpenDepth} />
 	</div>
 {:else}
 	<div class="json-viewer-error" role="alert">Invalid JSON data</div>
