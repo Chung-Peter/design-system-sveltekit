@@ -1,0 +1,27 @@
+<script lang="ts">
+	import JSONViewer from '$lib/ui/json-viewer/json-viewer.svelte';
+
+	const data = {
+		arr: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+		ids: ['1a', '1a1', '1b', '7a'],
+		testObject: {
+			key: 'value',
+			key2: 'value2',
+			key3: 'value3',
+			key4: 'value4',
+			key5: 'value5',
+			key6: 'value6',
+			key7: 'value7',
+			key8: 'value8',
+			key9: 'value9',
+			key10: 'value10'
+		},
+		arrayOfObjects: [
+			{ id: '1a', benefitValue: '$100', costShare: '$0', costShareType: 'copay' },
+			{ id: '1a1', benefitValue: '$100', costShare: '$20', costShareType: 'copay' },
+			{ id: '1b', benefitValue: '$100', costShare: '40%', costShareType: 'coinsurance' }
+		]
+	};
+</script>
+
+<JSONViewer {data} />
