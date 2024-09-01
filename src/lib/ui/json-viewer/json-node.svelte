@@ -207,9 +207,9 @@
 			{/if}
 		{/if}
 	</details>
-{:else}
+{:else if data !== null && data !== undefined}
 	<!-- <div class="json-value"> -->
-	{JSON.stringify(data)}{#if !isLast},{:else}&nbsp;{/if}
+	{JSON.stringify(data)}{#if !isLast},{/if}
 	<!-- </div> -->
 {/if}
 

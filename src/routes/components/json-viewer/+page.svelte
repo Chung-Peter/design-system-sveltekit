@@ -1,5 +1,6 @@
 <script lang="ts">
 	import JSONViewer from '$lib/ui/json-viewer/json-viewer.svelte';
+	import plansBenefits from './plans.json';
 
 	const data = {
 		arr: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -24,7 +25,8 @@
 	};
 </script>
 
-<JSONViewer {data} initialOpenDepth={3} />
+<JSONViewer data={plansBenefits[0]} initialOpenDepth={3} />
+<!-- <JSONViewer {data} initialOpenDepth={3} />
 
 <div class="my-4">
 	<div>input data: string</div>
@@ -34,4 +36,4 @@
 <div class="my-4">
 	<div>input data: string[]</div>
 	<JSONViewer data={['a string', 'another string', 'yet another string']} />
-</div>
+</div> -->

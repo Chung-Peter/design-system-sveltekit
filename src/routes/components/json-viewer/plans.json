@@ -1,0 +1,4741 @@
+[
+	{
+		"id": "a37f6673-fbc8-437b-ab8f-45d8c5475f01",
+		"medicareContractId": "H2610",
+		"modelFactoryId": "H2610005000000",
+		"productId": "SLMAPDST",
+		"pbpId": "005",
+		"segmentId": "000",
+		"egwpId": "000",
+		"planYear": 2024,
+		"planType": "HMO",
+		"planName": "Essence Advantage (HMO)",
+		"planTranslationToken": "ESSENCE ADVANTAGE (HMO)",
+		"moopInn": "$2,300.00",
+		"moopCombined": null,
+		"clientModelFactoryId": "EHI",
+		"clientName": "Essence Healthcare",
+		"osb": null,
+		"planBenefits": [
+			{
+				"id": "18b1",
+				"benefitName": "Hearing Aids (all types)",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every 2 Years"
+			},
+			{
+				"id": "10a1",
+				"benefitName": "Ground Ambulance Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$220",
+				"costShareType": "copay"
+			},
+			{
+				"id": "18a2",
+				"benefitName": "Fitting/Evaluation for Hearing Aid",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every 2 Years"
+			},
+			{
+				"id": "18a1",
+				"benefitName": "Routine Hearing Exams",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "18a",
+				"benefitName": "Hearing Exams",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "17b5",
+				"notes": "The minimum co-pay applies to UV treatment, tint, or standard plastic scratch coating and the maximum co-pay applies to standard and premium progressive lenses and standard anti-reflective coating. Between the min and max, copays are for standard polycarbonate lenses and standard anti-reflective coating. \nThe minimum coinsurance applies to premium progressive lenses and other coatings, oversized lenses, prism and other lens options, and the maximum coinsurance applies to contact lenses premium fit and follow-up.",
+				"benefitName": "Upgrades",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$15 - $65,80% - 90%",
+				"costShareType": "both"
+			},
+			{
+				"id": "4c2",
+				"benefitName": "Worldwide Urgent Coverage",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$125",
+				"costShareType": "copay"
+			},
+			{
+				"id": "17b3",
+				"benefitName": "Eyeglass lenses",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17b2",
+				"benefitName": "Eyeglasses (lenses and frames)",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17b1",
+				"benefitName": "Contact Lenses",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17b",
+				"notes": "Medicare-covered eyewear: Standard plastic single, bifocal, trifocal, or lenticular lenses are $0 copay. $200 allowance for eyeglass frames or contact lenses after each cataract surgery.",
+				"benefitName": "Eyewear",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "17a1",
+				"notes": "Eye refractions and dilations are covered during a routine exam.",
+				"benefitName": "Routine Eye Exams",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16b7",
+				"benefitName": "Prosthodontics, Other Oral/Maxillofacial Surgery, Other Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b6",
+				"benefitName": "Extractions",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b5",
+				"benefitName": "Periodontics",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b4",
+				"benefitName": "Endodontics",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b3",
+				"benefitName": "Restorative Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b2",
+				"benefitName": "Diagnostic Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b1",
+				"benefitName": "Non-routine Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9d",
+				"benefitName": "Outpatient Blood Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b",
+				"notes": "A referral is required to visit an oral surgeon for Medicare-covered services & those services may require a prior authorization.",
+				"benefitName": "Comprehensive Dental",
+				"refRequired": true,
+				"authRequired": true,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16a4",
+				"benefitName": "Dental X-Rays",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16a3",
+				"benefitName": "Fluoride Treatment",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16a2",
+				"benefitName": "Prophylaxis (Cleaning)",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16a1",
+				"benefitName": "Oral Exams",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "15-3",
+				"notes": "Actual cost share is the lesser of 20% or the Average Sales Price (ASP).",
+				"benefitName": "Other Medicare Part B Drugs",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "0% - 20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "15-2",
+				"notes": "Actual cost share is the lesser of 20% or the Average Sales Price (ASP).",
+				"benefitName": "Medicare Part B Chemotherapy/Radiation Drugs",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "0% - 20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "15-1",
+				"notes": "Cost share is a 20% coinsurance with a maximum monthly cost of $35.",
+				"benefitName": "Medicare Part B Insulin Drugs",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "0% - 20%",
+				"costShareMax": "$35",
+				"costShareType": "coins"
+			},
+			{
+				"id": "14e5",
+				"benefitName": "EKG following Welcome Visit",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14e4",
+				"benefitName": "Digital Rectal Exams",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14e3",
+				"benefitName": "Barium Enemas",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14e2",
+				"benefitName": "Diabetes Self-Management Training",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14e1",
+				"benefitName": "Glaucoma Screening",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14d",
+				"benefitName": "Kidney Disease Education Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14c7",
+				"notes": "Members may have access to, but are not required to use, web/phone/virtual/telemedicine visits with select contracted network providers such as PCPs and Specialists. An office visit copay applies for the same amount as an in-office visit. Prior Authorization and/or referral rules apply based on the category of service. \r\n",
+				"benefitName": "Remote Access Technologies (including Web/Phone-based technologies and Nursing Hotline)",
+				"refRequired": true,
+				"authRequired": true,
+				"benefitValue": "$0 - $30",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14c4",
+				"notes": "Members are covered for a fitness benefit through SilverSneakers® at participating locations that includes instructor-led group fitness classes, use of exercise equipment, and other amenities.",
+				"benefitName": "Fitness Benefit",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14b",
+				"benefitName": "Annual Physical Exam",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14a",
+				"benefitName": "Medicare-covered Zero Dollar Preventive Services",
+				"refRequired": false,
+				"authRequired": false
+			},
+			{
+				"id": "13b",
+				"benefitName": "Over-the-Counter (OTC) Items",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "12",
+				"benefitName": "Dialysis Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "11c1",
+				"notes": "When meters and strips are obtained at pharmacies, coverage is limited to specific Ascencia/Bayer products.",
+				"benefitName": "Diabetic Supplies",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "11b2",
+				"benefitName": "Medical Supplies",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "11b1",
+				"benefitName": "Prosthetic Devices",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "11a",
+				"benefitName": "Durable Medical Equipment (DME)",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "10b1",
+				"benefitName": "Transportation Services -  Plan Approved Health-related Location",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "24",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "10a2",
+				"benefitName": "Air Ambulance Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$220",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9c2",
+				"benefitName": "Group Sessions for Outpatient Substance Abuse",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$10",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9c1",
+				"benefitName": "Individual Sessions for Outpatient Substance Abuse",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9b",
+				"benefitName": "Ambulatory Surgical Center (ASC) Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$175",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9a2",
+				"benefitName": "Observation Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$230",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9a1",
+				"benefitName": "Outpatient Hospital Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$230",
+				"costShareType": "copay"
+			},
+			{
+				"id": "8b3",
+				"benefitName": "Outpatient X-Ray Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "8b2",
+				"notes": "Authorization rules apply for certain Outpatient Therapeutic Radiological Services.",
+				"benefitName": "Therapeutic Radiological Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "8b1",
+				"notes": "All diagnostic mammograms have a $0 member cost share. All other diagnostic radiology has a $200 member cost share.",
+				"benefitName": "Diagnostic Radiological Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$0 - $200",
+				"costShareType": "copay"
+			},
+			{
+				"id": "8a2",
+				"notes": "Authorization rules apply for certain Lab Services",
+				"benefitName": "Lab Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "8a1",
+				"notes": "All diagnostic colonoscopies have a $0 member cost share. All other diagnostic procedures have a $30 member cost share.",
+				"benefitName": "Diagnostic Procedures/Tests",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$0 - $30",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7k",
+				"benefitName": "Opioid Treatment Program Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7h2",
+				"benefitName": "Group Sessions for Psychiatric Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$10",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7h1",
+				"benefitName": "Individual Sessions for Psychiatric Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7f",
+				"benefitName": "Podiatry Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7e2",
+				"benefitName": "Group Sessions for Mental Health Specialty Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$10",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7e1",
+				"benefitName": "Individual Sessions for Mental Health Specialty Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7d",
+				"notes": "Certain Medicare-covered services provided by a physician may require a prior authorization.",
+				"benefitName": "Physician Specialist Services",
+				"refRequired": true,
+				"authRequired": true,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7c",
+				"benefitName": "Occupational Therapy Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$30",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7b",
+				"benefitName": "Chiropractic Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7a",
+				"benefitName": "Primary Care Physician Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "6",
+				"benefitName": "Home Health Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "5",
+				"benefitName": "Partial Hospitalization",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4c1",
+				"benefitName": "Worldwide Emergency Coverage",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$125",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4b",
+				"benefitName": "Urgently Needed Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$35",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4a",
+				"benefitName": "Emergency Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$125",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-4",
+				"benefitName": "SET for PAD Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-3",
+				"benefitName": "Pulmonary Rehabilitation Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-2",
+				"benefitName": "Intensive Cardiac Rehabilitation Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-1",
+				"benefitName": "Cardiac Rehabilitation Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "2",
+				"notes": "Admission to a new or different SNF facility within the same Benefit Period may start a new stay for copay administration purposes.",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 20",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "21 - 100",
+						"benefitValue": "$125",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Skilled Nursing Facility (SNF)",
+				"refRequired": false,
+				"authRequired": true
+			},
+			{
+				"id": "1b",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 8",
+						"benefitValue": "$240",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "9 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Inpatient Hospital Psychiatric",
+				"refRequired": false,
+				"authRequired": true
+			},
+			{
+				"id": "1a1",
+				"benefitName": "Additional Days for Inpatient Hospital-Acute",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitLimit": "unlimited"
+			},
+			{
+				"id": "1a",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 5",
+						"benefitValue": "$230",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "6 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Inpatient Hospital-Acute",
+				"refRequired": false,
+				"authRequired": true
+			},
+			{
+				"id": "1b1",
+				"benefitName": "Additional Days for Inpatient Hospital Psychiatric",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitLimit": "unlimited"
+			},
+			{
+				"id": "17a",
+				"benefitName": "Eye Exams",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "11c2",
+				"benefitName": "Diabetic Therapeutic Shoes/Inserts",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "7i",
+				"benefitName": "Physical Therapy and Speech-Language Pathology Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$30",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7g",
+				"notes": "Medicare-covered acupuncture services do not require a referral or prior authorization.  All other services require a referral. \r\n\r\nCertain Medicare-covered services provided by a health care professional may require a prior authorization.",
+				"benefitName": "Other Health Care Professional",
+				"refRequired": true,
+				"authRequired": true,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "17b4",
+				"benefitName": "Eyeglass frames",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			}
+		],
+		"pharmacyTiers": [
+			{
+				"id": "1d4bf03c-b47e-4797-abd4-bad3ceacfe95",
+				"modelFactoryId": "RxTier1-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 1",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$4",
+				"nonPreferredCost2M": "$8",
+				"nonPreferredCost3M": "$12",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			},
+			{
+				"id": "2f7a5ecc-d440-4f9d-9887-03de9bde6ed5",
+				"modelFactoryId": "RxTier2-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 2",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$12",
+				"nonPreferredCost2M": "$24",
+				"nonPreferredCost3M": "$36",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			},
+			{
+				"id": "1b3e4e37-ce0e-4f83-9965-0a1fc97c9ce1",
+				"modelFactoryId": "RxTier3-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 3",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand",
+				"preferredCost1M": "$39",
+				"preferredCost2M": "$78",
+				"preferredCost3M": "$117",
+				"nonPreferredCost1M": "$47",
+				"nonPreferredCost2M": "$94",
+				"nonPreferredCost3M": "$141",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$97.50"
+			},
+			{
+				"id": "a66ba4e8-109b-41b7-b4b3-a125c41789c0",
+				"modelFactoryId": "RxTier4-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 4",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "$75",
+				"preferredCost2M": "$150",
+				"preferredCost3M": "$225",
+				"nonPreferredCost1M": "$100",
+				"nonPreferredCost2M": "$200",
+				"nonPreferredCost3M": "$300",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$187.50"
+			},
+			{
+				"id": "b07084f5-bb89-4b72-b050-24a88a77f1af",
+				"modelFactoryId": "RxTier5-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 5",
+				"tierType": "ICL",
+				"tierCostType": "coins",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "33%",
+				"preferredCost2M": null,
+				"preferredCost3M": null,
+				"nonPreferredCost1M": "33%",
+				"nonPreferredCost2M": null,
+				"nonPreferredCost3M": null,
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": "33%",
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": null
+			},
+			{
+				"id": "db70aa5d-4083-4251-8a55-248ed2fc704a",
+				"modelFactoryId": "RxTier6-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 6",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$0",
+				"nonPreferredCost2M": "$0",
+				"nonPreferredCost3M": "$0",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			}
+		],
+		"annualDeductible": "$0.00",
+		"monthlyPlanPremium": "$0.00",
+		"drugPremiumPartD": "$0.00",
+		"providerDirectoryParentGroupId": 26,
+		"isDsnp": false,
+		"star": "5.00"
+	},
+	{
+		"id": "3d052e6b-d11c-413b-b496-3da969b433b7",
+		"medicareContractId": "H2610",
+		"modelFactoryId": "H2610006000000",
+		"productId": "SLMAPDEN",
+		"pbpId": "006",
+		"segmentId": "000",
+		"egwpId": "000",
+		"planYear": 2024,
+		"planType": "HMO",
+		"planName": "Essence Advantage Plus (HMO)",
+		"planTranslationToken": "ESSENCE ADVANTAGE PLUS (HMO)",
+		"moopInn": "$1,900.00",
+		"moopCombined": null,
+		"clientModelFactoryId": "EHI",
+		"clientName": "Essence Healthcare",
+		"osb": null,
+		"planBenefits": [
+			{
+				"id": "18a",
+				"benefitName": "Hearing Exams",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "18b1",
+				"benefitName": "Hearing Aids (all types)",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every 2 Years"
+			},
+			{
+				"id": "18a2",
+				"benefitName": "Fitting/Evaluation for Hearing Aid",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every 2 Years"
+			},
+			{
+				"id": "18a1",
+				"benefitName": "Routine Hearing Exams",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "17b5",
+				"notes": "The minimum co-pay applies to UV treatment, tint, or standard plastic scratch coating and the maximum co-pay applies to standard and premium progressive lenses and standard anti-reflective coating. Between the min and max, copays are for standard polycarbonate lenses and standard anti-reflective coating. \nThe minimum coinsurance applies to premium progressive lenses and other coatings, oversized lenses, prism and other lens options, and the maximum coinsurance applies to contact lenses premium fit and follow-up.",
+				"benefitName": "Upgrades",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$15 - $65,80% - 90%",
+				"costShareType": "both"
+			},
+			{
+				"id": "17b4",
+				"benefitName": "Eyeglass frames",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "4c2",
+				"benefitName": "Worldwide Urgent Coverage",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$125",
+				"costShareType": "copay"
+			},
+			{
+				"id": "17b3",
+				"benefitName": "Eyeglass lenses",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17b2",
+				"benefitName": "Eyeglasses (lenses and frames)",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17b1",
+				"benefitName": "Contact Lenses",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17b",
+				"notes": "Medicare-covered eyewear: Standard plastic single, bifocal, trifocal, or lenticular lenses are $0 copay. $200 allowance for eyeglass frames or contact lenses after each cataract surgery.",
+				"benefitName": "Eyewear",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "17a1",
+				"notes": "Eye refractions and dilations are covered during a routine exam.",
+				"benefitName": "Routine Eye Exams",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17a",
+				"benefitName": "Eye Exams",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$30",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b2",
+				"benefitName": "Diagnostic Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b1",
+				"benefitName": "Non-routine Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b",
+				"notes": "A referral is required to visit an oral surgeon for Medicare-covered services & those services may require a prior authorization.",
+				"benefitName": "Comprehensive Dental",
+				"refRequired": true,
+				"authRequired": true,
+				"benefitValue": "$30",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16a4",
+				"notes": "Horizontal bitewing or Intraoral tomosynthesis bitewing images (up to four)",
+				"benefitName": "Dental X-Rays",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16a3",
+				"benefitName": "Fluoride Treatment",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16a2",
+				"benefitName": "Prophylaxis (Cleaning)",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16a1",
+				"benefitName": "Oral Exams",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "9d",
+				"benefitName": "Outpatient Blood Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "15-3",
+				"notes": "Actual cost share is the lesser of 20% or the Average Sales Price (ASP).",
+				"benefitName": "Other Medicare Part B Drugs",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "0% - 20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "15-2",
+				"notes": "Actual cost share is the lesser of 20% or the Average Sales Price (ASP).",
+				"benefitName": "Medicare Part B Chemotherapy/Radiation Drugs",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "0% - 20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "9c1",
+				"benefitName": "Individual Sessions for Outpatient Substance Abuse",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "15-1",
+				"notes": "Cost share is a 20% coinsurance with a maximum monthly cost of $35.",
+				"benefitName": "Medicare Part B Insulin Drugs",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "0% - 20%",
+				"costShareMax": "$35",
+				"costShareType": "coins"
+			},
+			{
+				"id": "14e5",
+				"benefitName": "EKG following Welcome Visit",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14e4",
+				"benefitName": "Digital Rectal Exams",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14e3",
+				"benefitName": "Barium Enemas",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14e2",
+				"benefitName": "Diabetes Self-Management Training",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14e1",
+				"benefitName": "Glaucoma Screening",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14d",
+				"benefitName": "Kidney Disease Education Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14c7",
+				"notes": "Members may have access to, but are not required to use, web/phone/virtual/telemedicine visits with select contracted network providers such as PCPs and Specialists. An office visit copay applies for the same amount as an in-office visit. Prior Authorization and/or referral rules apply based on the category of service. \r\n",
+				"benefitName": "Remote Access Technologies (including Web/Phone-based technologies and Nursing Hotline)",
+				"refRequired": true,
+				"authRequired": true,
+				"benefitValue": "$0 - $30",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14c4",
+				"notes": "Members are covered for a fitness benefit through SilverSneakers® at participating locations that includes instructor-led group fitness classes, use of exercise equipment, and other amenities.",
+				"benefitName": "Fitness Benefit",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14b",
+				"benefitName": "Annual Physical Exam",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14a",
+				"benefitName": "Medicare-covered Zero Dollar Preventive Services",
+				"refRequired": false,
+				"authRequired": false
+			},
+			{
+				"id": "13b",
+				"benefitName": "Over-the-Counter (OTC) Items",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "12",
+				"benefitName": "Dialysis Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "11c2",
+				"benefitName": "Diabetic Therapeutic Shoes/Inserts",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "11c1",
+				"notes": "When meters and strips are obtained at pharmacies, coverage is limited to specific Ascencia/Bayer products.",
+				"benefitName": "Diabetic Supplies",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "10a2",
+				"benefitName": "Air Ambulance Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$150",
+				"costShareType": "copay"
+			},
+			{
+				"id": "10a1",
+				"benefitName": "Ground Ambulance Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$150",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9c2",
+				"benefitName": "Group Sessions for Outpatient Substance Abuse",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$10",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4b",
+				"benefitName": "Urgently Needed Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$25",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9b",
+				"benefitName": "Ambulatory Surgical Center (ASC) Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$100",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9a2",
+				"benefitName": "Observation Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$150",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9a1",
+				"benefitName": "Outpatient Hospital Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$150",
+				"costShareType": "copay"
+			},
+			{
+				"id": "8b3",
+				"benefitName": "Outpatient X-Ray Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "8b2",
+				"notes": "Authorization rules apply for certain Outpatient Therapeutic Radiological Services",
+				"benefitName": "Therapeutic Radiological Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "8b1",
+				"notes": "All diagnostic mammograms have a $0 member cost share. All other diagnostic radiology has a $200 member cost share.",
+				"benefitName": "Diagnostic Radiological Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$0 - $200",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7i",
+				"benefitName": "Physical Therapy and Speech-Language Pathology Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7h2",
+				"benefitName": "Group Sessions for Psychiatric Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$10",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7h1",
+				"benefitName": "Individual Sessions for Psychiatric Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7g",
+				"notes": "Medicare-covered acupuncture services do not require a referral or prior authorization.  All other services require a referral. \r\n\r\nCertain Medicare-covered services provided by a health care professional may require a prior authorization.",
+				"benefitName": "Other Health Care Professional",
+				"refRequired": true,
+				"authRequired": true,
+				"benefitValue": "$30",
+				"costShareType": "copay"
+			},
+			{
+				"id": "6",
+				"benefitName": "Home Health Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "5",
+				"benefitName": "Partial Hospitalization",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4c1",
+				"benefitName": "Worldwide Emergency Coverage",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$125",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4a",
+				"benefitName": "Emergency Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$125",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-4",
+				"benefitName": "SET for PAD Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-3",
+				"benefitName": "Pulmonary Rehabilitation Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-2",
+				"benefitName": "Intensive Cardiac Rehabilitation Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-1",
+				"benefitName": "Cardiac Rehabilitation Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "2",
+				"notes": "Admission to a new or different SNF facility within the same Benefit Period may start a new stay for copay administration purposes.",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 20",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "21 - 100",
+						"benefitValue": "$125",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Skilled Nursing Facility (SNF)",
+				"refRequired": false,
+				"authRequired": true
+			},
+			{
+				"id": "1b1",
+				"benefitName": "Additional Days for Inpatient Hospital Psychiatric",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitLimit": "unlimited"
+			},
+			{
+				"id": "1b",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 6",
+						"benefitValue": "$195",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "7 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Inpatient Hospital Psychiatric",
+				"refRequired": false,
+				"authRequired": true
+			},
+			{
+				"id": "1a1",
+				"benefitName": "Additional Days for Inpatient Hospital-Acute",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitLimit": "unlimited"
+			},
+			{
+				"id": "1a",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 6",
+						"benefitValue": "$195",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "7 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Inpatient Hospital-Acute",
+				"refRequired": false,
+				"authRequired": true
+			},
+			{
+				"id": "10b1",
+				"benefitName": "Transportation Services -  Plan Approved Health-related Location",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "24",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "11a",
+				"benefitName": "Durable Medical Equipment (DME)",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "11b1",
+				"benefitName": "Prosthetic Devices",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "11b2",
+				"benefitName": "Medical Supplies",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "16b3",
+				"benefitName": "Restorative Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b4",
+				"benefitName": "Endodontics",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b6",
+				"benefitName": "Extractions",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b5",
+				"benefitName": "Periodontics",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b7",
+				"benefitName": "Prosthodontics, Other Oral/Maxillofacial Surgery, Other Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "8a2",
+				"notes": "Authorization rules apply for certain Lab Services",
+				"benefitName": "Lab Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "8a1",
+				"notes": "All diagnostic colonoscopies have a $0 member cost share. All other diagnostic procedures have a $30 member cost share.",
+				"benefitName": "Diagnostic Procedures/Tests",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$0 - $30",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7k",
+				"benefitName": "Opioid Treatment Program Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7f",
+				"benefitName": "Podiatry Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$30",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7e2",
+				"benefitName": "Group Sessions for Mental Health Specialty Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$10",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7e1",
+				"benefitName": "Individual Sessions for Mental Health Specialty Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7d",
+				"notes": "Certain Medicare-covered services provided by a physician may require a prior authorization.",
+				"benefitName": "Physician Specialist Services",
+				"refRequired": true,
+				"authRequired": true,
+				"benefitValue": "$30",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7c",
+				"benefitName": "Occupational Therapy Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7b",
+				"benefitName": "Chiropractic Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7a",
+				"benefitName": "Primary Care Physician Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			}
+		],
+		"pharmacyTiers": [
+			{
+				"id": "9db5d97e-47a0-41f0-bb2b-669fd6490435",
+				"modelFactoryId": "RxTier1-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 1",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$4",
+				"nonPreferredCost2M": "$8",
+				"nonPreferredCost3M": "$12",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			},
+			{
+				"id": "a1d73f48-7050-477c-9f01-34e75cee1715",
+				"modelFactoryId": "RxTier2-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 2",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$12",
+				"nonPreferredCost2M": "$24",
+				"nonPreferredCost3M": "$36",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			},
+			{
+				"id": "ced1f6a4-3448-4184-adea-f7aff77e7614",
+				"modelFactoryId": "RxTier3-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 3",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand",
+				"preferredCost1M": "$34",
+				"preferredCost2M": "$68",
+				"preferredCost3M": "$102",
+				"nonPreferredCost1M": "$42",
+				"nonPreferredCost2M": "$84",
+				"nonPreferredCost3M": "$126",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$85"
+			},
+			{
+				"id": "bb7d9430-733a-4d53-bff5-4f04d5a9353d",
+				"modelFactoryId": "RxTier4-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 4",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "$65",
+				"preferredCost2M": "$130",
+				"preferredCost3M": "$195",
+				"nonPreferredCost1M": "$80",
+				"nonPreferredCost2M": "$160",
+				"nonPreferredCost3M": "$240",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$162.50"
+			},
+			{
+				"id": "e2c27583-fcd1-4931-805a-3749eec9c8e3",
+				"modelFactoryId": "RxTier5-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 5",
+				"tierType": "ICL",
+				"tierCostType": "coins",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "33%",
+				"preferredCost2M": null,
+				"preferredCost3M": null,
+				"nonPreferredCost1M": "33%",
+				"nonPreferredCost2M": null,
+				"nonPreferredCost3M": null,
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": "33%",
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": null
+			},
+			{
+				"id": "06a5fce5-3911-4e1c-9c1a-1357ca5c1d06",
+				"modelFactoryId": "RxTier6-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 6",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$0",
+				"nonPreferredCost2M": "$0",
+				"nonPreferredCost3M": "$0",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			}
+		],
+		"annualDeductible": "$0.00",
+		"monthlyPlanPremium": "$53.80",
+		"drugPremiumPartD": "$0.00",
+		"providerDirectoryParentGroupId": 26,
+		"isDsnp": false,
+		"star": "5.00"
+	},
+	{
+		"id": "3cd72199-7d5e-478f-8069-c1f4e1625b06",
+		"medicareContractId": "H2610",
+		"modelFactoryId": "H2610016000000",
+		"productId": "SLMAPDSL",
+		"pbpId": "016",
+		"segmentId": "000",
+		"egwpId": "000",
+		"planYear": 2024,
+		"planType": "HMO",
+		"planName": "Essence Advantage Select (HMO)",
+		"planTranslationToken": "ESSENCE ADVANTAGE SELECT (HMO)",
+		"moopInn": "$2,800.00",
+		"moopCombined": null,
+		"clientModelFactoryId": "EHI",
+		"clientName": "Essence Healthcare",
+		"osb": null,
+		"planBenefits": [
+			{
+				"id": "6",
+				"benefitName": "Home Health Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16a1",
+				"benefitName": "Oral Exams",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Other, Describe"
+			},
+			{
+				"id": "18b1",
+				"benefitName": "Hearing Aids (all types)",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every 2 Years"
+			},
+			{
+				"id": "18a2",
+				"benefitName": "Fitting/Evaluation for Hearing Aid",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every 2 Years"
+			},
+			{
+				"id": "18a1",
+				"benefitName": "Routine Hearing Exams",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "18a",
+				"benefitName": "Hearing Exams",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "17b5",
+				"notes": "The minimum co-pay applies to UV treatment, tint, or standard plastic scratch coating and the maximum co-pay applies to standard and premium progressive lenses and standard anti-reflective coating. Between the min and max, copays are for standard polycarbonate lenses and standard anti-reflective coating. \nThe minimum coinsurance applies to premium progressive lenses and other coatings, oversized lenses, prism and other lens options, and the maximum coinsurance applies to contact lenses premium fit and follow-up.",
+				"benefitName": "Upgrades",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$15 - $65,80% - 90%",
+				"costShareType": "both"
+			},
+			{
+				"id": "17b4",
+				"benefitName": "Eyeglass frames",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17b3",
+				"benefitName": "Eyeglass lenses",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17b2",
+				"benefitName": "Eyeglasses (lenses and frames)",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17b1",
+				"benefitName": "Contact Lenses",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16a3",
+				"benefitName": "Fluoride Treatment",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17b",
+				"notes": "Medicare-covered eyewear: Standard plastic single, bifocal, trifocal, or lenticular lenses are $0 copay. $200 allowance for eyeglass frames or contact lenses after each cataract surgery.",
+				"benefitName": "Eyewear",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "17a1",
+				"notes": "Eye refractions and dilations are covered during a routine exam.",
+				"benefitName": "Routine Eye Exams",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17a",
+				"benefitName": "Eye Exams",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$25",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14e5",
+				"benefitName": "EKG following Welcome Visit",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14e4",
+				"benefitName": "Digital Rectal Exams",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14e3",
+				"benefitName": "Barium Enemas",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b7",
+				"notes": "Removable complete, partial , immediate , overdentures or fixed dentures including retainer crowns, endosteal implants and abutments/retainers and guided tissue regeneration-1 every 5 calendar years\n\nBridge repair is once per 2 calendar years\nAnesthesia including deep sedation, inhalation of nitrous oxide, IV and non IV sedation\nConsultations-1 per provider per year\nVisits at extended care facilty or surgical center-6 per calendar year\nOcclusal analysi and complete adjustments-1 per 5 calendar years.\nLimited adjustments-once per calendar year.",
+				"benefitName": "Prosthodontics, Other Oral/Maxillofacial Surgery, Other Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b6",
+				"notes": "Simple extractions / Surgical extractions/Coronectomy  – 1 per tooth per lifetime",
+				"benefitName": "Extractions",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b5",
+				"notes": "Scaling and root planing – 1 per quadrant every 3 calendar years\nFull mouth debridement – 1 every 3 calendar years\nClinical crown lengthening - 1 per tooth per lifetime\nGingivectomy-gingivoplasty, gingival flap procedure, osseous surgery - 1 per quadrant every 3 calendar years\nPeriodontal Maintenance (following active therapy) – 4 every calendar year\n",
+				"benefitName": "Periodontics",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "5",
+				"benefitName": "Partial Hospitalization",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b4",
+				"notes": "Root canal treatment / Retreatment root canal therapy / Apicoectomy / Pulpotomy/Retrograde filling – 1 per tooth per lifetime",
+				"benefitName": "Endodontics",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b3",
+				"notes": "Amalgam and resin fillings-1 per tooth, per surface every two calendar years\nInlays/onlays, crown and associated services-1 per tooth, every 5 calendar years\n",
+				"benefitName": "Restorative Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16b",
+				"notes": "A referral is required to visit an oral surgeon for Medicare-covered services & those services may require a prior authorization.",
+				"benefitName": "Comprehensive Dental",
+				"refRequired": true,
+				"authRequired": true,
+				"benefitValue": "$25",
+				"costShareType": "copay"
+			},
+			{
+				"id": "16a4",
+				"notes": "Intraoral complete series, Intraoral tomosynthesis, Vertical bitewings ((7-8 images), Panoramic radiographic image, – 1 every 3 calendar years\nHorizontal Bitewings (one, two, three, four images), Intraoral tomosynthesis-bitewing, and Intraoral tomosynthesis-periopical radiographic – 1 every calendar year\nIntraoral occulusal radiographic image - 2 per calendar year\n",
+				"benefitName": "Dental X-Rays",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16a2",
+				"notes": "Routine Cleaning (prophylaxis) – 2 every calendar year\nScaling in presence of generalized moderate or severe gingival inflammation, full mouth - 1 every calendar year\n",
+				"benefitName": "Prophylaxis (Cleaning)",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "15-3",
+				"notes": "Actual cost share is the lesser of 20% or the Average Sales Price (ASP).",
+				"benefitName": "Other Medicare Part B Drugs",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "0% - 20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "15-2",
+				"notes": "Actual cost share is the lesser of 20% or the Average Sales Price (ASP).",
+				"benefitName": "Medicare Part B Chemotherapy/Radiation Drugs",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "0% - 20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "15-1",
+				"notes": "Cost share is a 20% coinsurance with a maximum monthly cost of $35.",
+				"benefitName": "Medicare Part B Insulin Drugs",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "0% - 20%",
+				"costShareMax": "$35",
+				"costShareType": "coins"
+			},
+			{
+				"id": "14e2",
+				"benefitName": "Diabetes Self-Management Training",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14e1",
+				"benefitName": "Glaucoma Screening",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14d",
+				"benefitName": "Kidney Disease Education Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14c7",
+				"notes": "Members may have access to, but are not required to use, web/phone/virtual/telemedicine visits with select contracted network providers such as PCPs and Specialists. An office visit copay applies for the same amount as an in-office visit. Prior Authorization and/or referral rules apply based on the category of service. \r\n",
+				"benefitName": "Remote Access Technologies (including Web/Phone-based technologies and Nursing Hotline)",
+				"refRequired": true,
+				"authRequired": true,
+				"benefitValue": "$0 - $35",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14c4",
+				"notes": "Members are covered for a fitness benefit through SilverSneakers® at participating locations that includes instructor-led group fitness classes, use of exercise equipment, and other amenities.",
+				"benefitName": "Fitness Benefit",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14b",
+				"benefitName": "Annual Physical Exam",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "14a",
+				"benefitName": "Medicare-covered Zero Dollar Preventive Services",
+				"refRequired": false,
+				"authRequired": false
+			},
+			{
+				"id": "13b",
+				"benefitName": "Over-the-Counter (OTC) Items",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "12",
+				"notes": "N/A",
+				"benefitName": "Dialysis Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "11c2",
+				"benefitName": "Diabetic Therapeutic Shoes/Inserts",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "11c1",
+				"notes": "When meters and strips are obtained at pharmacies, coverage is limited to specific Ascencia/Bayer products.",
+				"benefitName": "Diabetic Supplies",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "11b2",
+				"benefitName": "Medical Supplies",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "11b1",
+				"benefitName": "Prosthetic Devices",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "11a",
+				"benefitName": "Durable Medical Equipment (DME)",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "10b1",
+				"benefitName": "Transportation Services -  Plan Approved Health-related Location",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitLimit": "24",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "10a2",
+				"benefitName": "Air Ambulance Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$220",
+				"costShareType": "copay"
+			},
+			{
+				"id": "10a1",
+				"benefitName": "Ground Ambulance Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$220",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9d",
+				"benefitName": "Outpatient Blood Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9c2",
+				"benefitName": "Group Sessions for Outpatient Substance Abuse",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$10",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9c1",
+				"benefitName": "Individual Sessions for Outpatient Substance Abuse",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9b",
+				"benefitName": "Ambulatory Surgical Center (ASC) Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$175",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9a2",
+				"benefitName": "Observation Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$250",
+				"costShareType": "copay"
+			},
+			{
+				"id": "9a1",
+				"benefitName": "Outpatient Hospital Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$250",
+				"costShareType": "copay"
+			},
+			{
+				"id": "8b3",
+				"benefitName": "Outpatient X-Ray Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "8b2",
+				"notes": "Authorization rules apply for certain Outpatient Therapeutic Radiological Services",
+				"benefitName": "Therapeutic Radiological Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins"
+			},
+			{
+				"id": "8b1",
+				"notes": "All diagnostic mammograms have a $0 member cost share. All other diagnostic radiology has a $200 member cost share.",
+				"benefitName": "Diagnostic Radiological Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$0 - $200",
+				"costShareType": "copay"
+			},
+			{
+				"id": "8a2",
+				"notes": "Authorization rules apply for certain Lab Services",
+				"benefitName": "Lab Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "8a1",
+				"notes": "All diagnostic colonoscopies have a $0 member cost share. All other diagnostic procedures have a $30 member cost share.",
+				"benefitName": "Diagnostic Procedures/Tests",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$0 - $30",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7k",
+				"benefitName": "Opioid Treatment Program Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7i",
+				"benefitName": "Physical Therapy and Speech-Language Pathology Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$35",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7h2",
+				"benefitName": "Group Sessions for Psychiatric Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$10",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7h1",
+				"benefitName": "Individual Sessions for Psychiatric Services",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7g",
+				"notes": "Medicare-covered acupuncture services do not require a referral or prior authorization.  All other services require a referral. \r\n\r\nCertain Medicare-covered services provided by a health care professional may require a prior authorization.",
+				"benefitName": "Other Health Care Professional",
+				"refRequired": true,
+				"authRequired": true,
+				"benefitValue": "$25",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7f",
+				"benefitName": "Podiatry Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$25",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7e2",
+				"benefitName": "Group Sessions for Mental Health Specialty Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$10",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7e1",
+				"benefitName": "Individual Sessions for Mental Health Specialty Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$15",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7d",
+				"notes": "Certain Medicare-covered services provided by a physician may require a prior authorization.",
+				"benefitName": "Physician Specialist Services",
+				"refRequired": true,
+				"authRequired": true,
+				"benefitValue": "$25",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7c",
+				"benefitName": "Occupational Therapy Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$35",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7b",
+				"benefitName": "Chiropractic Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "7a",
+				"benefitName": "Primary Care Physician Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4c2",
+				"benefitName": "Worldwide Urgent Coverage",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$125",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4c1",
+				"benefitName": "Worldwide Emergency Coverage",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$125",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4b",
+				"benefitName": "Urgently Needed Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$35",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4a",
+				"benefitName": "Emergency Services",
+				"refRequired": false,
+				"authRequired": false,
+				"benefitValue": "$125",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-4",
+				"benefitName": "SET for PAD Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-3",
+				"benefitName": "Pulmonary Rehabilitation Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-2",
+				"benefitName": "Intensive Cardiac Rehabilitation Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-1",
+				"benefitName": "Cardiac Rehabilitation Services",
+				"refRequired": true,
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay"
+			},
+			{
+				"id": "2",
+				"notes": "Admission to a new or different SNF facility within the same Benefit Period may start a new stay for copay administration purposes.",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 20",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "21 - 100",
+						"benefitValue": "$170",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Skilled Nursing Facility (SNF)",
+				"refRequired": false,
+				"authRequired": true
+			},
+			{
+				"id": "1b1",
+				"benefitName": "Additional Days for Inpatient Hospital Psychiatric",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitLimit": "unlimited"
+			},
+			{
+				"id": "1b",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 6",
+						"benefitValue": "$260",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "7 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Inpatient Hospital Psychiatric",
+				"refRequired": false,
+				"authRequired": true
+			},
+			{
+				"id": "1a1",
+				"benefitName": "Additional Days for Inpatient Hospital-Acute",
+				"refRequired": false,
+				"authRequired": true,
+				"benefitLimit": "unlimited"
+			},
+			{
+				"id": "1a",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 5",
+						"benefitValue": "$250",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "6 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Inpatient Hospital-Acute",
+				"refRequired": false,
+				"authRequired": true
+			}
+		],
+		"pharmacyTiers": [
+			{
+				"id": "6c626ee1-81e6-4823-bb8a-42972be07457",
+				"modelFactoryId": "RxTier1-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 1",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$4",
+				"nonPreferredCost2M": "$8",
+				"nonPreferredCost3M": "$12",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			},
+			{
+				"id": "ce24533e-0cea-4a8f-912c-3e191b60217b",
+				"modelFactoryId": "RxTier2-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 2",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$12",
+				"nonPreferredCost2M": "$24",
+				"nonPreferredCost3M": "$36",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			},
+			{
+				"id": "ac793ac2-fbca-4861-a339-99fb70a9f5c2",
+				"modelFactoryId": "RxTier3-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 3",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand",
+				"preferredCost1M": "$39",
+				"preferredCost2M": "$78",
+				"preferredCost3M": "$117",
+				"nonPreferredCost1M": "$47",
+				"nonPreferredCost2M": "$94",
+				"nonPreferredCost3M": "$141",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$97.50"
+			},
+			{
+				"id": "b0d4e322-ba79-4b3e-80b4-cdc946c2bac7",
+				"modelFactoryId": "RxTier4-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 4",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "$75",
+				"preferredCost2M": "$150",
+				"preferredCost3M": "$225",
+				"nonPreferredCost1M": "$100",
+				"nonPreferredCost2M": "$200",
+				"nonPreferredCost3M": "$300",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$187.50"
+			},
+			{
+				"id": "e1e20184-5bf7-4cef-a102-7726e66c9067",
+				"modelFactoryId": "RxTier5-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 5",
+				"tierType": "ICL",
+				"tierCostType": "coins",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "33%",
+				"preferredCost2M": null,
+				"preferredCost3M": null,
+				"nonPreferredCost1M": "33%",
+				"nonPreferredCost2M": null,
+				"nonPreferredCost3M": null,
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": "33%",
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": null
+			},
+			{
+				"id": "6d3530e4-5943-480f-87cc-f523a80c3dfe",
+				"modelFactoryId": "RxTier6-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 6",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$0",
+				"nonPreferredCost2M": "$0",
+				"nonPreferredCost3M": "$0",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			}
+		],
+		"annualDeductible": "$0.00",
+		"monthlyPlanPremium": "$0.00",
+		"drugPremiumPartD": "$0.00",
+		"providerDirectoryParentGroupId": 26,
+		"isDsnp": false,
+		"star": "5.00"
+	},
+	{
+		"id": "ec03a3c2-3308-4e86-9131-f27becbddb90",
+		"medicareContractId": "H6200",
+		"modelFactoryId": "H6200002000000",
+		"productId": "EHI00011",
+		"pbpId": "002",
+		"segmentId": "000",
+		"egwpId": "000",
+		"planYear": 2024,
+		"planType": "Local PPO",
+		"planName": "Essence Advantage Choice Plus (PPO) - St Louis Metro",
+		"planTranslationToken": "ESSENCE ADVANTAGE CHOICE PLUS (PPO) - ST LOUIS METRO",
+		"moopInn": "$3,000.00",
+		"moopCombined": "$5,000.00",
+		"clientModelFactoryId": "EHI",
+		"clientName": "Essence Healthcare",
+		"osb": null,
+		"planBenefits": [
+			{
+				"id": "11b2",
+				"benefitName": "Medical Supplies",
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "20%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "14a",
+				"benefitName": "Medicare-covered Zero Dollar Preventive Services",
+				"authRequired": false
+			},
+			{
+				"id": "17a",
+				"benefitName": "Eye Exams",
+				"authRequired": false,
+				"benefitValue": "$25",
+				"costShareType": "copay",
+				"oonBenefitValue": "$25",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "18b1",
+				"benefitName": "Hearing Aids (all types)",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "18a2",
+				"benefitName": "Fitting/Evaluation for Hearing Aid",
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Every 2 Years"
+			},
+			{
+				"id": "18a1",
+				"benefitName": "Routine Hearing Exams",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "18a",
+				"notes": "Hearing Aid Fitting exam is covered with purchase of new Hearing Aid(s)\r\n\r\n",
+				"benefitName": "Hearing Exams",
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "17b5",
+				"notes": "The minimum co-pay applies to UV treatment, tint, or standard plastic scratch coating and the maximum co-pay applies to standard and premium progressive lenses and standard anti-reflective coating. Between the min and max, copays are for standard polycarbonate lenses and standard anti-reflective coating. \nThe minimum coinsurance applies to premium progressive lenses and other coatings, oversized lenses, prism and other lens options, and the maximum coinsurance applies to contact lenses premium fit and follow-up.\n",
+				"benefitName": "Upgrades",
+				"authRequired": false,
+				"benefitValue": "$15 - $65,80% - 90%",
+				"costShareType": "both",
+				"oonBenefitValue": "$15 - $65,80% - 90%",
+				"oonCostShareType": "both"
+			},
+			{
+				"id": "12",
+				"benefitName": "Dialysis Services",
+				"authRequired": false,
+				"benefitValue": "20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "20%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "17b4",
+				"notes": "Standard plastic single, bifocal, trifocal, or lenticular lenses are $0 copay.\n",
+				"benefitName": "Eyeglass frames",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "17b2",
+				"notes": "Standard plastic single, bifocal, trifocal, or lenticular lenses are $0 copay.\n",
+				"benefitName": "Eyeglasses (lenses and frames)",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "17b1",
+				"notes": "Standard plastic single, bifocal, trifocal, or lenticular lenses are $0 copay.",
+				"benefitName": "Contact Lenses",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "17b",
+				"notes": "Medicare-covered\r\n1 pair of Medicare-covered eyeglass frames or contact lenses (or 2 six packs) after each cataract surgery\r\n1 pair of Medicare-covered eyeglass lenses (std plastic sgl, bifocal, trifocal, or lenticular) after each cataract surgery\r\n",
+				"benefitName": "Eyewear",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "17a1",
+				"benefitName": "Routine Eye Exams",
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16a2",
+				"notes": "Routine Cleaning (prophylaxis) – 2 every calendar year\nScaling in presence of generalized moderate or severe gingival inflammation, full mouth - 1 every calendar year\n\n",
+				"benefitName": "Prophylaxis (Cleaning)",
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16a1",
+				"benefitName": "Oral Exams",
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Other, Describe"
+			},
+			{
+				"id": "15-3",
+				"benefitName": "Other Medicare Part B Drugs",
+				"authRequired": true,
+				"benefitValue": "0% - 20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "0% - 40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "16b7",
+				"notes": "Removable complete, partial , immediate , overdentures or fixed dentures including retainer crowns, endosteal implants and abutments/retainers and guided tissue regeneration-1 every 5 calendar years\n\nBridge repair is once per 2 calendar years\nAnesthesia including deep sedation, inhalation of nitrous oxide, IV and non IV sedation\nConsultations-1 per provider per year\nVisits at extended care facilty or surgical center-6 per calendar year\nOcclusal analysi and complete adjustments-1 per 5 calendar years.\nLimited adjustments-once per calendar year.",
+				"benefitName": "Prosthodontics, Other Oral/Maxillofacial Surgery, Other Services",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "16b6",
+				"notes": "Simple extractions / Surgical extractions/Coronectomy  – 1 per tooth per lifetime\n\n",
+				"benefitName": "Extractions",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "16b5",
+				"notes": "Scaling and root planing – 1 per quadrant every 3 calendar years\nFull mouth debridement – 1 every 3 calendar years\nClinical crown lengthening - 1 per tooth per lifetime\nGingivectomy-gingivoplasty, gingival flap procedure, osseous surgery - 1 per quadrant every 3 calendar years\nPeriodontal Maintenance (following active therapy) – 4 every calendar year\n",
+				"benefitName": "Periodontics",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "16b4",
+				"notes": "Root canal treatment / Retreatment root canal therapy / Apicoectomy / Pulpotomy/Retrograde filling – 1 per tooth per lifetime\n",
+				"benefitName": "Endodontics",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "16b3",
+				"notes": "Amalgam and resin fillings-1 per tooth, per surface every two calendar years\nInlays/onlays, crown and associated services-1 per tooth, every 5 calendar years\n",
+				"benefitName": "Restorative Services",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "16b",
+				"benefitName": "Comprehensive Dental",
+				"authRequired": true,
+				"benefitValue": "$25",
+				"costShareType": "copay",
+				"oonBenefitValue": "$25",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "11c2",
+				"benefitName": "Diabetic Therapeutic Shoes/Inserts",
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "0% - 20%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "11c1",
+				"notes": "When meters and strips are obtained at pharmacies, coverage is limited to specific Abbott products.",
+				"benefitName": "Diabetic Supplies",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "0% - 20%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "16a4",
+				"notes": "Intraoral complete series, Intraoral tomosynthesis, Vertical bitewings ((7-8 images), Panoramic radiographic image, – 1 every 3 calendar years\nHorizontal Bitewings (one, two, three, four images), Intraoral tomosynthesis-bitewing, and Intraoral tomosynthesis-periopical radiographic – 1 every calendar year\nIntraoral occulusal radiographic image - 2 per calendar year\n",
+				"benefitName": "Dental X-Rays",
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17b3",
+				"notes": "Standard plastic single, bifocal, trifocal, or lenticular lenses are $0 copay.\n",
+				"benefitName": "Eyeglass lenses",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "16a3",
+				"benefitName": "Fluoride Treatment",
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "15-2",
+				"benefitName": "Medicare Part B Chemotherapy/Radiation Drugs",
+				"authRequired": true,
+				"benefitValue": "0% - 20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "0% - 40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "4c1",
+				"benefitName": "Worldwide Emergency Coverage",
+				"authRequired": false,
+				"benefitValue": "$110",
+				"costShareType": "copay"
+			},
+			{
+				"id": "15-1",
+				"benefitName": "Medicare Part B Insulin Drugs",
+				"authRequired": false,
+				"benefitValue": "0% - 20%",
+				"costShareMax": "$35",
+				"costShareType": "coins",
+				"oonBenefitValue": "0% - 40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "14e5",
+				"benefitName": "EKG following Welcome Visit",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14e4",
+				"benefitName": "Digital Rectal Exams",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14e3",
+				"benefitName": "Barium Enemas",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14e2",
+				"benefitName": "Diabetes Self-Management Training",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14e1",
+				"benefitName": "Glaucoma Screening",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14d",
+				"benefitName": "Kidney Disease Education Services",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14c7",
+				"notes": "Members may have access to, but are not required to use, web/phone/virtual/telemedicine visits with select contracted network providers such as PCPs and Specialists. An office visit copay applies for the same amount as an in-office visit. Prior Authorization rules apply based on the category of service. \r\n",
+				"benefitName": "Remote Access Technologies (including Web/Phone-based technologies and Nursing Hotline)",
+				"authRequired": true,
+				"benefitValue": "$0 - $40",
+				"costShareType": "copay",
+				"oonBenefitValue": "$0 - $40",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14c4",
+				"notes": "Members are covered for a fitness benefit through SilverSneakers® at participating locations that includes instructor-led group fitness classes, use of exercise equipment, and other amenities.",
+				"benefitName": "Fitness Benefit",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14b",
+				"benefitName": "Annual Physical Exam",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "13b",
+				"benefitName": "Over-the-Counter (OTC) Items",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "11b1",
+				"benefitName": "Prosthetic Devices",
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "20%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "11a",
+				"benefitName": "Durable Medical Equipment (DME)",
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "10b1",
+				"benefitName": "Transportation Services -  Plan Approved Health-related Location",
+				"authRequired": false,
+				"benefitLimit": "24",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "10a2",
+				"benefitName": "Air Ambulance Services",
+				"authRequired": true,
+				"benefitValue": "$250",
+				"costShareType": "copay",
+				"oonBenefitValue": "$250",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "10a1",
+				"notes": "N/A",
+				"benefitName": "Ground Ambulance Services",
+				"authRequired": true,
+				"benefitValue": "$250",
+				"costShareType": "copay",
+				"oonBenefitValue": "$250",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "9d",
+				"benefitName": "Outpatient Blood Services",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "9c2",
+				"benefitName": "Group Sessions for Outpatient Substance Abuse",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "9c1",
+				"benefitName": "Individual Sessions for Outpatient Substance Abuse",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "9b",
+				"benefitName": "Ambulatory Surgical Center (ASC) Services",
+				"authRequired": true,
+				"benefitValue": "$180",
+				"costShareType": "copay",
+				"oonBenefitValue": "$180",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "9a2",
+				"benefitName": "Observation Services",
+				"authRequired": false,
+				"benefitValue": "$280",
+				"costShareType": "copay",
+				"oonBenefitValue": "$280",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "3-3",
+				"benefitName": "Pulmonary Rehabilitation Services",
+				"authRequired": true,
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "9a1",
+				"notes": "OP Hospital Surgery is charged per surgery\nAuthorization rules apply for certain Medicare-covered Outpatient Hospital Services.\n",
+				"benefitName": "Outpatient Hospital Services",
+				"authRequired": true,
+				"benefitValue": "$280",
+				"costShareType": "copay",
+				"oonBenefitValue": "$280",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "8b3",
+				"benefitName": "Outpatient X-Ray Services",
+				"authRequired": false,
+				"benefitValue": "$15",
+				"costShareType": "copay",
+				"oonBenefitValue": "$15",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "8b2",
+				"notes": "Authorization rules apply for certain Outpatient Therapeutic Radiological Services.",
+				"benefitName": "Therapeutic Radiological Services",
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "8b1",
+				"notes": "All diagnostic mammograms have a $0 member cost share. All other diagnostic radiology has a $200 member cost share.",
+				"benefitName": "Diagnostic Radiological Services",
+				"authRequired": false,
+				"benefitValue": "$0 - $200",
+				"costShareType": "copay",
+				"oonBenefitValue": "$0 - $200",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "8a2",
+				"notes": "Authorization rules apply for certain Lab Services",
+				"benefitName": "Lab Services",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "8a1",
+				"notes": "All diagnostic colonoscopies have a $0 member cost share. All other diagnostic procedures have a $30 member cost share.",
+				"benefitName": "Diagnostic Procedures/Tests",
+				"authRequired": false,
+				"benefitValue": "$0 - $30",
+				"costShareType": "copay",
+				"oonBenefitValue": "$0 - $30",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7k",
+				"benefitName": "Opioid Treatment Program Services",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7i",
+				"benefitName": "Physical Therapy and Speech-Language Pathology Services",
+				"authRequired": false,
+				"benefitValue": "$40",
+				"costShareType": "copay",
+				"oonBenefitValue": "$40",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7h2",
+				"benefitName": "Group Sessions for Psychiatric Services",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7h1",
+				"benefitName": "Individual Sessions for Psychiatric Services",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7g",
+				"notes": "Certain medicare-covered services provided by a health care professional may require a prior authorization",
+				"benefitName": "Other Health Care Professional",
+				"authRequired": true,
+				"benefitValue": "$25",
+				"costShareType": "copay",
+				"oonBenefitValue": "$25",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7f",
+				"benefitName": "Podiatry Services",
+				"authRequired": false,
+				"benefitValue": "$25",
+				"costShareType": "copay",
+				"oonBenefitValue": "$25",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7e2",
+				"benefitName": "Group Sessions for Mental Health Specialty Services",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7e1",
+				"benefitName": "Individual Sessions for Mental Health Specialty Services",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7d",
+				"notes": "Certain medicare-covered services provided by a physician may require a prior authorization",
+				"benefitName": "Physician Specialist Services",
+				"authRequired": true,
+				"benefitValue": "$25",
+				"costShareType": "copay",
+				"oonBenefitValue": "$25",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7c",
+				"benefitName": "Occupational Therapy Services",
+				"authRequired": false,
+				"benefitValue": "$40",
+				"costShareType": "copay",
+				"oonBenefitValue": "$40",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7b",
+				"benefitName": "Chiropractic Services",
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7a",
+				"benefitName": "Primary Care Physician Services",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "$15",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "6",
+				"benefitName": "Home Health Services",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "5",
+				"benefitName": "Partial Hospitalization",
+				"authRequired": true,
+				"benefitValue": "$45",
+				"costShareType": "copay",
+				"oonBenefitValue": "$45",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "4c2",
+				"benefitName": "Worldwide Urgent Coverage",
+				"authRequired": false,
+				"benefitValue": "$110",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4b",
+				"benefitName": "Urgently Needed Services",
+				"authRequired": false,
+				"benefitValue": "$40",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4a",
+				"benefitName": "Emergency Services",
+				"authRequired": false,
+				"benefitValue": "$110",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-4",
+				"benefitName": "SET for PAD Services",
+				"authRequired": true,
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "3-2",
+				"benefitName": "Intensive Cardiac Rehabilitation Services",
+				"authRequired": true,
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "3-1",
+				"benefitName": "Cardiac Rehabilitation Services",
+				"authRequired": true,
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "2",
+				"notes": "Admission to a new or different SNF facility within the same Benefit Period may start a new stay for copay administration purposes.",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 20",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "21 - 100",
+						"benefitValue": "$170",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Skilled Nursing Facility (SNF)",
+				"authRequired": true,
+				"oonIntervals": [
+					{
+						"id": "1",
+						"benefitLimit": "undefined - undefined",
+						"benefitValue": "40%",
+						"costShareType": "coins",
+						"benefitLimitPeriod": "Days"
+					}
+				]
+			},
+			{
+				"id": "1b1",
+				"benefitName": "Additional Days for Inpatient Hospital Psychiatric",
+				"authRequired": true,
+				"benefitLimit": "unlimited"
+			},
+			{
+				"id": "1b",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 6",
+						"benefitValue": "$295",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "7 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Inpatient Hospital Psychiatric",
+				"authRequired": true,
+				"oonIntervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 6",
+						"benefitValue": "$295",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "7 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				]
+			},
+			{
+				"id": "1a",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 5",
+						"benefitValue": "$275",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "6 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Inpatient Hospital-Acute",
+				"authRequired": true,
+				"oonIntervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 5",
+						"benefitValue": "$275",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "6 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				]
+			},
+			{
+				"id": "1a1",
+				"benefitName": "Additional Days for Inpatient Hospital-Acute",
+				"authRequired": true,
+				"benefitLimit": "unlimited"
+			}
+		],
+		"pharmacyTiers": [
+			{
+				"id": "e15c3194-85f4-4808-815f-57c02addc85f",
+				"modelFactoryId": "RxTier1-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 1",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$4",
+				"nonPreferredCost2M": "$8",
+				"nonPreferredCost3M": "$12",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			},
+			{
+				"id": "b62de064-1c7c-4d24-8a99-b7f51bce773d",
+				"modelFactoryId": "RxTier2-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 2",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$12",
+				"nonPreferredCost2M": "$24",
+				"nonPreferredCost3M": "$36",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			},
+			{
+				"id": "69e15fd3-f52b-4a8a-a175-a4b0eb0a3b7c",
+				"modelFactoryId": "RxTier3-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 3",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand",
+				"preferredCost1M": "$45",
+				"preferredCost2M": "$90",
+				"preferredCost3M": "$135",
+				"nonPreferredCost1M": "$47",
+				"nonPreferredCost2M": "$94",
+				"nonPreferredCost3M": "$141",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$112.50"
+			},
+			{
+				"id": "3772005d-dd25-43fd-8665-1d510010985d",
+				"modelFactoryId": "RxTier4-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 4",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "$95",
+				"preferredCost2M": "$190",
+				"preferredCost3M": "$285",
+				"nonPreferredCost1M": "$100",
+				"nonPreferredCost2M": "$200",
+				"nonPreferredCost3M": "$300",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$237.50"
+			},
+			{
+				"id": "d1c2157e-1d41-472a-8ce6-b4de227c7fda",
+				"modelFactoryId": "RxTier5-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 5",
+				"tierType": "ICL",
+				"tierCostType": "coins",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "33%",
+				"preferredCost2M": null,
+				"preferredCost3M": null,
+				"nonPreferredCost1M": "33%",
+				"nonPreferredCost2M": null,
+				"nonPreferredCost3M": null,
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": "33%",
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": null
+			}
+		],
+		"annualDeductible": "$0.00",
+		"monthlyPlanPremium": "$22.20",
+		"drugPremiumPartD": "$0.00",
+		"providerDirectoryParentGroupId": 59,
+		"isDsnp": false,
+		"star": null
+	},
+	{
+		"id": "ccc543e9-133b-4503-9bb6-82b6aeea8efe",
+		"medicareContractId": "H6200",
+		"modelFactoryId": "H6200001000000",
+		"productId": "EHI00010",
+		"pbpId": "001",
+		"segmentId": "000",
+		"egwpId": "000",
+		"planYear": 2024,
+		"planType": "Local PPO",
+		"planName": "Essence Advantage Choice (PPO) - St Louis Metro",
+		"planTranslationToken": "ESSENCE ADVANTAGE CHOICE (PPO) - ST LOUIS METRO",
+		"moopInn": "$3,400.00",
+		"moopCombined": "$5,400.00",
+		"clientModelFactoryId": "EHI",
+		"clientName": "Essence Healthcare",
+		"osb": null,
+		"planBenefits": [
+			{
+				"id": "11b2",
+				"benefitName": "Medical Supplies",
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "20%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "17a",
+				"benefitName": "Eye Exams",
+				"authRequired": false,
+				"benefitValue": "$30",
+				"costShareType": "copay",
+				"oonBenefitValue": "$30",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "18b1",
+				"benefitName": "Hearing Aids (all types)",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "18a2",
+				"benefitName": "Fitting/Evaluation for Hearing Aid",
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Every 2 Years"
+			},
+			{
+				"id": "18a1",
+				"benefitName": "Routine Hearing Exams",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "18a",
+				"notes": "Hearing Aid Fitting exam is covered with purchase of new Hearing Aid(s)\r\n\r\n",
+				"benefitName": "Hearing Exams",
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "17b5",
+				"notes": "The minimum co-pay applies to UV treatment, tint, or standard plastic scratch coating and the maximum co-pay applies to standard and premium progressive lenses and standard anti-reflective coating. Between the min and max, copays are for standard polycarbonate lenses and standard anti-reflective coating. \nThe minimum coinsurance applies to premium progressive lenses and other coatings, oversized lenses, prism and other lens options, and the maximum coinsurance applies to contact lenses premium fit and follow-up.\n",
+				"benefitName": "Upgrades",
+				"authRequired": false,
+				"benefitValue": "$15 - $65,80% - 90%",
+				"costShareType": "both",
+				"oonBenefitValue": "$15 - $65,80% - 90%",
+				"oonCostShareType": "both"
+			},
+			{
+				"id": "12",
+				"benefitName": "Dialysis Services",
+				"authRequired": false,
+				"benefitValue": "20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "20%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "17b4",
+				"notes": "Standard plastic single, bifocal, trifocal, or lenticular lenses are $0 copay. \n",
+				"benefitName": "Eyeglass frames",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "15-2",
+				"benefitName": "Medicare Part B Chemotherapy/Radiation Drugs",
+				"authRequired": true,
+				"benefitValue": "0% - 20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "0% - 40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "17b2",
+				"notes": "Standard plastic single, bifocal, trifocal, or lenticular lenses are $0 copay. ",
+				"benefitName": "Eyeglasses (lenses and frames)",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "17b1",
+				"notes": "Standard plastic single, bifocal, trifocal, or lenticular lenses are $0 copay.\n",
+				"benefitName": "Contact Lenses",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "17b",
+				"notes": "Medicare-covered\r\n1 pair of Medicare-covered eyeglass frames or contact lenses (or 2 six packs) after each cataract surgery\r\n1 pair of Medicare-covered eyeglass lenses (std plastic sgl, bifocal, trifocal, or lenticular) after each cataract surgery\r\n",
+				"benefitName": "Eyewear",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "17a1",
+				"benefitName": "Routine Eye Exams",
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16a2",
+				"notes": "Routine Cleaning (prophylaxis) – 2 every calendar year\nScaling in presence of generalized moderate or severe gingival inflammation, full mouth - 1 every calendar year\n\n",
+				"benefitName": "Prophylaxis (Cleaning)",
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "16a1",
+				"benefitName": "Oral Exams",
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Other, Describe"
+			},
+			{
+				"id": "15-3",
+				"benefitName": "Other Medicare Part B Drugs",
+				"authRequired": true,
+				"benefitValue": "0% - 20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "0% - 40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "16b7",
+				"notes": "Removable complete, partial , immediate , overdentures or fixed dentures including retainer crowns, endosteal implants and abutments/retainers and guided tissue regeneration-1 every 5 calendar years\n\nBridge repair is once per 2 calendar years\nAnesthesia including deep sedation, inhalation of nitrous oxide, IV and non IV sedation\nConsultations-1 per provider per year\nVisits at extended care facilty or surgical center-6 per calendar year\nOcclusal analysi and complete adjustments-1 per 5 calendar years.\nLimited adjustments-once per calendar year.",
+				"benefitName": "Prosthodontics, Other Oral/Maxillofacial Surgery, Other Services",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "16b6",
+				"notes": "Simple extractions / Surgical extractions/Coronectomy  – 1 per tooth per lifetime\n\n",
+				"benefitName": "Extractions",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "16b5",
+				"notes": "Scaling and root planing – 1 per quadrant every 3 calendar years\nFull mouth debridement – 1 every 3 calendar years\nClinical crown lengthening - 1 per tooth per lifetime\nGingivectomy-gingivoplasty, gingival flap procedure, osseous surgery - 1 per quadrant every 3 calendar years\nPeriodontal Maintenance (following active therapy) – 4 every calendar year\n",
+				"benefitName": "Periodontics",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "16b4",
+				"notes": "Root canal treatment / Retreatment root canal therapy / Apicoectomy / Pulpotomy/Retrograde filling – 1 per tooth per lifetime\n",
+				"benefitName": "Endodontics",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "16b3",
+				"notes": "Amalgam and resin fillings-1 per tooth, per surface every two calendar years\nInlays/onlays, crown and associated services-1 per tooth, every 5 calendar years\n",
+				"benefitName": "Restorative Services",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "11c2",
+				"benefitName": "Diabetic Therapeutic Shoes/Inserts",
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "0% - 20%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "11c1",
+				"notes": "When meters and strips are obtained at pharmacies, coverage is limited to specific Abbott products.",
+				"benefitName": "Diabetic Supplies",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "0% - 20%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "16a4",
+				"notes": "Intraoral complete series, Intraoral tomosynthesis, Vertical bitewings ((7-8 images), Panoramic radiographic image, – 1 every 3 calendar years\nHorizontal Bitewings (one, two, three, four images), Intraoral tomosynthesis-bitewing, and Intraoral tomosynthesis-periopical radiographic  – 1 every calendar year\nIntraoral occulusal radiographic image - 2 per calendar year\n",
+				"benefitName": "Dental X-Rays",
+				"authRequired": false,
+				"benefitLimit": "1",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "17b3",
+				"notes": "Standard plastic single, bifocal, trifocal, or lenticular lenses are $0 copay. \n",
+				"benefitName": "Eyeglass lenses",
+				"authRequired": false,
+				"benefitLimit": "unlimited",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "16a3",
+				"benefitName": "Fluoride Treatment",
+				"authRequired": false,
+				"benefitLimit": "2",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "4c1",
+				"benefitName": "Worldwide Emergency Coverage",
+				"authRequired": false,
+				"benefitValue": "$110",
+				"costShareType": "copay"
+			},
+			{
+				"id": "15-1",
+				"benefitName": "Medicare Part B Insulin Drugs",
+				"authRequired": false,
+				"benefitValue": "0% - 20%",
+				"costShareMax": "$35",
+				"costShareType": "coins",
+				"oonBenefitValue": "0% - 40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "14e5",
+				"benefitName": "EKG following Welcome Visit",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14e4",
+				"benefitName": "Digital Rectal Exams",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14e3",
+				"benefitName": "Barium Enemas",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14e2",
+				"benefitName": "Diabetes Self-Management Training",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14e1",
+				"benefitName": "Glaucoma Screening",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14d",
+				"benefitName": "Kidney Disease Education Services",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14c7",
+				"notes": "Members may have access to, but are not required to use, web/phone/virtual/telemedicine visits with select contracted network providers such as PCPs and Specialists. An office visit copay applies for the same amount as an in-office visit. Prior Authorization rules apply based on the category of service. \r\n",
+				"benefitName": "Remote Access Technologies (including Web/Phone-based technologies and Nursing Hotline)",
+				"authRequired": true,
+				"benefitValue": "$0 - $40",
+				"costShareType": "copay",
+				"oonBenefitValue": "$0 - $40",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14c4",
+				"notes": "Members are covered for a fitness benefit through SilverSneakers® at participating locations that includes instructor-led group fitness classes, use of exercise equipment, and other amenities.",
+				"benefitName": "Fitness Benefit",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "14b",
+				"benefitName": "Annual Physical Exam",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "13b",
+				"benefitName": "Over-the-Counter (OTC) Items",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "11b1",
+				"benefitName": "Prosthetic Devices",
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "20%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "11a",
+				"benefitName": "Durable Medical Equipment (DME)",
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "10b1",
+				"benefitName": "Transportation Services -  Plan Approved Health-related Location",
+				"authRequired": false,
+				"benefitLimit": "24",
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay",
+				"benefitLimitPeriod": "Every Year"
+			},
+			{
+				"id": "10a2",
+				"benefitName": "Air Ambulance Services",
+				"authRequired": true,
+				"benefitValue": "$270",
+				"costShareType": "copay",
+				"oonBenefitValue": "$270",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "10a1",
+				"notes": "N/A",
+				"benefitName": "Ground Ambulance Services",
+				"authRequired": true,
+				"benefitValue": "$270",
+				"costShareType": "copay",
+				"oonBenefitValue": "$270",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "9d",
+				"benefitName": "Outpatient Blood Services",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "9c2",
+				"benefitName": "Group Sessions for Outpatient Substance Abuse",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "9c1",
+				"benefitName": "Individual Sessions for Outpatient Substance Abuse",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "9b",
+				"benefitName": "Ambulatory Surgical Center (ASC) Services",
+				"authRequired": true,
+				"benefitValue": "$180",
+				"costShareType": "copay",
+				"oonBenefitValue": "$180",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "9a2",
+				"benefitName": "Observation Services",
+				"authRequired": false,
+				"benefitValue": "$280",
+				"costShareType": "copay",
+				"oonBenefitValue": "$280",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "9a1",
+				"notes": "OP Hospital Surgery is charged per surgery\nAuthorization rules apply for certain Medicare-covered Outpatient Hospital Services.\n",
+				"benefitName": "Outpatient Hospital Services",
+				"authRequired": true,
+				"benefitValue": "$280",
+				"costShareType": "copay",
+				"oonBenefitValue": "$280",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "8b3",
+				"benefitName": "Outpatient X-Ray Services",
+				"authRequired": false,
+				"benefitValue": "$15",
+				"costShareType": "copay",
+				"oonBenefitValue": "$15",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "8b2",
+				"notes": "Authorization rules apply for certain Outpatient Therapeutic Radiological Services.",
+				"benefitName": "Therapeutic Radiological Services",
+				"authRequired": true,
+				"benefitValue": "20%",
+				"costShareType": "coins",
+				"oonBenefitValue": "40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "8b1",
+				"notes": "All diagnostic mammograms have a $0 member cost share. All other diagnostic radiology has a $200 member cost share.",
+				"benefitName": "Diagnostic Radiological Services",
+				"authRequired": false,
+				"benefitValue": "$0 - $200",
+				"costShareType": "copay",
+				"oonBenefitValue": "$0 - $200",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "8a2",
+				"notes": "Authorization rules apply for certain Lab Services",
+				"benefitName": "Lab Services",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "8a1",
+				"notes": "All diagnostic colonoscopies have a $0 member cost share. All other diagnostic procedures have a $30 member cost share.",
+				"benefitName": "Diagnostic Procedures/Tests",
+				"authRequired": false,
+				"benefitValue": "$0 - $30",
+				"costShareType": "copay",
+				"oonBenefitValue": "$0 - $30",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7k",
+				"benefitName": "Opioid Treatment Program Services",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7i",
+				"benefitName": "Physical Therapy and Speech-Language Pathology Services",
+				"authRequired": false,
+				"benefitValue": "$40",
+				"costShareType": "copay",
+				"oonBenefitValue": "$40",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7h2",
+				"benefitName": "Group Sessions for Psychiatric Services",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7h1",
+				"benefitName": "Individual Sessions for Psychiatric Services",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7g",
+				"notes": "Certain medicare-covered services provided by a health care professional may require a prior authorization",
+				"benefitName": "Other Health Care Professional",
+				"authRequired": true,
+				"benefitValue": "$30",
+				"costShareType": "copay",
+				"oonBenefitValue": "$30",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7f",
+				"benefitName": "Podiatry Services",
+				"authRequired": false,
+				"benefitValue": "$30",
+				"costShareType": "copay",
+				"oonBenefitValue": "$30",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7e2",
+				"benefitName": "Group Sessions for Mental Health Specialty Services",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7e1",
+				"benefitName": "Individual Sessions for Mental Health Specialty Services",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "Zero",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7d",
+				"notes": "Certain medicare-covered services provided by a physician may require a prior authorization",
+				"benefitName": "Physician Specialist Services",
+				"authRequired": true,
+				"benefitValue": "$30",
+				"costShareType": "copay",
+				"oonBenefitValue": "$30",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7c",
+				"benefitName": "Occupational Therapy Services",
+				"authRequired": false,
+				"benefitValue": "$40",
+				"costShareType": "copay",
+				"oonBenefitValue": "$40",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7b",
+				"benefitName": "Chiropractic Services",
+				"authRequired": false,
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "7a",
+				"benefitName": "Primary Care Physician Services",
+				"authRequired": false,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "$15",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "6",
+				"benefitName": "Home Health Services",
+				"authRequired": true,
+				"benefitValue": "Zero",
+				"costShareType": "copay",
+				"oonBenefitValue": "40%",
+				"oonCostShareType": "coins"
+			},
+			{
+				"id": "5",
+				"benefitName": "Partial Hospitalization",
+				"authRequired": true,
+				"benefitValue": "$45",
+				"costShareType": "copay",
+				"oonBenefitValue": "$45",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "4c2",
+				"benefitName": "Worldwide Urgent Coverage",
+				"authRequired": false,
+				"benefitValue": "$110",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4b",
+				"benefitName": "Urgently Needed Services",
+				"authRequired": false,
+				"benefitValue": "$40",
+				"costShareType": "copay"
+			},
+			{
+				"id": "4a",
+				"benefitName": "Emergency Services",
+				"authRequired": false,
+				"benefitValue": "$110",
+				"costShareType": "copay"
+			},
+			{
+				"id": "3-4",
+				"benefitName": "SET for PAD Services",
+				"authRequired": true,
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "3-3",
+				"benefitName": "Pulmonary Rehabilitation Services",
+				"authRequired": true,
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "3-2",
+				"benefitName": "Intensive Cardiac Rehabilitation Services",
+				"authRequired": true,
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "3-1",
+				"benefitName": "Cardiac Rehabilitation Services",
+				"authRequired": true,
+				"benefitValue": "$20",
+				"costShareType": "copay",
+				"oonBenefitValue": "$20",
+				"oonCostShareType": "copay"
+			},
+			{
+				"id": "2",
+				"notes": "Admission to a new or different SNF facility within the same Benefit Period may start a new stay for copay administration purposes.",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 20",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "21 - 100",
+						"benefitValue": "$170",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Skilled Nursing Facility (SNF)",
+				"authRequired": true,
+				"oonIntervals": [
+					{
+						"id": "1",
+						"benefitLimit": "undefined - undefined",
+						"benefitValue": "40%",
+						"costShareType": "coins",
+						"benefitLimitPeriod": "Days"
+					}
+				]
+			},
+			{
+				"id": "1b1",
+				"benefitName": "Additional Days for Inpatient Hospital Psychiatric",
+				"authRequired": true,
+				"benefitLimit": "unlimited"
+			},
+			{
+				"id": "1b",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 5",
+						"benefitValue": "$300",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "6 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Inpatient Hospital Psychiatric",
+				"authRequired": true,
+				"oonIntervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 5",
+						"benefitValue": "$300",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "6 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				]
+			},
+			{
+				"id": "1a1",
+				"benefitName": "Additional Days for Inpatient Hospital-Acute",
+				"authRequired": true,
+				"benefitLimit": "unlimited"
+			},
+			{
+				"id": "1a",
+				"intervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 5",
+						"benefitValue": "$290",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "6 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				],
+				"benefitName": "Inpatient Hospital-Acute",
+				"authRequired": true,
+				"oonIntervals": [
+					{
+						"id": "1",
+						"benefitLimit": "1 - 5",
+						"benefitValue": "$290",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					},
+					{
+						"id": "2",
+						"benefitLimit": "6 - 90",
+						"benefitValue": "$0",
+						"costShareType": "copay",
+						"benefitLimitPeriod": "Days"
+					}
+				]
+			},
+			{
+				"id": "14a",
+				"benefitName": "Medicare-covered Zero Dollar Preventive Services",
+				"authRequired": false
+			},
+			{
+				"id": "16b",
+				"benefitName": "Comprehensive Dental",
+				"authRequired": true,
+				"benefitValue": "$30",
+				"costShareType": "copay",
+				"oonBenefitValue": "$30",
+				"oonCostShareType": "copay"
+			}
+		],
+		"pharmacyTiers": [
+			{
+				"id": "bccf7b08-6804-4875-ac4a-cfc74d8ffab7",
+				"modelFactoryId": "RxTier1-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 1",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$4",
+				"nonPreferredCost2M": "$8",
+				"nonPreferredCost3M": "$12",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			},
+			{
+				"id": "abf32506-95b8-4aba-b0a0-3aa12e994cba",
+				"modelFactoryId": "RxTier2-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 2",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Generic",
+				"preferredCost1M": "$0",
+				"preferredCost2M": "$0",
+				"preferredCost3M": "$0",
+				"nonPreferredCost1M": "$12",
+				"nonPreferredCost2M": "$24",
+				"nonPreferredCost3M": "$36",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$0"
+			},
+			{
+				"id": "a49a1b2b-7579-4637-9673-5335f352a184",
+				"modelFactoryId": "RxTier3-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 3",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand",
+				"preferredCost1M": "$45",
+				"preferredCost2M": "$90",
+				"preferredCost3M": "$135",
+				"nonPreferredCost1M": "$47",
+				"nonPreferredCost2M": "$94",
+				"nonPreferredCost3M": "$141",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$112.50"
+			},
+			{
+				"id": "e1767b87-90ef-4e48-9a49-0c90d69d4faa",
+				"modelFactoryId": "RxTier4-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 4",
+				"tierType": "ICL",
+				"tierCostType": "copay",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "$95",
+				"preferredCost2M": "$190",
+				"preferredCost3M": "$285",
+				"nonPreferredCost1M": "$100",
+				"nonPreferredCost2M": "$200",
+				"nonPreferredCost3M": "$300",
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": null,
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": "$237.50"
+			},
+			{
+				"id": "f3710190-69e5-43c2-9690-ba42e45bd3e7",
+				"modelFactoryId": "RxTier5-ICL",
+				"tierName": null,
+				"tierLevel": "Tier 5",
+				"tierType": "ICL",
+				"tierCostType": "coins",
+				"drugType": "Brand;Generic",
+				"preferredCost1M": "33%",
+				"preferredCost2M": null,
+				"preferredCost3M": null,
+				"nonPreferredCost1M": "33%",
+				"nonPreferredCost2M": null,
+				"nonPreferredCost3M": null,
+				"oonCost1M": null,
+				"oonCost2M": null,
+				"oonCost3M": null,
+				"mailOrderCost1M": "33%",
+				"mailOrderCost2M": null,
+				"mailOrderCost3M": null
+			}
+		],
+		"annualDeductible": "$0.00",
+		"monthlyPlanPremium": "$0.00",
+		"drugPremiumPartD": "$0.00",
+		"providerDirectoryParentGroupId": 59,
+		"isDsnp": false,
+		"star": null
+	}
+]
