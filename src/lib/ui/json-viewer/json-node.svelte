@@ -1,4 +1,6 @@
 <script lang="ts">
+	import JsonIcon from '~icons/tabler/json';
+	import TableIcon from '~icons/octicon/table-24';
 	import ObjectArrayTable from './object-array-table.svelte';
 
 	const {
@@ -139,8 +141,14 @@
 					<button
 						onclick={() => (showTable = !showTable)}
 						title={showTable ? 'Click to view as JSON' : 'Click to view as table'}
-						class="options button border px-1 py-0">{showTable ? '§' : '▤'}</button
+						class="options button border px-1 py-0"
 					>
+						{#if showTable}
+							<JsonIcon />
+						{:else}
+							<TableIcon />
+						{/if}
+					</button>
 				{/if}
 
 				{#if isArrayOfObjects && showTable}
