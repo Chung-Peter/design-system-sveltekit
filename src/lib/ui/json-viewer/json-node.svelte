@@ -1,4 +1,6 @@
 <script lang="ts">
+	import ObjectArrayTable from './object-array-table.svelte';
+
 	const {
 		data,
 		depth = 0,
@@ -18,6 +20,7 @@
 	const isArrayOfObjects = $derived(
 		Array.isArray(data) && data.length > 0 && typeof data[0] === 'object'
 	);
+	let showTable = $state(true);
 
 	const sortedData = $derived(
 		Array.isArray(data) && sortOrder
@@ -83,6 +86,7 @@
 						&rbrack;{#if !isLast},{/if}
 					</div>
 				{/if}
+
 				<!-- <span>Array [{data.length}]</span> -->
 				<!-- {#if isArrayOfObjects}
            {#each getObjectKeys(data[0]) as key}
@@ -131,21 +135,33 @@
 
 		<div class="accordion-content node-data ml-10">
 			{#if isArray}
-				<div class="is-array entry">
-					{#each filteredData as entry, index}
-						<div class="array-index select-none">[{index}]:</div>
-						<!-- <div class="array-data" class:is-last={index === filteredData.length - 1}> -->
-						<div class="value">
-							<svelte:self
-								data={entry}
-								depth={depth + 1}
-								{initialOpenDepth}
-								isLast={index === filteredData.length - 1}
-							/>
-						</div>
-						<!-- </div> -->
-					{/each}
-				</div>
+				{#if isArrayOfObjects}
+					<button
+						onclick={() => (showTable = !showTable)}
+						title={showTable ? 'Click to view as JSON' : 'Click to view as table'}
+						class="options button border px-1 py-0">{showTable ? '§' : '▤'}</button
+					>
+				{/if}
+
+				{#if isArrayOfObjects && showTable}
+					<ObjectArrayTable data={filteredData} />
+				{:else}
+					<div class="is-array entry">
+						{#each filteredData as entry, index}
+							<div class="array-index select-none">[{index}]:</div>
+							<!-- <div class="array-data" class:is-last={index === filteredData.length - 1}> -->
+							<div class="value">
+								<svelte:self
+									data={entry}
+									depth={depth + 1}
+									{initialOpenDepth}
+									isLast={index === filteredData.length - 1}
+								/>
+							</div>
+							<!-- </div> -->
+						{/each}
+					</div>
+				{/if}
 			{:else if isObject}
 				<div class="is-object entry">
 					{#each Object.entries(filteredData) as [key, value], index}

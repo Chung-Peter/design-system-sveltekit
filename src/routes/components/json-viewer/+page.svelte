@@ -24,7 +24,7 @@
 	};
 </script>
 
-<JSONViewer {data} initialOpenDepth={2} />
+<JSONViewer {data} initialOpenDepth={3} />
 
 <div class="my-4">
 	<div>input data: string</div>
