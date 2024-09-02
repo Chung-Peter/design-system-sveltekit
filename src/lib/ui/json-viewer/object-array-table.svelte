@@ -1,6 +1,6 @@
 <script lang="ts">
 	import WrapTextIcon from '~icons/uim/wrap-text';
-
+	import CopyToClipboard from '$lib/ui/copy-to-clipboard.svelte';
 	import JSONViewer from './json-node.svelte';
 
 	const { data } = $props();
@@ -43,6 +43,7 @@
 				<WrapTextIcon />
 			</div></label
 		>
+		<CopyToClipboard {data} />
 	</div>
 	<div class="max-h-[90dvh] overflow-auto bg-white">
 		<table class="border-collapse cursor-default">

@@ -1,6 +1,8 @@
 <script lang="ts">
 	import JsonIcon from '~icons/tabler/json';
 	import TableIcon from '~icons/octicon/table-24';
+
+	import CopyToClipboard from '$lib/ui/copy-to-clipboard.svelte';
 	import ObjectArrayTable from './object-array-table.svelte';
 
 	const {
@@ -122,16 +124,11 @@
 				{/if}
 			{/if}
 			{#if accordionIsOpen}
-				<button
-					onclick={() => {
-						navigator.clipboard.writeText(JSON.stringify(data));
-					}}
-					class="copy-to-clipboard button absolute right-0 top-0 m-1 opacity-0 transition-all duration-200 group-hover:opacity-100"
-					style="--button-border-width: 1px; --button-padding-block: 0px;"
-					title="Copy to clipboard"
-				>
-					Copy
-				</button>
+				<CopyToClipboard
+					{data}
+					text="Copy"
+					class="absolute right-0 top-0 m-1 opacity-0 transition-all duration-200 group-hover:opacity-100"
+				/>
 			{/if}
 		</summary>
 
