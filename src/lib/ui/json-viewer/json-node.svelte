@@ -7,10 +7,17 @@
 
 	const {
 		data,
+		name = '',
 		depth = 0,
 		isLast = true,
 		initialOpenDepth = 999
-	} = $props<{ data: unknown; depth?: number; isLast?: boolean; initialOpenDepth?: number }>();
+	} = $props<{
+		data: unknown;
+		name?: string;
+		depth?: number;
+		isLast?: boolean;
+		initialOpenDepth?: number;
+	}>();
 
 	let sortOrder = $state<'asc' | 'desc' | null>(null);
 	let sortKey = $state<string | null>(null);
@@ -62,7 +69,7 @@
 {#if isArray || isObject}
 	<details
 		bind:open={accordionIsOpen}
-		class="flex flex-col has-[>summary>.copy-to-clipboard:hover]:bg-gray-100"
+		class="flex flex-col has-[>summary>.copy-to-clipboard:hover]:bg-green-50 has-[>summary>.copy-to-clipboard:hover]:outline-dashed has-[>summary>.copy-to-clipboard:hover]:outline-2 has-[>summary>.copy-to-clipboard:hover]:outline-offset-[-2px] has-[>summary>.copy-to-clipboard:hover]:outline-green-900 has-[>summary>.copy-to-clipboard:hover]:transition-all"
 		class:is-array={isArray}
 		class:is-object={isObject}
 	>
@@ -127,18 +134,19 @@
 				<CopyToClipboard
 					{data}
 					text="Copy"
+					title={`Copy ${name} to clipboard`}
 					class="absolute right-0 top-0 m-1 opacity-0 transition-all duration-200 group-hover:opacity-100"
 				/>
 			{/if}
 		</summary>
 
-		<div class="accordion-content node-data ml-10">
+		<div class="accordion-content node-data ml-10 flex flex-col">
 			{#if isArray}
 				{#if isArrayOfObjects}
 					<button
 						onclick={() => (showTable = !showTable)}
 						title={showTable ? 'Click to view as JSON' : 'Click to view as table'}
-						class="options button border px-1 py-0"
+						class="toggle-object-array-view button self-start border px-1 py-0"
 					>
 						{#if showTable}
 							<JsonIcon />
@@ -147,9 +155,8 @@
 						{/if}
 					</button>
 				{/if}
-
 				{#if isArrayOfObjects && showTable}
-					<ObjectArrayTable data={filteredData} />
+					<ObjectArrayTable data={filteredData} {name} />
 				{:else}
 					<div class="is-array entry">
 						{#each filteredData as entry, index}
@@ -158,6 +165,7 @@
 							<div class="value">
 								<svelte:self
 									data={entry}
+									name={`${name}[${index}]`}
 									depth={depth + 1}
 									{initialOpenDepth}
 									isLast={index === filteredData.length - 1}
@@ -174,19 +182,15 @@
 							<span class="key text-red-800">"{key}"</span>
 							<span class="separator">:</span>
 						</div>
-						<!-- <div
-							class="object-value"
-							class:is-last={index === Object.keys(filteredData).length - 1}
-						> -->
 						<div class="value">
 							<svelte:self
 								data={value}
+								name={`${name ? name + '.' : ''}${key}`}
 								depth={depth + 1}
 								{initialOpenDepth}
 								isLast={index === Object.keys(filteredData).length - 1}
 							/>
 						</div>
-						<!-- </div> -->
 					{/each}
 				</div>
 			{/if}
@@ -195,11 +199,11 @@
 		{#if accordionIsOpen}
 			{#if isArray}
 				<div class="closing-bracket">
-					]{#if !isLast},{/if}
+					&rbrack;{#if !isLast},{/if}
 				</div>
 			{:else}
 				<div class="closing-bracket">
-					}{#if !isLast},{/if}
+					&rbrace;{#if !isLast},{/if}
 				</div>
 			{/if}
 		{/if}

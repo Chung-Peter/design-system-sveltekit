@@ -1,9 +1,8 @@
 <script lang="ts">
 	import WrapTextIcon from '~icons/uim/wrap-text';
-	import CopyToClipboard from '$lib/ui/copy-to-clipboard.svelte';
 	import JSONViewer from './json-node.svelte';
 
-	const { data } = $props();
+	const { data, name = '' } = $props<{ data: unknown[]; name?: string }>();
 
 	let wrapValue = $state(false);
 
@@ -43,7 +42,6 @@
 				<WrapTextIcon />
 			</div></label
 		>
-		<CopyToClipboard {data} />
 	</div>
 	<div class="max-h-[90dvh] overflow-auto bg-white">
 		<table class="border-collapse cursor-default">
@@ -64,9 +62,9 @@
 				</tr>
 			</thead>
 			<tbody>
-				{#each data as entry}
+				{#each data as entry, rowIndex}
 					<tr>
-						{#each headers as key, index}
+						{#each headers as key, colIndex}
 							<td
 								onmouseover={() => setHoveringColumn(key)}
 								onfocus={() => setHoveringColumn(key)}
@@ -75,12 +73,15 @@
 								data-key={key}
 								data-value={getCellValue(entry, key)}
 								class:col-has-hover={hoveringColumn === key}
-								class:sticky={index === 0}
+								class:sticky={colIndex === 0}
 								class:whitespace-nowrap={!wrapValue}
 								class="border border-gray-300 px-1 py-0"
 							>
 								{#if isObject(entry[key])}
-									<JSONViewer data={entry[key]} />
+									<JSONViewer
+										data={entry[key]}
+										name={`${name || ''}${entry.id ? `[id: '${entry.id}']` : `[${rowIndex}]`}.${key}`}
+									/>
 								{:else}
 									{getCellValue(entry, key)}
 								{/if}
