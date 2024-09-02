@@ -14,7 +14,7 @@
 	onclick={() => {
 		navigator.clipboard.writeText(JSON.stringify(data));
 	}}
-	class="copy-to-clipboard button flex items-center gap-1 border p-1 {className}"
+	class="copy-to-clipboard button flex items-center gap-1 border bg-white p-1 {className}"
 	{title}
 >
 	{#if showIcon}
