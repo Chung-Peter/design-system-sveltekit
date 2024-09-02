@@ -2,6 +2,7 @@
 	import WrapTextIcon from '~icons/uim/wrap-text';
 	import ClearFilterIcon from '~icons/fluent-mdl2/clear-filter';
 	import JSONViewer from './json-node.svelte';
+	import { naturalSortObjectArray } from '$lib/utils/object-array.utils';
 
 	const { data, name = '' } = $props<{ data: unknown[]; name?: string }>();
 
@@ -38,27 +39,6 @@
 			: String(value);
 	}
 
-	function sortData(dataToSort: unknown[], column: string, direction: 'asc' | 'desc'): unknown[] {
-		const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
-
-		return [...dataToSort].sort((a: any, b: any) => {
-			const valueA = JSON.stringify(a[column]);
-			const valueB = JSON.stringify(b[column]);
-
-			if (valueA === valueB) return 0;
-			if (valueA == null || valueA == undefined) return direction === 'asc' ? 1 : -1;
-			if (valueB == null || valueB == undefined) return direction === 'asc' ? -1 : 1;
-
-			// Convert to string for comparison
-			const stringA = String(valueA);
-			const stringB = String(valueB);
-
-			// Use natural sort comparison
-			const comparison = collator.compare(stringA, stringB);
-			return direction === 'asc' ? comparison : -comparison;
-		});
-	}
-
 	function handleSort(column: string) {
 		if (sortColumn === column) {
 			sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
@@ -68,7 +48,9 @@
 		}
 	}
 
-	const sortedData = $derived(sortColumn ? sortData(data, sortColumn, sortDirection) : data);
+	const sortedData = $derived(
+		sortColumn ? naturalSortObjectArray(data, sortColumn, sortDirection) : data
+	);
 </script>
 
 {#if isValidData}
