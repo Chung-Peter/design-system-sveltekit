@@ -1,39 +1,20 @@
 <script lang="ts">
 	import JSONViewer from '$lib/ui/json-viewer/json-viewer.svelte';
 	import plansBenefits from './plans.json';
+	import testData from './test-data.json';
 
-	const data = {
-		arr: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-		ids: ['1a', '1a1', '1b', '7a'],
-		testObject: {
-			key: 'value',
-			key2: 'value2',
-			key3: 'value3',
-			key4: 'value4',
-			key5: 'value5',
-			key6: 'value6',
-			key7: 'value7',
-			key8: 'value8',
-			key9: 'value9',
-			key10: 'value10'
-		},
-		arrayOfObjects: [
-			{ id: '1a', benefitValue: '$100', costShare: '$0', costShareType: 'copay' },
-			{ id: '1a1', benefitValue: '$100', costShare: '$20', costShareType: 'copay' },
-			{ id: '1b', benefitValue: '$100', costShare: '40%', costShareType: 'coinsurance' }
-		]
-	};
+	const benefitId = '1a';
+	const data = plansBenefits.map((planData) => {
+		const benefit = planData.planBenefits.find((benefit) => benefit.id === benefitId);
+		return { modelFactoryId: planData.modelFactoryId, ...benefit };
+	});
 </script>
 
-<JSONViewer data={plansBenefits[0]} initialOpenDepth={3} />
-<!-- <JSONViewer {data} initialOpenDepth={3} />
+<!-- <JSONViewer {data} initialOpenDepth={3} /> -->
 
-<div class="my-4">
-	<div>input data: string</div>
-	<JSONViewer data={'a string'} />
-</div>
+<JSONViewer data={testData} />
 
-<div class="my-4">
-	<div>input data: string[]</div>
-	<JSONViewer data={['a string', 'another string', 'yet another string']} />
-</div> -->
+<JSONViewer data={plansBenefits} initialOpenDepth={1} />
+
+<!-- Example with bad data -->
+<!-- <JSONViewer data={{ a: undefined }} /> -->
