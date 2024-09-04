@@ -1,24 +1,16 @@
 <script lang="ts">
-	import JSONNode from './json-node.svelte';
+	import { Json, type JsonNodeProps } from './models';
+	import JsonNode from './json-node.svelte';
 
-	const { data, initialOpenDepth = 999 } = $props<{ data: unknown; initialOpenDepth?: number }>();
+	const { data, initialOpenDepth = 999 }: Pick<JsonNodeProps, 'data' | 'initialOpenDepth'> =
+		$props();
 
-	const isValid = $derived(isValidJSON(data));
-	const parsedData = $derived(isValid ? JSON.parse(JSON.stringify(data)) : undefined);
-
-	function isValidJSON(data: unknown): boolean {
-		try {
-			JSON.parse(JSON.stringify(data));
-			return true;
-		} catch {
-			return false;
-		}
-	}
+	const { success: isValid, data: parsedData } = Json.safeParse(data);
 </script>
 
 {#if isValid}
 	<div class="json-viewer" role="tree" aria-label="JSON Viewer">
-		<JSONNode data={parsedData} {initialOpenDepth} />
+		<JsonNode data={parsedData} {initialOpenDepth} />
 	</div>
 {:else}
 	<div class="json-viewer-error" role="alert">Invalid JSON data</div>
