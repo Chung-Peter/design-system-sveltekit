@@ -4,6 +4,8 @@
 
 	import CopyToClipboard from '$lib/ui/copy-to-clipboard.svelte';
 	import ObjectArrayTable from './object-array-table.svelte';
+	import type { JsonNodeProps } from './models';
+	import { ObjectArray } from './models';
 
 	const {
 		data,
@@ -11,59 +13,16 @@
 		depth = 0,
 		isLast = true,
 		initialOpenDepth = 999
-	} = $props<{
-		data: unknown;
-		name?: string;
-		depth?: number;
-		isLast?: boolean;
-		initialOpenDepth?: number;
-	}>();
+	}: JsonNodeProps = $props();
 
-	let sortOrder = $state<'asc' | 'desc' | null>(null);
-	let sortKey = $state<string | null>(null);
-	let filterValue = $state('');
-
-	const isArray = $derived(Array.isArray(data));
-	const isObject = $derived(typeof data === 'object' && data !== null);
+	const isArray = Array.isArray(data);
+	const isObject = typeof data === 'object' && data !== null;
 
 	let accordionIsOpen = $state(depth < initialOpenDepth);
 
-	const isArrayOfObjects = $derived(
-		Array.isArray(data) && data.length > 0 && typeof data[0] === 'object'
-	);
-	let showTable = $state(true);
+	const isObjectArray = ObjectArray.safeParse(data).success;
 
-	const sortedData = $derived(
-		Array.isArray(data) && sortOrder
-			? [...data].sort((a, b) => {
-					let aValue = isArrayOfObjects && sortKey ? a[sortKey] : a;
-					let bValue = isArrayOfObjects && sortKey ? b[sortKey] : b;
-					if (sortOrder === 'asc') return aValue > bValue ? 1 : -1;
-					return aValue < bValue ? 1 : -1;
-				})
-			: data
-	);
-
-	const filteredData = $derived(
-		Array.isArray(sortedData) && filterValue
-			? sortedData.filter((entry) =>
-					JSON.stringify(entry).toLowerCase().includes(filterValue.toLowerCase())
-				)
-			: sortedData
-	);
-
-	function toggleSort(key: string | null = null) {
-		if (key !== sortKey) {
-			sortKey = key;
-			sortOrder = 'asc';
-		} else {
-			sortOrder = sortOrder === 'asc' ? 'desc' : sortOrder === 'desc' ? null : 'asc';
-		}
-	}
-
-	function getObjectKeys(obj: object): string[] {
-		return Object.keys(obj);
-	}
+	let viewAsTable = $state(true);
 </script>
 
 {#if isArray || isObject}
@@ -97,26 +56,6 @@
 						&rbrack;{#if !isLast},{/if}
 					</div>
 				{/if}
-
-				<!-- <span>Array [{data.length}]</span> -->
-				<!-- {#if isArrayOfObjects}
-           {#each getObjectKeys(data[0]) as key}
-             <button onclick={() => toggleSort(key)} aria-label={`Sort by ${key}`}>
-               {key}
-               {sortKey === key ? (sortOrder === 'asc' ? '↑' : '↓') : '⇅'}
-             </button>
-           {/each}
-         {:else}
-           <button onclick={() => toggleSort()} aria-label="Toggle sort order">
-             {sortOrder === 'asc' ? '↑' : sortOrder === 'desc' ? '↓' : '⇅'}
-           </button>
-         {/if} -->
-				<!-- <input
-					type="text"
-					bind:value={filterValue}
-					placeholder="Filter array"
-					aria-label="Filter array items"
-				/> -->
 			{:else}
 				<div>&lbrace;</div>
 				{#if !accordionIsOpen}
@@ -142,24 +81,24 @@
 
 		<div class="accordion-content node-data ml-10 flex flex-col">
 			{#if isArray}
-				{#if isArrayOfObjects}
+				{#if isObjectArray}
 					<button
-						onclick={() => (showTable = !showTable)}
-						title={showTable ? 'Click to view as JSON' : 'Click to view as table'}
+						onclick={() => (viewAsTable = !viewAsTable)}
+						title={viewAsTable ? 'Click to view as JSON' : 'Click to view as table'}
 						class="toggle-object-array-view button self-start border px-1 py-0"
 					>
-						{#if showTable}
+						{#if viewAsTable}
 							<JsonIcon />
 						{:else}
 							<TableIcon />
 						{/if}
 					</button>
 				{/if}
-				{#if isArrayOfObjects && showTable}
-					<ObjectArrayTable data={filteredData} {name} />
+				{#if isObjectArray && viewAsTable}
+					<ObjectArrayTable {data} {name} depth={depth + 1} />
 				{:else}
 					<div class="is-array entry">
-						{#each filteredData as entry, index}
+						{#each data as entry, index}
 							<div class="array-index select-none">[{index}]:</div>
 							<!-- <div class="array-data" class:is-last={index === filteredData.length - 1}> -->
 							<div class="value">
@@ -168,7 +107,7 @@
 									name={`${name}[${index}]`}
 									depth={depth + 1}
 									{initialOpenDepth}
-									isLast={index === filteredData.length - 1}
+									isLast={index === data.length - 1}
 								/>
 							</div>
 							<!-- </div> -->
@@ -177,7 +116,7 @@
 				{/if}
 			{:else if isObject}
 				<div class="is-object entry">
-					{#each Object.entries(filteredData) as [key, value], index}
+					{#each Object.entries(data) as [key, value], index}
 						<div class=" flex justify-between">
 							<span class="key text-red-800">"{key}"</span>
 							<span class="separator">:</span>
@@ -188,7 +127,7 @@
 								name={`${name ? name + '.' : ''}${key}`}
 								depth={depth + 1}
 								{initialOpenDepth}
-								isLast={index === Object.keys(filteredData).length - 1}
+								isLast={index === Object.keys(data).length - 1}
 							/>
 						</div>
 					{/each}
@@ -250,15 +189,4 @@
 	/* .value:not(:has(> details)) {
 		justify-self: flex-end;
 	} */
-
-	.json-value {
-		color: #1a1aa6;
-		text-align: right;
-		width: max-content;
-	}
-
-	input {
-		margin-left: 8px;
-		font-size: 0.9em;
-	}
 </style>
