@@ -1,8 +1,10 @@
-export function naturalSortObjectArray<T extends Record<string, unknown>>(
-	dataToSort: T[],
-	sortByKey: keyof T,
+import type { ObjectArray } from './models';
+
+export function naturalSortObjectArray(
+	dataToSort: ObjectArray,
+	sortByKey: string,
 	sortDirection: 'asc' | 'desc'
-): T[] {
+): ObjectArray {
 	const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' });
 
 	return [...dataToSort].sort((a, b) => {

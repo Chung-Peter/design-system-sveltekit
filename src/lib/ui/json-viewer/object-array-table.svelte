@@ -1,26 +1,27 @@
 <script lang="ts">
 	import WrapTextIcon from '~icons/uim/wrap-text';
 	import ClearFilterIcon from '~icons/fluent-mdl2/clear-filter';
-	import JSONViewer from './json-node.svelte';
-	import { naturalSortObjectArray } from '$lib/utils/object-array.utils';
 
-	const { data, name = '' } = $props<{ data: unknown[]; name?: string }>();
+	import JsonNode from './json-node.svelte';
+	import { ObjectArray } from './models';
+	import { naturalSortObjectArray } from './utils';
+	import type { JsonNodeProps } from './models';
+	const { data, name = '', depth = 0 }: JsonNodeProps = $props();
 
 	let wrapValue = $state(false);
 	let sortColumn = $state('');
 	let sortDirection = $state<'asc' | 'desc'>('asc');
 	let hoveringColumn = $state('');
 
-	// Ensure data is an array of objects and has at least one item
-	const isValidData = $derived(
-		Array.isArray(data) &&
-			data.length > 0 &&
-			data.every((item) => typeof item === 'object' && item !== null)
-	);
+	const { success: isObjectArray, data: parsedData } = ObjectArray.safeParse(data);
+	// const isValidData =
+	// 	Array.isArray(data) &&
+	// 	data.length > 0 &&
+	// 	data.every((item) => typeof item === 'object' && item !== null);
 
 	// Extract all unique keys from all objects
 	const headers = $derived<string[]>(
-		isValidData ? [...new Set(data.flatMap(Object.keys) as string[])] : []
+		isObjectArray ? [...new Set(parsedData.flatMap(Object.keys) as string[])] : []
 	);
 
 	function setHoveringColumn(key: string) {
@@ -49,11 +50,13 @@
 	}
 
 	const sortedData = $derived(
-		sortColumn ? naturalSortObjectArray(data, sortColumn, sortDirection) : data
+		parsedData && sortColumn
+			? naturalSortObjectArray(parsedData, sortColumn, sortDirection)
+			: (parsedData ?? [])
 	);
 </script>
 
-{#if isValidData}
+{#if isObjectArray}
 	<div class="table-options mb-1 flex items-center justify-end gap-2">
 		{#if sortColumn}
 			<button
@@ -71,11 +74,11 @@
 			</div></label
 		>
 	</div>
-	<div class="max-h-[90dvh] overflow-auto bg-white">
-		<table class="border-collapse cursor-default">
+	<div class="max-h-[80dvh] overflow-auto bg-white">
+		<table class="border-collapse cursor-default" style="--zIndex: {20 - 2 * depth}">
 			<thead>
-				<tr class="sticky">
-					{#each headers as key, index}
+				<tr>
+					{#each headers as key, colIndex}
 						<th
 							title={`Click to sort by ${key}`}
 							onclick={() => handleSort(key)}
@@ -87,8 +90,8 @@
 							data-sort-direction={sortColumn === key ? sortDirection : null}
 							class:sorted={sortColumn === key}
 							class:col-has-hover={hoveringColumn === key}
-							class:sticky={index === 0}
-							class="border border-gray-300 bg-white px-1 py-0"
+							class:left-0={colIndex === 0}
+							class="sticky top-0 border border-gray-300 bg-white px-1 py-0"
 						>
 							<div class="flex items-center justify-between gap-x-2">
 								<div>{key}</div>
@@ -110,14 +113,14 @@
 								data-key={key}
 								data-value={getCellValue(entry, key)}
 								class:col-has-hover={hoveringColumn === key}
-								class:sticky={colIndex === 0}
 								class:whitespace-nowrap={!wrapValue}
-								class="border border-gray-300 px-1 py-0"
+								class="border border-gray-300 px-1 py-0 {colIndex === 0 ? 'sticky left-0 ' : ''}"
 							>
 								{#if isObject(entry[key])}
-									<JSONViewer
+									<JsonNode
 										data={entry[key]}
 										name={`${name || ''}${entry.id ? `[id: '${entry.id}']` : `[${rowIndex}]`}.${key}`}
+										depth={depth + 1}
 									/>
 								{:else}
 									{getCellValue(entry, key)}
@@ -144,12 +147,19 @@
 
 	.sticky {
 		@apply bg-white;
-		tr& {
-			@apply top-0 z-[1] shadow-md;
+
+		/* Sticky cells should have z-index */
+		&:is(th, .left-0) {
+			z-index: var(--zIndex);
 		}
 
-		&:is(td, th) {
-			@apply left-0;
+		/* Sticky first column header cell should have a higher z-index */
+		th.left-0& {
+			z-index: calc(var(--zIndex) + 1);
+		}
+
+		/* Border on sticky left column */
+		&.left-0 {
 			&::before {
 				content: '';
 				@apply absolute bottom-0 left-[-1px] top-0 border-r-2;
