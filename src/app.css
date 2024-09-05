@@ -157,6 +157,10 @@ a:visited,
 			--color-main-hover: var(--color-main);
 		}
 	}
+
+	&:disabled {
+		@apply cursor-not-allowed border-gray-400 bg-gray-200 text-gray-400;
+	}
 }
 
 .card {

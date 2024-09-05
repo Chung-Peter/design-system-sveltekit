@@ -1,11 +1,7 @@
 <script lang="ts">
-	import JsonIcon from '~icons/tabler/json';
-	import TableIcon from '~icons/octicon/table-24';
-
-	import CopyToClipboard from '$lib/ui/copy-to-clipboard.svelte';
-	import ObjectArrayTable from './object-array-table.svelte';
+	import CopyToClipboardButton from '$lib/ui/copy-to-clipboard-button.svelte';
+	import ObjectArrayWrapper from './object-array-wrapper.svelte';
 	import type { JsonNodeProps } from './models';
-	import { ObjectArray } from './models';
 
 	const {
 		data,
@@ -20,9 +16,9 @@
 
 	let accordionIsOpen = $state(depth < initialOpenDepth);
 
-	const isObjectArray = ObjectArray.safeParse(data).success;
-
-	let viewAsTable = $state(true);
+	function isObjectArray(value: unknown): boolean {
+		return Array.isArray(value) && value.length > 0 && typeof value[0] === 'object';
+	}
 </script>
 
 {#if isArray || isObject}
@@ -33,7 +29,7 @@
 		class:is-object={isObject}
 	>
 		<summary
-			class="group relative flex gap-x-1"
+			class="group relative flex items-center gap-x-1"
 			title={!accordionIsOpen ? JSON.stringify(data, null, 4) : 'Click to collapse'}
 		>
 			{#if isArray}
@@ -70,50 +66,33 @@
 				{/if}
 			{/if}
 			{#if accordionIsOpen}
-				<CopyToClipboard
+				<CopyToClipboardButton
 					{data}
 					text="Copy"
 					title={`Copy ${name} to clipboard`}
-					class="absolute right-0 top-0 m-1 opacity-0 transition-all duration-200 group-hover:opacity-100"
+					class="absolute right-0 top-0 m-1 opacity-0 transition-all group-hover:opacity-100"
 				/>
 			{/if}
 		</summary>
 
 		<div class="accordion-content node-data ml-10 flex flex-col">
-			{#if isArray}
-				{#if isObjectArray}
-					<button
-						onclick={() => (viewAsTable = !viewAsTable)}
-						title={viewAsTable ? 'Click to view as JSON' : 'Click to view as table'}
-						class="toggle-object-array-view button self-start border px-1 py-0"
-					>
-						{#if viewAsTable}
-							<JsonIcon />
-						{:else}
-							<TableIcon />
-						{/if}
-					</button>
-				{/if}
-				{#if isObjectArray && viewAsTable}
-					<ObjectArrayTable {data} {name} depth={depth + 1} />
-				{:else}
-					<div class="is-array entry">
-						{#each data as entry, index}
-							<div class="array-index select-none">[{index}]:</div>
-							<!-- <div class="array-data" class:is-last={index === filteredData.length - 1}> -->
-							<div class="value">
-								<svelte:self
-									data={entry}
-									name={`${name}[${index}]`}
-									depth={depth + 1}
-									{initialOpenDepth}
-									isLast={index === data.length - 1}
-								/>
-							</div>
-							<!-- </div> -->
-						{/each}
-					</div>
-				{/if}
+			{#if isObjectArray(data)}
+				<ObjectArrayWrapper {data} {name} depth={depth + 1} {initialOpenDepth} />
+			{:else if isArray}
+				<div class="is-array entry">
+					{#each data as entry, index}
+						<div class="array-index select-none">[{index}]:</div>
+						<div class="json-value">
+							<svelte:self
+								data={entry}
+								name={`${name}[${index}]`}
+								depth={depth + 1}
+								{initialOpenDepth}
+								isLast={index === data.length - 1}
+							/>
+						</div>
+					{/each}
+				</div>
 			{:else if isObject}
 				<div class="is-object entry">
 					{#each Object.entries(data) as [key, value], index}
@@ -121,7 +100,7 @@
 							<span class="key text-red-800">"{key}"</span>
 							<span class="separator">:</span>
 						</div>
-						<div class="value">
+						<div class="json-value">
 							<svelte:self
 								data={value}
 								name={`${name ? name + '.' : ''}${key}`}
@@ -148,9 +127,7 @@
 		{/if}
 	</details>
 {:else if data !== null && data !== undefined}
-	<!-- <div class="json-value"> -->
 	{JSON.stringify(data)}{#if !isLast},{/if}
-	<!-- </div> -->
 {/if}
 
 <style lang="postcss">
@@ -172,7 +149,7 @@
 		transform: rotate(90deg);
 	}
 
-	.entry {
+	:global(.entry) {
 		display: grid;
 		grid-template-columns: auto 1fr;
 		column-gap: 0.5rem;
@@ -182,11 +159,11 @@
 		@apply text-gray-400;
 	}
 
-	.value {
+	.json-value {
 		overflow-x: hidden;
 		/* width: 100%; */
 	}
-	/* .value:not(:has(> details)) {
+	/* .json-value:not(:has(> details)) {
 		justify-self: flex-end;
 	} */
 </style>
