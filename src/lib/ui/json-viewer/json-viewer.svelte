@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { Json, type JsonNodeProps } from './json-viewer.models';
-	import JsonNode from './json-node.svelte';
+	import { Json, type JsonNodeProps } from './json-viewer.models'
+	import JsonNode from './json-node.svelte'
 
 	const { data, initialOpenDepth = 999 }: Pick<JsonNodeProps, 'data' | 'initialOpenDepth'> =
-		$props();
+		$props()
 
-	const { success: isValid, data: parsedData } = Json.safeParse(data);
+	const { success: isValid, data: parsedData } = Json.safeParse(data)
 </script>
 
 {#if isValid}

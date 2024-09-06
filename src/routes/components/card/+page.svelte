@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	import type { PageData } from './$types'
 
-	export let data: PageData;
+	export let data: PageData
 
-	const component = 'card';
-	const variants = ['variant-filled', 'variant-outline'];
-	const colorVariants = ['', 'primary', 'secondary', 'danger', 'success'];
+	const component = 'card'
+	const variants = ['variant-filled', 'variant-outline']
+	const colorVariants = ['', 'primary', 'secondary', 'danger', 'success']
 </script>
 
 <div class="flex flex-col gap-4">

@@ -1,49 +1,49 @@
 <script lang="ts">
-	import ClearFilterIcon from '~icons/fluent-mdl2/clear-filter';
-	import ClearSortIcon from '~icons/mdi/sort-variant-off';
-	import JsonIcon from '~icons/tabler/json';
-	import TableIcon from '~icons/octicon/table-24';
+	import ClearFilterIcon from '~icons/fluent-mdl2/clear-filter'
+	import ClearSortIcon from '~icons/mdi/sort-variant-off'
+	import JsonIcon from '~icons/tabler/json'
+	import TableIcon from '~icons/octicon/table-24'
 
-	import ObjectArrayTable from './object-array-table.svelte';
-	import JsonNode from '../json-node.svelte';
-	import { ObjectArray, type FilterSortOptions, type JsonNodeProps } from '../json-viewer.models';
-	import { filterAndSortData } from './object-array.utils';
+	import ObjectArrayTable from './object-array-table.svelte'
+	import JsonNode from '../json-node.svelte'
+	import { ObjectArray, type FilterSortOptions, type JsonNodeProps } from '../json-viewer.models'
+	import { filterAndSortData } from './object-array.utils'
 
-	const { data, name = '', depth = 0, initialOpenDepth = 999 }: JsonNodeProps = $props();
+	const { data, name = '', depth = 0, initialOpenDepth = 999 }: JsonNodeProps = $props()
 
-	const { success: isObjectArray, data: parsedData } = ObjectArray.safeParse(data);
+	const { success: isObjectArray, data: parsedData } = ObjectArray.safeParse(data)
 
-	let viewAsTable = $state(true);
+	let viewAsTable = $state(true)
 	let filterSortOptions = $state<FilterSortOptions>({
 		columnFilters: {},
 		sortColumn: '',
-		sortDirection: 'asc'
-	});
+		sortDirection: 'asc',
+	})
 
-	const headers = isObjectArray ? [...new Set(parsedData.flatMap(Object.keys) as string[])] : [];
+	const headers = isObjectArray ? [...new Set(parsedData.flatMap(Object.keys) as string[])] : []
 
 	const processedData = $derived(
-		isObjectArray ? filterAndSortData(parsedData, filterSortOptions) : []
-	);
+		isObjectArray ? filterAndSortData(parsedData, filterSortOptions) : [],
+	)
 
 	function clearFilters() {
-		filterSortOptions.columnFilters = {};
+		filterSortOptions.columnFilters = {}
 	}
 	function onFilterChange(column: string, filterValue: string) {
-		filterSortOptions.columnFilters[column] = filterValue;
+		filterSortOptions.columnFilters[column] = filterValue
 		if (!filterValue) {
-			delete filterSortOptions.columnFilters[column];
+			delete filterSortOptions.columnFilters[column]
 		}
 	}
 
 	function onSortKeyChange(key: string) {
 		if (filterSortOptions.sortColumn === key) {
-			filterSortOptions.sortDirection = filterSortOptions.sortDirection === 'asc' ? 'desc' : 'asc';
+			filterSortOptions.sortDirection = filterSortOptions.sortDirection === 'asc' ? 'desc' : 'asc'
 		} else {
-			filterSortOptions.sortColumn = key;
-			filterSortOptions.sortDirection = 'asc';
+			filterSortOptions.sortColumn = key
+			filterSortOptions.sortDirection = 'asc'
 		}
-		filterSortOptions = { ...filterSortOptions };
+		filterSortOptions = { ...filterSortOptions }
 	}
 </script>
 

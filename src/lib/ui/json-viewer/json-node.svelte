@@ -1,23 +1,23 @@
 <script lang="ts">
-	import CopyToClipboardButton from '$lib/ui/copy-to-clipboard-button.svelte';
-	import ObjectArrayWrapper from './object-array/object-array-wrapper.svelte';
-	import type { JsonNodeProps } from './json-viewer.models';
+	import CopyToClipboardButton from '$lib/ui/copy-to-clipboard-button.svelte'
+	import ObjectArrayWrapper from './object-array/object-array-wrapper.svelte'
+	import type { JsonNodeProps } from './json-viewer.models'
 
 	const {
 		data,
 		name = '',
 		depth = 0,
 		isLast = true,
-		initialOpenDepth = 999
-	}: JsonNodeProps = $props();
+		initialOpenDepth = 999,
+	}: JsonNodeProps = $props()
 
-	const isArray = Array.isArray(data);
-	const isObject = typeof data === 'object' && data !== null;
+	const isArray = Array.isArray(data)
+	const isObject = typeof data === 'object' && data !== null
 
-	let accordionIsOpen = $state(depth < initialOpenDepth);
+	let accordionIsOpen = $state(depth < initialOpenDepth)
 
 	function isObjectArray(value: unknown): boolean {
-		return Array.isArray(value) && value.length > 0 && typeof value[0] === 'object';
+		return Array.isArray(value) && value.length > 0 && typeof value[0] === 'object'
 	}
 </script>
 

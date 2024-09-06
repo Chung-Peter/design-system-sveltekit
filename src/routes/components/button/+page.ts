@@ -1,8 +1,8 @@
-import type { PageLoad } from './$types';
+import type { PageLoad } from './$types'
 
 export const load = (async () => {
 	return {
 		title: 'Button',
-		description: 'Make things clicky.'
-	};
-}) satisfies PageLoad;
+		description: 'Make things clicky.',
+	}
+}) satisfies PageLoad

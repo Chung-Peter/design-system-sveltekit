@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/stores'
 
-	const { children } = $props();
+	const { children } = $props()
 
-	import '../app.css';
+	import '../app.css'
 </script>
 
 <svelte:head>

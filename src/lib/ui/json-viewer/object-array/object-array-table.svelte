@@ -1,18 +1,18 @@
 <script lang="ts">
-	import WrapTextIcon from '~icons/uim/wrap-text';
+	import WrapTextIcon from '~icons/uim/wrap-text'
 
-	import JsonNode from '../json-node.svelte';
-	import type { JsonNodeProps, ObjectArray } from '../json-viewer.models';
+	import JsonNode from '../json-node.svelte'
+	import type { JsonNodeProps, ObjectArray } from '../json-viewer.models'
 
 	type ObjectArrayTableProps = JsonNodeProps & {
-		data: ObjectArray;
-		headers: string[];
-		sortColumn?: string;
-		sortDirection?: 'asc' | 'desc';
-		columnFilters?: Record<string, string>;
-		onFilterChange: (column: string, filterValue: string) => void;
-		onSortKeyChange: (key: string) => void;
-	};
+		data: ObjectArray
+		headers: string[]
+		sortColumn?: string
+		sortDirection?: 'asc' | 'desc'
+		columnFilters?: Record<string, string>
+		onFilterChange: (column: string, filterValue: string) => void
+		onSortKeyChange: (key: string) => void
+	}
 
 	const {
 		data,
@@ -23,26 +23,26 @@
 		sortDirection = 'asc',
 		columnFilters = {},
 		onFilterChange,
-		onSortKeyChange
-	}: ObjectArrayTableProps = $props();
+		onSortKeyChange,
+	}: ObjectArrayTableProps = $props()
 
-	let wrapValue = $state(false);
-	let hoveringColumn = $state('');
+	let wrapValue = $state(false)
+	let hoveringColumn = $state('')
 
 	function setHoveringColumn(column: string) {
-		hoveringColumn = column;
+		hoveringColumn = column
 	}
 
 	function isObject(value: unknown): boolean {
-		return typeof value === 'object' && value !== null;
+		return typeof value === 'object' && value !== null
 	}
 
 	function getCellValue(item: Record<string, unknown>, key: string): string {
-		if (!(key in item)) return '';
-		const value = item[key];
+		if (!(key in item)) return ''
+		const value = item[key]
 		return typeof value === 'object' && value !== null
 			? JSON.stringify(value, null, 2)
-			: String(value);
+			: String(value)
 	}
 </script>
 

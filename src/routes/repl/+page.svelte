@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	import type { PageData } from './$types'
 
-	export let data: PageData;
+	export let data: PageData
 
 	let html = `<div class="card variant-outline primary">
 	<div class="stretch">
@@ -23,7 +23,7 @@
 		<p>This is a normal paragraph.</p>
 		<p >If 'stretch' class is added to the first or last child, the top or bottom padding will also be removed.</p>
 	</div>
-</a>`;
+</a>`
 </script>
 
 <svelte:head>
