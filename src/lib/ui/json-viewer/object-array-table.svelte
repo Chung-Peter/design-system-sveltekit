@@ -58,8 +58,8 @@
 		<span class="sr-only">Wrap values</span>
 	</button>
 </div>
-<div class="max-h-[80dvh] overflow-auto bg-white">
-	<table class="border-collapse cursor-default" style="--zIndex: {20 - 2 * depth}">
+<div class="overflow-auto bg-white">
+	<table class="cursor-default" style="--zIndex: {20 - 2 * depth};">
 		<thead>
 			<tr>
 				{#each headers as key, colIndex}
@@ -70,7 +70,7 @@
 					>
 						<div class="flex flex-col gap-1">
 							<div class="flex items-center justify-between gap-x-2">
-								<span>{key}</span>
+								<div class="key-name flex-1 text-center">{key}</div>
 								<button
 									onclick={() => onSortKeyChange(key)}
 									title={`Sort by ${key}`}
@@ -85,7 +85,7 @@
 								placeholder="Filter..."
 								value={columnFilters[key] || ''}
 								oninput={(e) => onFilterChange(key, e.currentTarget.value)}
-								class="w-full text-sm"
+								class="text-sm"
 							/>
 						</div>
 					</th>
@@ -105,7 +105,9 @@
 							data-value={getCellValue(entry, key)}
 							class:col-has-hover={hoveringColumn === key}
 							class:whitespace-nowrap={!wrapValue}
-							class="border border-gray-300 px-1 py-0 {colIndex === 0 ? 'sticky left-0 ' : ''}"
+							class="border border-gray-300 px-1 py-0 align-top {colIndex === 0
+								? 'sticky left-0 '
+								: ''}"
 						>
 							{#if isObject(entry[key])}
 								<JsonNode
@@ -147,7 +149,7 @@
 		}
 
 		/* Border on sticky left column */
-		&.left-0 {
+		/* &.left-0 {
 			&::before {
 				content: '';
 				@apply absolute bottom-0 left-[-1px] top-0 border-r-2;
@@ -156,7 +158,7 @@
 				content: '';
 				@apply absolute bottom-0 right-[-2px] top-0 border-l-2;
 			}
-		}
+		} */
 	}
 
 	tr:hover > td {

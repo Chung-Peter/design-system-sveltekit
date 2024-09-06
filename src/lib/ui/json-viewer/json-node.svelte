@@ -160,8 +160,7 @@
 	}
 
 	.json-value {
-		overflow-x: hidden;
-		/* width: 100%; */
+		overflow: hidden;
 	}
 	/* .json-value:not(:has(> details)) {
 		justify-self: flex-end;

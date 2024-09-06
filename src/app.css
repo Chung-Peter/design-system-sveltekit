@@ -115,7 +115,12 @@
 	--gap-xxl-relative: calc(5.25 * var(--gap-unit-relative));
 }
 
+body {
+	@apply overflow-x-clip;
+}
+
 @tailwind components;
+
 a,
 a:visited,
 .link {
@@ -159,7 +164,7 @@ a:visited,
 	}
 
 	&:disabled {
-		@apply cursor-not-allowed border-gray-400 bg-gray-200 text-gray-400;
+		@apply cursor-not-allowed border-gray-300 bg-gray-100 text-gray-300;
 	}
 }
 
