@@ -1,7 +1,7 @@
 <script lang="ts">
 	import CopyToClipboardButton from '$lib/ui/copy-to-clipboard-button.svelte';
-	import ObjectArrayWrapper from './object-array-wrapper.svelte';
-	import type { JsonNodeProps } from './models';
+	import ObjectArrayWrapper from './object-array/object-array-wrapper.svelte';
+	import type { JsonNodeProps } from './json-viewer.models';
 
 	const {
 		data,

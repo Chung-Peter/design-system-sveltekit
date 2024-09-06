@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Json, type JsonNodeProps } from './models';
+	import { Json, type JsonNodeProps } from './json-viewer.models';
 	import JsonNode from './json-node.svelte';
 
 	const { data, initialOpenDepth = 999 }: Pick<JsonNodeProps, 'data' | 'initialOpenDepth'> =

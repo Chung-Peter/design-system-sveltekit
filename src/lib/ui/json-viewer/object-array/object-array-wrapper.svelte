@@ -5,10 +5,9 @@
 	import TableIcon from '~icons/octicon/table-24';
 
 	import ObjectArrayTable from './object-array-table.svelte';
-	import JsonNode from './json-node.svelte';
-	import type { JsonNodeProps, FilterSortOptions } from './models';
-	import { ObjectArray } from './models';
-	import { filterAndSortData } from './data-manager';
+	import JsonNode from '../json-node.svelte';
+	import { ObjectArray, type FilterSortOptions, type JsonNodeProps } from '../json-viewer.models';
+	import { filterAndSortData } from './object-array.utils';
 
 	const { data, name = '', depth = 0, initialOpenDepth = 999 }: JsonNodeProps = $props();
 

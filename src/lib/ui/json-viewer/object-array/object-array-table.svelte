@@ -1,8 +1,8 @@
 <script lang="ts">
 	import WrapTextIcon from '~icons/uim/wrap-text';
 
-	import JsonNode from './json-node.svelte';
-	import type { JsonNodeProps, ObjectArray } from './models';
+	import JsonNode from '../json-node.svelte';
+	import type { JsonNodeProps, ObjectArray } from '../json-viewer.models';
 
 	type ObjectArrayTableProps = JsonNodeProps & {
 		data: ObjectArray;
@@ -65,8 +65,9 @@
 				{#each headers as key, colIndex}
 					<th
 						scope="col"
-						class="sticky top-0 border border-gray-300 bg-white px-1 py-0"
 						class:left-0={colIndex === 0}
+						class:col-has-hover={hoveringColumn === key}
+						class="sticky top-0 border border-gray-300 bg-white px-1 py-0"
 					>
 						<div class="flex flex-col gap-1">
 							<div class="flex items-center justify-between gap-x-2">

@@ -9,8 +9,6 @@ export const Json: z.ZodType<Json> = z.lazy(() =>
 );
 
 export const ObjectArray = z.array(z.record(z.unknown()));
-// .min(1, { message: 'Array must have at least one object' })
-// .nonempty({ message: 'Array cannot contain null or undefined values' });
 export type ObjectArray = z.infer<typeof ObjectArray>;
 
 export interface JsonNodeProps {
