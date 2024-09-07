@@ -178,22 +178,22 @@ a:visited,
 	border-color: var(--color-main);
 	border-radius: var(--card-border-radius);
 	border-width: var(--card-border-width);
-	display: block;
+	overflow: hidden;
 	padding-block: var(--card-padding-block);
 	padding-inline: var(--card-padding-inline);
 
 	& > .stretch {
 		margin-inline: calc(var(--card-padding-inline) * -1);
 
+		img {
+			width: 100%;
+		}
+
 		&:first-child {
-			border-top-left-radius: var(--card-border-radius);
-			border-top-right-radius: var(--card-border-radius);
 			margin-top: calc(var(--card-padding-block) * -1);
 		}
 
 		&:last-child {
-			border-bottom-left-radius: var(--card-border-radius);
-			border-bottom-right-radius: var(--card-border-radius);
 			margin-bottom: calc(var(--card-padding-block) * -1);
 		}
 	}
