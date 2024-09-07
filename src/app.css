@@ -78,6 +78,8 @@
 	--card-padding-block: var(--gap-md);
 	--card-padding-inline: var(--gap-md);
 
+	--grid-min-col-width: 20rem;
+
 	/* END Design Intents */
 
 	--font-base: 1rem;
@@ -117,6 +119,10 @@
 
 body {
 	@apply overflow-x-clip;
+}
+
+.dynamic-grid {
+	grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-col-width), 1fr));
 }
 
 @tailwind components;
