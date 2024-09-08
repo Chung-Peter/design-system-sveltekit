@@ -77,7 +77,7 @@
 
 		<div class="accordion-content node-data ml-10 flex flex-col">
 			{#if isObjectArray(data)}
-				<ObjectArrayWrapper {data} {name} depth={depth + 1} {initialOpenDepth} />
+				<ObjectArrayWrapper {data} {name} {depth} {initialOpenDepth} />
 			{:else if isArray}
 				<div class="is-array entry">
 					{#each data as entry, index}
