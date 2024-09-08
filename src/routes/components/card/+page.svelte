@@ -1,8 +1,4 @@
 <script lang="ts">
-	import type { PageData } from './$types'
-
-	export let data: PageData
-
 	const component = 'card'
 	const variants = ['variant-filled', 'variant-outline']
 	const colorVariants = ['', 'primary', 'secondary', 'danger', 'success']
@@ -11,7 +7,7 @@
 <div class="flex flex-col gap-4">
 	{#each variants as variant}
 		{#each colorVariants as colorVariant}
-			{@const classes = `${component} ${variant} ${colorVariant}`}
+			{@const classes = `${component} ${variant} ${colorVariant}`.trim()}
 			<div class={classes}>
 				<div class="card-content flex flex-col gap-4">
 					<p>A card with class="{classes}"</p>
