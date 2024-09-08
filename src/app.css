@@ -164,6 +164,7 @@ summary.accordion-label {
 	padding-block: var(--button-padding-block);
 	padding-inline: var(--button-padding-inline);
 	transition: all 0.3s;
+	white-space: nowrap;
 
 	&.variant-outline {
 		color: var(--color-main);

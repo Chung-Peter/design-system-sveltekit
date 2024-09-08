@@ -11,7 +11,7 @@
 			<h2 class="border-b">
 				class="{[component, variant, colorVariant].join(' ')} &lt;text-size&gt;"
 			</h2>
-			<div class="flex items-center justify-center gap-4">
+			<div class="flex flex-wrap items-center justify-center gap-4">
 				{#each textSizes as textSize}
 					{@const classes = [component, variant, colorVariant, textSize].join(' ')}
 					<button class={classes} title={`class="${classes}"`}>Click me</button>
