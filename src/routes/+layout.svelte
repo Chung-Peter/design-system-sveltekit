@@ -24,7 +24,7 @@
 			</details>
 			<a href="/repl">REPL</a>
 		</nav>
-		<main class="mb-8 w-full max-w-5xl flex-grow px-4">
+		<main class="mb-8 w-full flex-grow px-4">
 			<h1 class="mb-2 mt-8 text-4xl font-bold">{$page.data.title}</h1>
 			{#if $page.data.description}
 				<p class="mb-2">{$page.data.description}</p>
@@ -41,7 +41,7 @@
 	}
 
 	:root {
-		--nav-width: 16rem;
+		--nav-width: 12rem;
 	}
 
 	nav {
@@ -52,7 +52,7 @@
 		}
 
 		& + main {
-			margin-left: var(--nav-width);
+			padding-left: var(--nav-width);
 		}
 	}
 </style>
