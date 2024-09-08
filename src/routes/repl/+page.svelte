@@ -67,7 +67,7 @@
 					<meta charset="UTF-8">
 					<meta name="viewport" content="width=device-width, initial-scale=1.0">
 					<title>REPL Preview</title>
-					<script
+					<${'script'}
 						src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"
 					></${'script'}>
 					<${'style'}>${appCss}</${'style'}>
@@ -76,7 +76,7 @@
 				<body>
 					${repl.html}
 					<${'style'}>${repl.css}</${'style'}>
-					<script>${repl.js}</${'script'}>
+					<${'script'}>${repl.js}</${'script'}>
 				</body>
 			</html>
 		`)
@@ -137,7 +137,7 @@
 	})
 </script>
 
-<div class="flex h-[90dvh] flex-col gap-4">
+<div class="flex flex-col gap-4">
 	<div class="dynamic-grid grid gap-4">
 		<div class="flex flex-col">
 			<label for="css-editor">CSS Editor</label>
@@ -178,15 +178,14 @@
 
 	<div class="flex flex-col">
 		<h2>Output:</h2>
-		<div class="flex-1 border-2 border-black">
-			<iframe
-				bind:this={iframe}
-				title="REPL Preview"
-				sandbox="allow-scripts allow-modals allow-popups"
-				width="100%"
-				height="100%"
-			></iframe>
-		</div>
+		<iframe
+			bind:this={iframe}
+			title="REPL Preview"
+			sandbox="allow-scripts allow-modals allow-popups"
+			width="100%"
+			height="100%"
+			class="h-[90dvh] w-full border-2 border-black"
+		></iframe>
 	</div>
 </div>
 
