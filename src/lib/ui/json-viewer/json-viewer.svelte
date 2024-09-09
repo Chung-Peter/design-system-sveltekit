@@ -5,7 +5,7 @@
 	const { data, initialOpenDepth = 999 }: Pick<JsonNodeProps, 'data' | 'initialOpenDepth'> =
 		$props()
 
-	const { success: isValid, data: parsedData } = Json.safeParse(data)
+	const { success: isValid, data: parsedData } = $derived(Json.safeParse(data))
 </script>
 
 {#if isValid}

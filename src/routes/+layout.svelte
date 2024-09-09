@@ -16,10 +16,11 @@
 			<a href="/">Home</a>
 			<details open class="accordion my-4 flex flex-col">
 				<summary class="accordion-label font-medium">Components</summary>
-				<div class="accordion-content ml-1 flex flex-col border-l border-gray-500 pl-3">
+				<div class="accordion-content ml-1 flex flex-col border-l border-gray-500">
 					<a href="/components/button">Button</a>
 					<a href="/components/card">Card</a>
 					<a href="/components/json-viewer">JSON Viewer</a>
+					<a href="/components/json-viewer/etl" class="ml-4">ETL</a>
 				</div>
 			</details>
 			<a href="/repl">REPL</a>
@@ -48,7 +49,7 @@
 		width: var(--nav-width);
 
 		& a {
-			@apply text-gray-500 hover:text-gray-800 hover:no-underline;
+			@apply px-2 text-gray-500 hover:bg-gray-100 hover:text-gray-800 hover:no-underline;
 		}
 
 		& + main {

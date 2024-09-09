@@ -3,34 +3,38 @@
 	import JsonViewer from '$lib/ui/json-viewer/json-viewer.svelte'
 	import plansJson from '../plans.json'
 
-	let inputData = $state(JSON.stringify(plansJson, null, 2))
+	let inputString = $state(JSON.stringify(plansJson, null, 2))
+	// let inputString = $state('{}')
+	let input = $derived.by(() => {
+		try {
+			return { data: JSON.parse(inputString), error: '' }
+		} catch (e) {
+			return { data: {}, error: 'data must be valid JSON' }
+		}
+	})
+
 	let jsCode = $state(`// Transform your data here
 // Input data is available as 'data'
 // Example: 
-// const benefitId = '1a'
-// return data.map((planData) => {
-//   const benefit = planData.planBenefits.find((benefit) => benefit.id === benefitId)
-//   return { modelFactoryId: planData.modelFactoryId, ...benefit }
-// })
+ const benefitId = '13b'
+ return data.map((planData) => {
+  const benefit = planData.planBenefits.find((benefit) => benefit.id === benefitId)
+  return { modelFactoryId: planData.modelFactoryId, productId: planData.productId, ...benefit }
+ })
 `)
-	let outputData = $state({})
-	let error = $state('')
 
-	function transformData() {
-		try {
-			const data = JSON.parse(inputData)
-			const transformFunction = new Function('data', jsCode)
-			const result = transformFunction(data)
-			outputData = result
-			error = ''
-		} catch (e) {
-			error = e instanceof Error ? e.message : 'An unknown error occurred'
-			outputData = {}
+	const output = $derived.by(() => {
+		if (input.error) {
+			return { data: {}, error: input.error }
 		}
-	}
+		try {
+			const transformFunction = new Function('data', jsCode)
+			const result = transformFunction(input.data)
 
-	onMount(() => {
-		transformData()
+			return { data: result || {}, error: '' }
+		} catch (e) {
+			return { data: {}, error: e instanceof Error ? e.message : 'An unknown error occurred' }
+		}
 	})
 </script>
 
@@ -39,22 +43,24 @@
 		<label for="data-input">Input Data (JSON)</label>
 		<textarea
 			id="data-input"
-			bind:value={inputData}
-			oninput={transformData}
+			bind:value={inputString}
 			rows="10"
 			placeholder="Enter your JSON data here"
 		></textarea>
 	</div>
 	<div class="flex flex-col">
 		<h3>data:</h3>
-		<JsonViewer data={JSON.parse(inputData)} initialOpenDepth={0} />
+		{#if input.error}
+			<div class="error" role="alert">{input.error}</div>
+		{:else}
+			<JsonViewer data={input.data} initialOpenDepth={0} />
+		{/if}
 	</div>
 	<div class="input-box">
 		<label for="js-input">JavaScript Transformation</label>
 		<textarea
 			id="js-input"
 			bind:value={jsCode}
-			oninput={transformData}
 			rows="10"
 			placeholder="Enter your transformation code here"
 			spellcheck="false"
@@ -64,10 +70,11 @@
 
 	<div class="output-section">
 		<h3>Output:</h3>
-		{#if error}
-			<div class="error" role="alert">{error}</div>
-		{:else}
-			<JsonViewer data={outputData} />
+		{#if output.error}
+			<div class="error" role="alert">{output.error}</div>
+		{:else if output.data}
+			<pre>{JSON.stringify(output.data)}</pre>
+			<JsonViewer data={output.data} />
 		{/if}
 	</div>
 </div>

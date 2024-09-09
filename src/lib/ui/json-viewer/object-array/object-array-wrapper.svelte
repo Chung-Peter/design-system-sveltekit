@@ -11,7 +11,7 @@
 
 	const { data, name = '', depth = 0, initialOpenDepth = 999 }: JsonNodeProps = $props()
 
-	const { success: isObjectArray, data: parsedData } = ObjectArray.safeParse(data)
+	const { success: isObjectArray, data: parsedData } = $derived(ObjectArray.safeParse(data))
 
 	let viewAsTable = $state(true)
 	let filterSortOptions = $state<FilterSortOptions>({
@@ -20,7 +20,9 @@
 		sortDirection: 'asc',
 	})
 
-	const headers = isObjectArray ? [...new Set(parsedData.flatMap(Object.keys) as string[])] : []
+	const headers = $derived(
+		isObjectArray ? [...new Set(parsedData.flatMap(Object.keys) as string[])] : [],
+	)
 
 	const processedData = $derived(
 		isObjectArray ? filterAndSortData(parsedData, filterSortOptions) : [],
