@@ -2,6 +2,7 @@
 	import CopyToClipboardButton from '$lib/ui/copy-to-clipboard-button.svelte'
 	import ObjectArrayWrapper from './object-array/object-array-wrapper.svelte'
 	import type { JsonNodeProps } from './json-viewer.models'
+	import { untrack } from 'svelte'
 
 	const props: JsonNodeProps = $props()
 	const {
@@ -11,16 +12,15 @@
 		isLast = true,
 		initialOpenDepth = 999,
 		openAfterDepth = 999,
-	} = props
+	} = $derived(props)
 
-	const isArray = Array.isArray(data)
-	const isObject = typeof data === 'object' && data !== null
+	const isArray = $derived(Array.isArray(data))
+	const isObjectArray = $derived(
+		Array.isArray(data) && data.length > 0 && typeof data[0] === 'object',
+	)
+	const isObject = $derived(typeof data === 'object' && data !== null)
 
-	let accordionIsOpen = $state(depth < initialOpenDepth || depth >= openAfterDepth)
-
-	function isObjectArray(value: unknown): boolean {
-		return Array.isArray(value) && value.length > 0 && typeof value[0] === 'object'
-	}
+	let accordionIsOpen = $state(untrack(() => depth < initialOpenDepth || depth >= openAfterDepth))
 </script>
 
 {#if isArray || isObject}
@@ -78,7 +78,7 @@
 		</summary>
 
 		<div class="accordion-content node-data ml-10 flex flex-col">
-			{#if isObjectArray(data)}
+			{#if isObjectArray}
 				<ObjectArrayWrapper {...props} />
 			{:else if isArray}
 				<div class="is-array entry">
