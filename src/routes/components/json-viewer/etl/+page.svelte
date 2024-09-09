@@ -54,7 +54,12 @@
 		{#if input.error}
 			<div class="error" role="alert">{input.error}</div>
 		{:else}
-			<JsonViewer data={input.data} initialOpenDepth={0} defaultObjectArrayView="json" />
+			<JsonViewer
+				data={input.data}
+				initialOpenDepth={0}
+				openAfterDepth={1}
+				defaultObjectArrayView="json"
+			/>
 		{/if}
 	</div>
 	<div class="input-box">

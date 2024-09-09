@@ -19,6 +19,7 @@ export interface JsonNodeProps {
 	depth?: number
 	isLast?: boolean
 	initialOpenDepth?: number
+	openAfterDepth?: number
 	defaultObjectArrayView?: ObjectArrayView
 }
 

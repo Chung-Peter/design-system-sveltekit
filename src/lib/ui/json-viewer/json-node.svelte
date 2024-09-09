@@ -3,19 +3,20 @@
 	import ObjectArrayWrapper from './object-array/object-array-wrapper.svelte'
 	import type { JsonNodeProps } from './json-viewer.models'
 
+	const props: JsonNodeProps = $props()
 	const {
 		data,
 		name = '',
 		depth = 0,
 		isLast = true,
 		initialOpenDepth = 999,
-		...restProps
-	}: JsonNodeProps = $props()
+		openAfterDepth = 999,
+	} = props
 
 	const isArray = Array.isArray(data)
 	const isObject = typeof data === 'object' && data !== null
 
-	let accordionIsOpen = $state(depth < initialOpenDepth)
+	let accordionIsOpen = $state(depth < initialOpenDepth || depth >= openAfterDepth)
 
 	function isObjectArray(value: unknown): boolean {
 		return Array.isArray(value) && value.length > 0 && typeof value[0] === 'object'
@@ -78,19 +79,18 @@
 
 		<div class="accordion-content node-data ml-10 flex flex-col">
 			{#if isObjectArray(data)}
-				<ObjectArrayWrapper {data} {name} {depth} {initialOpenDepth} {...restProps} />
+				<ObjectArrayWrapper {...props} />
 			{:else if isArray}
 				<div class="is-array entry">
 					{#each data as entry, index}
 						<div class="array-index select-none">[{index}]:</div>
 						<div class="json-value">
 							<svelte:self
+								{...props}
 								data={entry}
 								name={`${name}[${index}]`}
 								depth={depth + 1}
-								{initialOpenDepth}
 								isLast={index === data.length - 1}
-								{...restProps}
 							/>
 						</div>
 					{/each}
@@ -104,12 +104,11 @@
 						</div>
 						<div class="json-value">
 							<svelte:self
+								{...props}
 								data={value}
 								name={`${name ? name + '.' : ''}${key}`}
 								depth={depth + 1}
-								{initialOpenDepth}
 								isLast={index === Object.keys(data).length - 1}
-								{...restProps}
 							/>
 						</div>
 					{/each}
