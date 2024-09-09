@@ -2,15 +2,14 @@
 	import { Json, type JsonNodeProps } from './json-viewer.models'
 	import JsonNode from './json-node.svelte'
 
-	const { data, initialOpenDepth = 999 }: Pick<JsonNodeProps, 'data' | 'initialOpenDepth'> =
-		$props()
+	const { data, ...restProps }: JsonNodeProps = $props()
 
 	const { success: isValid, data: parsedData } = $derived(Json.safeParse(data))
 </script>
 
 {#if isValid}
 	<div class="json-viewer" role="tree" aria-label="JSON Viewer">
-		<JsonNode data={parsedData} {initialOpenDepth} />
+		<JsonNode data={parsedData} {...restProps} />
 	</div>
 {:else}
 	<div class="json-viewer-error" role="alert">Invalid JSON data</div>

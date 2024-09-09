@@ -10,6 +10,8 @@ export const Json: z.ZodType<Json> = z.lazy(() =>
 
 export const ObjectArray = z.array(z.record(z.unknown()))
 export type ObjectArray = z.infer<typeof ObjectArray>
+export const OBJECT_ARRAY_VIEW_OPTIONS = ['table', 'json'] as const
+export type ObjectArrayView = (typeof OBJECT_ARRAY_VIEW_OPTIONS)[number]
 
 export interface JsonNodeProps {
 	data: unknown
@@ -17,6 +19,7 @@ export interface JsonNodeProps {
 	depth?: number
 	isLast?: boolean
 	initialOpenDepth?: number
+	defaultObjectArrayView?: ObjectArrayView
 }
 
 export interface FilterSortOptions {

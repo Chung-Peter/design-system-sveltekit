@@ -24,6 +24,7 @@
 		columnFilters = {},
 		onFilterChange,
 		onSortKeyChange,
+		...restProps
 	}: ObjectArrayTableProps = $props()
 
 	let wrapValue = $state(false)
@@ -115,6 +116,7 @@
 									data={entry[key]}
 									name={`${name || ''}${entry.id ? `[id: '${entry.id}']` : `[${rowIndex}]`}.${key}`}
 									depth={depth + 1}
+									{...restProps}
 								/>
 							{:else}
 								{getCellValue(entry, key)}

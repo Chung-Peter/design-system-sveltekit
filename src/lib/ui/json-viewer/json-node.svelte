@@ -9,6 +9,7 @@
 		depth = 0,
 		isLast = true,
 		initialOpenDepth = 999,
+		...restProps
 	}: JsonNodeProps = $props()
 
 	const isArray = Array.isArray(data)
@@ -77,7 +78,7 @@
 
 		<div class="accordion-content node-data ml-10 flex flex-col">
 			{#if isObjectArray(data)}
-				<ObjectArrayWrapper {data} {name} {depth} {initialOpenDepth} />
+				<ObjectArrayWrapper {data} {name} {depth} {initialOpenDepth} {...restProps} />
 			{:else if isArray}
 				<div class="is-array entry">
 					{#each data as entry, index}
@@ -89,6 +90,7 @@
 								depth={depth + 1}
 								{initialOpenDepth}
 								isLast={index === data.length - 1}
+								{...restProps}
 							/>
 						</div>
 					{/each}
@@ -107,6 +109,7 @@
 								depth={depth + 1}
 								{initialOpenDepth}
 								isLast={index === Object.keys(data).length - 1}
+								{...restProps}
 							/>
 						</div>
 					{/each}

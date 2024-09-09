@@ -15,7 +15,8 @@
 
 	let jsCode = $state(`// Transform your data here
 // Input data is available as 'data'
-// Example: 
+
+// Example: compare benefitId across all plans
  const benefitId = '13b'
  return data.map((planData) => {
   const benefit = planData.planBenefits.find((benefit) => benefit.id === benefitId)
@@ -53,7 +54,7 @@
 		{#if input.error}
 			<div class="error" role="alert">{input.error}</div>
 		{:else}
-			<JsonViewer data={input.data} initialOpenDepth={0} />
+			<JsonViewer data={input.data} initialOpenDepth={0} defaultObjectArrayView="json" />
 		{/if}
 	</div>
 	<div class="input-box">
@@ -71,10 +72,11 @@
 	<div class="output-section">
 		<h3>Output:</h3>
 		{#if output.error}
-			<div class="error" role="alert">{output.error}</div>
+			<div class="error border border-red-500 p-2" role="alert">{output.error}</div>
 		{:else if output.data}
-			<pre>{JSON.stringify(output.data)}</pre>
-			<JsonViewer data={output.data} />
+			<div class="border border-green-300 p-2">
+				<JsonViewer data={output.data} />
+			</div>
 		{/if}
 	</div>
 </div>

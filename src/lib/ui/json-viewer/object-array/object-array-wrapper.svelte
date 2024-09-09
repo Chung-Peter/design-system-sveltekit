@@ -9,11 +9,18 @@
 	import { ObjectArray, type FilterSortOptions, type JsonNodeProps } from '../json-viewer.models'
 	import { filterAndSortData } from './object-array.utils'
 
-	const { data, name = '', depth = 0, initialOpenDepth = 999 }: JsonNodeProps = $props()
+	const {
+		data,
+		name = '',
+		depth = 0,
+		initialOpenDepth = 999,
+		defaultObjectArrayView = 'table',
+		...restProps
+	}: JsonNodeProps = $props()
 
 	const { success: isObjectArray, data: parsedData } = $derived(ObjectArray.safeParse(data))
 
-	let viewAsTable = $state(true)
+	let viewAsTable = $state(defaultObjectArrayView === 'table')
 	let filterSortOptions = $state<FilterSortOptions>({
 		columnFilters: {},
 		sortColumn: '',
@@ -91,6 +98,7 @@
 	{#if viewAsTable}
 		<ObjectArrayTable
 			data={processedData}
+			{defaultObjectArrayView}
 			{headers}
 			{name}
 			{depth}
@@ -99,6 +107,7 @@
 			columnFilters={filterSortOptions.columnFilters}
 			{onFilterChange}
 			{onSortKeyChange}
+			{...restProps}
 		/>
 	{:else}
 		<div class="is-array entry">
@@ -107,18 +116,13 @@
 				<div class="json-value">
 					<JsonNode
 						data={entry}
+						{defaultObjectArrayView}
 						name={`${name}[${index}]`}
 						depth={depth + 1}
 						{initialOpenDepth}
 						isLast={index === processedData.length - 1}
+						{...restProps}
 					/>
-					<!-- <svelte:self
-					data={entry}
-					name={`${name}[${index}]`}
-					depth={depth + 1}
-					{initialOpenDepth}
-					isLast={index === data.length - 1}
-				/> -->
 				</div>
 			{/each}
 		</div>
