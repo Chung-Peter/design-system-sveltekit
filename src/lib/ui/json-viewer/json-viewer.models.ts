@@ -8,7 +8,13 @@ export const Json: z.ZodType<Json> = z.lazy(() =>
 	z.union([Primitive, z.array(Json), z.record(Json)]),
 )
 
-export const ObjectArray = z.array(z.record(z.unknown()))
+export const JsonArray = z.array(Json)
+export type JsonArray = z.infer<typeof JsonArray>
+
+export const JsonObject = z.record(Json)
+export type JsonObject = z.infer<typeof JsonObject>
+
+export const ObjectArray = z.array(JsonObject)
 export type ObjectArray = z.infer<typeof ObjectArray>
 export const OBJECT_ARRAY_VIEW_OPTIONS = ['table', 'json'] as const
 export type ObjectArrayView = (typeof OBJECT_ARRAY_VIEW_OPTIONS)[number]
