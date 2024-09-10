@@ -1,7 +1,7 @@
 <script lang="ts">
 	import CopyToClipboardButton from '$lib/ui/copy-to-clipboard-button.svelte'
 	import ObjectArrayWrapper from './object-array/object-array-wrapper.svelte'
-	import { JsonArray, JsonObject, ObjectArray, type JsonNodeProps } from './json-viewer.models'
+	import type { JsonNodeProps, JsonArray, JsonObject } from './json-viewer.models'
 	import { untrack } from 'svelte'
 
 	const props: JsonNodeProps = $props()
@@ -14,11 +14,13 @@
 		openAfterDepth = 999,
 	} = $derived(props)
 
-	const { success: isObjectArray, data: objectArrayData } = $derived(ObjectArray.safeParse(data))
-	const { success: isArray, data: arrayData } = $derived(JsonArray.safeParse(data))
-	const { success: isObject, data: objectData } = $derived(JsonObject.safeParse(data))
-
 	let accordionIsOpen = $state(untrack(() => depth < initialOpenDepth || depth >= openAfterDepth))
+
+	const isArray = $derived(Array.isArray(data))
+	const isObject = $derived(typeof data === 'object' && data !== null)
+	const isObjectArray = $derived(
+		Array.isArray(data) && data.length > 0 && typeof data[0] === 'object',
+	)
 </script>
 
 {#if isArray || isObject}
@@ -36,7 +38,7 @@
 				<div class="whitespace-nowrap">
 					{#if !accordionIsOpen}
 						<span class="text-gray-400">
-							({arrayData.length})
+							({(data as JsonArray).length})
 						</span>
 					{/if}
 					&lbrack;
@@ -45,7 +47,7 @@
 					<div
 						class="array-contents-summary overflow-hidden text-ellipsis whitespace-nowrap italic text-gray-400"
 					>
-						{JSON.stringify(arrayData).replace(/^\[|\]$/g, '')}
+						{JSON.stringify(data).replace(/^\[|\]$/g, '')}
 					</div>
 
 					<div>
@@ -58,7 +60,7 @@
 					<div
 						class="object-contents-summary overflow-hidden text-ellipsis whitespace-nowrap italic text-gray-400"
 					>
-						{JSON.stringify(objectData).replace(/^\{|\}$/g, '')}
+						{JSON.stringify(data).replace(/^\{|\}$/g, '')}
 					</div>
 					<div>
 						&rbrace;{#if !isLast},{/if}
@@ -77,10 +79,10 @@
 
 		<div class="accordion-content node-data ml-10 flex flex-col">
 			{#if isObjectArray}
-				<ObjectArrayWrapper {...{ ...props, data: objectArrayData }} />
+				<ObjectArrayWrapper {...props} />
 			{:else if isArray}
 				<div class="is-array entry">
-					{#each arrayData as entry, index}
+					{#each data as JsonArray as entry, index}
 						<div class="array-index select-none">[{index}]:</div>
 						<div class="json-value">
 							<svelte:self
@@ -88,14 +90,14 @@
 								data={entry}
 								name={`${name}[${index}]`}
 								depth={depth + 1}
-								isLast={index === arrayData.length - 1}
+								isLast={index === (data as JsonArray).length - 1}
 							/>
 						</div>
 					{/each}
 				</div>
 			{:else if isObject}
 				<div class="is-object entry">
-					{#each Object.entries(objectData) as [key, value], index}
+					{#each Object.entries(data as JsonObject) as [key, value], index}
 						<div class=" flex justify-between">
 							<span class="key text-red-800">"{key}"</span>
 							<span class="separator">:</span>
@@ -106,7 +108,7 @@
 								data={value}
 								name={`${name ? name + '.' : ''}${key}`}
 								depth={depth + 1}
-								isLast={index === Object.keys(objectData).length - 1}
+								isLast={index === Object.keys(data as JsonObject).length - 1}
 							/>
 						</div>
 					{/each}
