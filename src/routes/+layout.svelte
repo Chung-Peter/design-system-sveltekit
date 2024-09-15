@@ -21,7 +21,7 @@
 					<a href={`${base}/components/button`}>Button</a>
 					<a href={`${base}/components/card`}>Card</a>
 					<a href={`${base}/components/json-viewer`}>JSON Viewer</a>
-					<a href="/components/json-viewer/etl" class="ml-4">ETL</a>
+					<a href={`${base}/components/json-viewer/etl`} class="ml-4">ETL</a>
 				</div>
 			</details>
 			<a href={`${base}/repl`}>REPL</a>
