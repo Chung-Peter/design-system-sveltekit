@@ -2,10 +2,10 @@
 	import WrapTextIcon from '~icons/uim/wrap-text'
 
 	import JsonNode from '../json-node.svelte'
-	import type { JsonNodeProps, ObjectArray } from '../json-viewer.models'
+	import type { JsonNodeProps } from '../json-viewer.models'
 
 	type ObjectArrayTableProps = JsonNodeProps & {
-		data: ObjectArray
+		data: Record<string, unknown>[]
 		headers: string[]
 		sortColumn?: string
 		sortDirection?: 'asc' | 'desc'

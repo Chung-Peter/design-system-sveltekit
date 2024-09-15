@@ -37,10 +37,6 @@
 </div>
 
 <style lang="postcss">
-	:global(body) {
-		@apply overflow-hidden;
-	}
-
 	:root {
 		--nav-width: 12rem;
 	}

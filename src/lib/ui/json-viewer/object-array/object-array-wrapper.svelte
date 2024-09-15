@@ -6,8 +6,9 @@
 
 	import ObjectArrayTable from './object-array-table.svelte'
 	import JsonNode from '../json-node.svelte'
-	import { ObjectArray, type FilterSortOptions, type JsonNodeProps } from '../json-viewer.models'
+	import { type FilterSortOptions, type JsonNodeProps } from '../json-viewer.models'
 	import { filterAndSortData } from './object-array.utils'
+	import { isObjectArray } from '../json-viewer.utils'
 
 	const {
 		data,
@@ -18,8 +19,6 @@
 		...restProps
 	}: JsonNodeProps = $props()
 
-	const { success: isObjectArray, data: parsedData } = $derived(ObjectArray.safeParse(data))
-
 	let viewAsTable = $state(defaultObjectArrayView === 'table')
 	let filterSortOptions = $state<FilterSortOptions>({
 		columnFilters: {},
@@ -28,11 +27,11 @@
 	})
 
 	const headers = $derived(
-		isObjectArray ? [...new Set(parsedData.flatMap(Object.keys) as string[])] : [],
+		isObjectArray(data) ? [...new Set(data.flatMap(Object.keys) as string[])] : [],
 	)
 
 	const processedData = $derived(
-		isObjectArray ? filterAndSortData(parsedData, filterSortOptions) : [],
+		isObjectArray(data) ? filterAndSortData(data, filterSortOptions) : [],
 	)
 
 	function clearFilters() {
@@ -56,7 +55,7 @@
 	}
 </script>
 
-{#if isObjectArray}
+{#if isObjectArray(data)}
 	<div class="mt-2 flex items-center justify-between">
 		<div class="flex items-center gap-2">
 			<button
@@ -128,5 +127,5 @@
 		</div>
 	{/if}
 {:else}
-	<div class="font-bold text-red-500">Error: Was expecting an object array</div>
+	<div class="animate-pulse font-bold text-red-500">Error: Was expecting an object array</div>
 {/if}

@@ -1,7 +1,8 @@
 <script lang="ts">
 	import CopyToClipboardButton from '$lib/ui/copy-to-clipboard-button.svelte'
 	import ObjectArrayWrapper from './object-array/object-array-wrapper.svelte'
-	import type { JsonNodeProps, JsonArray, JsonObject } from './json-viewer.models'
+	import type { JsonNodeProps } from './json-viewer.models'
+	import { isArray, isObject, isObjectArray, isValidPrimitive } from './json-viewer.utils'
 	import { untrack } from 'svelte'
 
 	const props: JsonNodeProps = $props()
@@ -15,30 +16,24 @@
 	} = $derived(props)
 
 	let accordionIsOpen = $state(untrack(() => depth < initialOpenDepth || depth >= openAfterDepth))
-
-	const isArray = $derived(Array.isArray(data))
-	const isObject = $derived(typeof data === 'object' && data !== null)
-	const isObjectArray = $derived(
-		Array.isArray(data) && data.length > 0 && typeof data[0] === 'object',
-	)
 </script>
 
-{#if isArray || isObject}
+{#if isArray(data) || isObject(data)}
 	<details
 		bind:open={accordionIsOpen}
 		class="flex flex-col has-[>summary>.copy-to-clipboard:hover]:bg-green-50 has-[>summary>.copy-to-clipboard:hover]:outline-dashed has-[>summary>.copy-to-clipboard:hover]:outline-2 has-[>summary>.copy-to-clipboard:hover]:outline-offset-[-2px] has-[>summary>.copy-to-clipboard:hover]:outline-green-900 has-[>summary>.copy-to-clipboard:hover]:transition-all"
-		class:is-array={isArray}
-		class:is-object={isObject}
+		class:is-array={isArray(data)}
+		class:is-object={isObject(data)}
 	>
 		<summary
 			class="group relative flex items-center gap-x-1"
 			title={!accordionIsOpen ? JSON.stringify(data, null, 4) : 'Click to collapse'}
 		>
-			{#if isArray}
+			{#if isArray(data)}
 				<div class="whitespace-nowrap">
 					{#if !accordionIsOpen}
 						<span class="text-gray-400">
-							({(data as JsonArray).length})
+							({data.length})
 						</span>
 					{/if}
 					&lbrack;
@@ -78,11 +73,11 @@
 		</summary>
 
 		<div class="accordion-content node-data ml-10 flex flex-col">
-			{#if isObjectArray}
+			{#if isObjectArray(data)}
 				<ObjectArrayWrapper {...props} />
-			{:else if isArray}
+			{:else if isArray(data)}
 				<div class="is-array entry">
-					{#each data as JsonArray as entry, index}
+					{#each data as entry, index}
 						<div class="array-index select-none">[{index}]:</div>
 						<div class="json-value">
 							<svelte:self
@@ -90,14 +85,14 @@
 								data={entry}
 								name={`${name}[${index}]`}
 								depth={depth + 1}
-								isLast={index === (data as JsonArray).length - 1}
+								isLast={index === data.length - 1}
 							/>
 						</div>
 					{/each}
 				</div>
-			{:else if isObject}
+			{:else if isObject(data)}
 				<div class="is-object entry">
-					{#each Object.entries(data as JsonObject) as [key, value], index}
+					{#each Object.entries(data) as [key, value], index}
 						<div class=" flex justify-between">
 							<span class="key text-red-800">"{key}"</span>
 							<span class="separator">:</span>
@@ -108,7 +103,7 @@
 								data={value}
 								name={`${name ? name + '.' : ''}${key}`}
 								depth={depth + 1}
-								isLast={index === Object.keys(data as JsonObject).length - 1}
+								isLast={index === Object.keys(data).length - 1}
 							/>
 						</div>
 					{/each}
@@ -117,7 +112,7 @@
 		</div>
 
 		{#if accordionIsOpen}
-			{#if isArray}
+			{#if isArray(data)}
 				<div class="closing-bracket">
 					&rbrack;{#if !isLast},{/if}
 				</div>
@@ -128,8 +123,10 @@
 			{/if}
 		{/if}
 	</details>
-{:else if data !== null && data !== undefined}
+{:else if isValidPrimitive(data)}
 	{JSON.stringify(data)}{#if !isLast},{/if}
+{:else}
+	<span role="alert" class="animate-pulse bg-red-500 px-1 font-bold text-white">Invalid JSON data</span>
 {/if}
 
 <style lang="postcss">

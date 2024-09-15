@@ -1,15 +1,14 @@
 <script lang="ts">
-	import { Json, type JsonNodeProps } from './json-viewer.models'
+	import { type JsonNodeProps } from './json-viewer.models'
 	import JsonNode from './json-node.svelte'
+	import { isValidJson } from './json-viewer.utils'
 
 	const { data, ...restProps }: JsonNodeProps = $props()
-
-	const { success: isValid, data: parsedData } = $derived(Json.safeParse(data))
 </script>
 
-{#if isValid}
+{#if isValidJson(data)}
 	<div class="json-viewer" role="tree" aria-label="JSON Viewer">
-		<JsonNode data={parsedData} {...restProps} />
+		<JsonNode {data} {...restProps} />
 	</div>
 {:else}
 	<div class="json-viewer-error" role="alert">Invalid JSON data</div>
