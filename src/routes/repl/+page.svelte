@@ -116,6 +116,23 @@
 		debouncedUpdate()
 	}
 
+	function handleTabKeypress(event: KeyboardEvent) {
+		if (event.key === 'Tab') {
+			event.preventDefault()
+			const textArea = event.currentTarget as HTMLTextAreaElement
+			const start = textArea.selectionStart
+			const end = textArea.selectionEnd
+
+			// Insert tab character
+			textArea.value = textArea.value.substring(0, start) + '\t' + textArea.value.substring(end)
+
+			// Move cursor to the right position
+			textArea.selectionStart = textArea.selectionEnd = start + 1
+
+			textArea.dispatchEvent(new Event('input', { bubbles: true }))
+		}
+	}
+
 	/**
 	 * Creates a debounced function that delays invoking `func` until after `wait` milliseconds
 	 * have elapsed since the last time the debounced function was invoked.
@@ -155,7 +172,8 @@
 			<textarea
 				id="css-editor"
 				bind:value={repl.css}
-				oninput={(e) => handleInput(e, 'css')}
+				onkeydown={handleTabKeypress}
+				oninput={updatePreview}
 				placeholder="CSS"
 				rows="5"
 				aria-label="CSS Editor"
@@ -167,6 +185,7 @@
 			<textarea
 				id="js-editor"
 				bind:value={repl.js}
+				onkeydown={handleTabKeypress}
 				onblur={(e) => handleInput(e, 'js')}
 				placeholder="JavaScript"
 				rows="5"
@@ -179,7 +198,8 @@
 			<textarea
 				id="html-editor"
 				bind:value={repl.html}
-				oninput={() => updatePreview()}
+				onkeydown={handleTabKeypress}
+				oninput={updatePreview}
 				placeholder="HTML"
 				rows="15"
 				aria-label="HTML Editor"
