@@ -125,20 +125,17 @@ body {
 	grid-template-columns: repeat(auto-fit, minmax(var(--grid-min-col-width), 1fr));
 }
 
-@tailwind components;
-
-a,
-a:visited,
-.link {
+:is(a, a:visited, .link) {
 	color: var(--link-color);
 	cursor: pointer;
-	text-decoration: none;
+	text-decoration: underline;
 
 	&:hover {
 		color: var(--link-color-hover);
-		text-decoration: underline;
 	}
 }
+
+@tailwind components;
 
 summary.accordion-label {
 	@apply flex cursor-pointer list-none items-center justify-between;

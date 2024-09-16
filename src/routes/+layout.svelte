@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { base } from '$app/paths'
 	import { page } from '$app/stores'
 
 	const { children } = $props()
@@ -46,7 +46,7 @@
 		width: var(--nav-width);
 
 		& a {
-			@apply px-2 text-gray-500 hover:bg-gray-100 hover:text-gray-800 hover:no-underline;
+			@apply px-2 text-gray-500 no-underline hover:bg-gray-100 hover:text-gray-800;
 		}
 
 		& + main {
