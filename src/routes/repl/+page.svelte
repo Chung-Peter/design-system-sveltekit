@@ -59,7 +59,23 @@
 		js: `// Add your JavaScript here`,
 	}
 
-	let repl = $state(initialState)
+	const html = localStorage.getItem('repl-html') || initialState.html
+	const css = localStorage.getItem('repl-css') || initialState.css
+	const js = localStorage.getItem('repl-js') || initialState.js
+	let repl: EditorState = $state({ html, css, js })
+	$effect(() => {
+		console.log('store html:', repl.html)
+		localStorage.setItem('repl-html', repl.html)
+	})
+	$effect(() => {
+		console.log('store css:', repl.css)
+		localStorage.setItem('repl-css', repl.css)
+	})
+	$effect(() => {
+		console.log('store js:', repl.js)
+		localStorage.setItem('repl-js', repl.js)
+	})
+
 	const srcDoc = $derived(`
 			<!DOCTYPE html>
 			<html lang="en">
@@ -92,11 +108,6 @@
 
 	// Debounced update function
 	const debouncedUpdate = debounce(updatePreview, 1000)
-
-	// Use $effect for lifecycle hooks
-	// $effect(() => {
-	// 	updatePreview()
-	// })
 
 	// Handle input changes
 	function handleInput(event: Event, key: keyof EditorState) {
