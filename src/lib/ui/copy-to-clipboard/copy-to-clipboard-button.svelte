@@ -1,7 +1,7 @@
 <script lang="ts">
 	import ClipboardCodeIcon from '~icons/fluent/clipboard-code-16-regular'
 
-	import { copyToClipboard } from '$lib/utils/copy-to-clipboard'
+	import { copyToClipboard } from '$lib/ui/copy-to-clipboard/copy-to-clipboard.utils'
 
 	const {
 		data,
