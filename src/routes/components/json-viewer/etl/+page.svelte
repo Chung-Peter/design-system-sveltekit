@@ -16,12 +16,46 @@
 	let jsCode = $state(`// Transform your data here
 // Input data is available as 'data'
 
-// Example: compare benefitId across all plans
- const benefitId = '13b'
- return data.map((planData) => {
-  const benefit = planData.planBenefits.find((benefit) => benefit.id === benefitId)
-  return { modelFactoryId: planData.modelFactoryId, productId: planData.productId, ...benefit }
- })
+// Example:
+
+function naturalSortById(objArr) {
+	const collator = new Intl.Collator(undefined, { numeric: true, sensitivity: 'base' })
+	return objArr.sort((a, b) => collator.compare(a.id, b.id))
+}
+
+// get all unique benefitIds across all plans
+const benefitIds = Array.from(
+	new Set(
+		data.flatMap((planData) =>
+			planData.planBenefits.flatMap((b) =>
+				JSON.stringify({ id: b.id, benefitName: b.benefitName }),
+			),
+		),
+	),
+).map((stringified) => JSON.parse(stringified))
+const sortedBenefitIds = naturalSortById(benefitIds)
+
+function getObjectById(objArr, id) {
+	return objArr.find((obj) => obj.id === id)
+}
+
+// compare benefitId across all plans
+const benefitId = '13b'
+const comparePlans = data.map((planData) => {
+	const benefit = getObjectById(planData.planBenefits, benefitId)
+
+	const result = {
+		modelFactoryId: planData.modelFactoryId,
+		productId: planData.productId,
+		...benefit,
+	}
+	return result
+})
+
+return {
+	comparePlans,
+	benefitIds: sortedBenefitIds,
+}
 `)
 
 	const output = $derived.by(() => {

@@ -126,7 +126,9 @@
 {:else if isValidPrimitive(data)}
 	{JSON.stringify(data)}{#if !isLast},{/if}
 {:else}
-	<span role="alert" class="animate-pulse bg-red-500 px-1 font-bold text-white">Invalid JSON data</span>
+	<span role="alert" class="animate-pulse bg-red-500 px-1 font-bold text-white"
+		>Invalid JSON data</span
+	>
 {/if}
 
 <style lang="postcss">
