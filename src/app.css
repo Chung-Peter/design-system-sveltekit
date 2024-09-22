@@ -150,11 +150,11 @@ summary.accordion-label {
 }
 
 .button {
-	/* background-color: var(--color-main); */
+	background-color: var(--color-on-main);
 	border-color: var(--color-main);
 	border-radius: var(--button-border-radius);
 	border-width: var(--button-border-width);
-	/* color: var(--color-on-main); */
+	color: var(--color-main);
 	cursor: pointer;
 	/* display: flex; */
 	/* align-items: center; */
@@ -163,19 +163,20 @@ summary.accordion-label {
 	transition: all 0.3s;
 	white-space: nowrap;
 
-	&.variant-outline {
-		color: var(--color-main);
+	&,
+	&.variant-outlined {
+		/* color: var(--color-main); */
+		&:hover {
+			background-color: var(--color-main);
+			color: var(--color-on-main);
+		}
 	}
 
+	&.variant-filled {
+		background-color: var(--color-main);
 	&:hover {
 		background-color: var(--color-main-hover);
-		color: var(--color-on-main);
-
-		.variant-filled& {
 			border-color: var(--color-main-hover);
-		}
-		.variant-outline& {
-			--color-main-hover: var(--color-main);
 		}
 	}
 
@@ -184,6 +185,7 @@ summary.accordion-label {
 	}
 }
 
+/* TODO: Add card-content class */
 .card {
 	border-color: var(--color-main);
 	border-radius: var(--card-border-radius);
@@ -234,8 +236,9 @@ summary.accordion-label {
 	color: var(--color-on-main);
 }
 
-.variant-outline {
+.variant-outlined {
 	background-color: var(--color-on-main);
+	border-color: var(--color-main);
 }
 /* END Variants */
 

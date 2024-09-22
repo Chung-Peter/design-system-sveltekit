@@ -1,6 +1,6 @@
 <script lang="ts">
 	const component = 'button'
-	const variants = ['', 'variant-filled', 'variant-outline']
+	const variants = ['', 'variant-filled', 'variant-outlined']
 	const colorVariants = ['', 'primary', 'secondary', 'danger', 'success']
 	const textSizes = ['', 'text-lg', 'text-xl', 'text-2xl', 'text-3xl', 'text-4xl']
 </script>

@@ -12,7 +12,7 @@
 	// Initial state
 	const initialState: EditorState = {
 		html: `<div class="grid gap-4 p-2">
-	<div class="card variant-outline primary" style="--card-border-width: 5px; --card-border-radius: 2em;">
+	<div class="card variant-outlined primary" style="--card-border-width: 5px; --card-border-radius: 2em;">
 		<div class="stretch">
 			<img src="https://picsum.photos/id/908/800">
 		</div>
@@ -27,7 +27,7 @@
 		<p>This grid has a dynamic number of columns based on the screen size. Try resizing the window to see the effect.</p>
 	</div>
 	<div class="grid dynamic-grid gap-2">
-		<a href="#" class="card variant-outline primary hover:!no-underline">
+		<a href="#" class="card variant-outlined primary hover:!no-underline">
 			<div class="stretch">
 				<img src="https://picsum.photos/id/918/800/400">
 			</div>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	const component = 'card'
-	const variants = ['variant-filled', 'variant-outline']
+	const variants = ['variant-filled', 'variant-outlined']
 	const colorVariants = ['', 'primary', 'secondary', 'danger', 'success']
 </script>
 
