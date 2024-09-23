@@ -13,9 +13,9 @@
 
 <div class="h-screen w-screen overflow-y-auto">
 	<div class="mx-auto flex max-w-7xl">
-		<nav class="fixed top-0 flex w-48 flex-col overflow-y-auto p-2">
-			<a href={`${base}/`}>Home</a>
-			<details open class="accordion my-4 flex flex-col">
+		<nav class="fixed top-0 flex flex-col overflow-y-auto p-2">
+			<a href={`${base}/introduction`}>Introduction</a>
+			<details open class="accordion my-4">
 				<summary class="accordion-label font-medium">Components</summary>
 				<div class="accordion-content ml-1 flex flex-col border-l border-gray-500">
 					<a href={`${base}/components/button`}>Button</a>
