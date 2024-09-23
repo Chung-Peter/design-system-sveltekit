@@ -17,7 +17,8 @@
 			<a href={`${base}/introduction`}>Introduction</a>
 			<details open class="accordion my-4">
 				<summary class="accordion-label font-medium">Components</summary>
-				<div class="accordion-content ml-1 flex flex-col border-l border-gray-500">
+				<div class="accordion-content ml-4 flex flex-col border-l border-gray-500">
+					<a href={`${base}/components/accordion`}>Accordion</a>
 					<a href={`${base}/components/button`}>Button</a>
 					<a href={`${base}/components/card`}>Card</a>
 					<a href={`${base}/components/json-viewer`}>JSON Viewer</a>
@@ -43,9 +44,13 @@
 	}
 
 	nav {
+		--accordion-label-padding-block: var(--gap-xxs);
+		--accordion-content-padding-block: 0px;
+		--accordion-content-padding-inline: var(--gap-xs);
+
 		width: var(--nav-width);
 
-		& a {
+		& :is(a, summary) {
 			@apply px-2 text-gray-500 no-underline hover:bg-gray-100 hover:text-gray-800;
 		}
 

@@ -13,6 +13,7 @@
 
 	--ehi-danger-600: #dc3545;
 	--ehi-danger-500: #ec474f;
+
 	--ehi-success-700: #198754;
 	--ehi-success-600: #19a061;
 
@@ -40,30 +41,86 @@
 	/* Semantic Colors */
 
 	/* Defaults */
-	--color-main: var(--black, #000);
-	--color-main-hover: var(--ehi-neutral-600, #555);
-	--color-on-main: var(--white, #fff);
+	@property --color-main {
+		syntax: '<color>';
+		inherit: true;
+		initial-value: #000;
+	}
+	@property --color-main-hover {
+		syntax: '<color>';
+		inherit: true;
+		initial-value: #333;
+	}
+	@property --color-on-main {
+		syntax: '<color>';
+		inherit: true;
+		initial-value: #fff;
+	}
+	@property --color-on-main-hover {
+		syntax: '<color>';
+		inherit: true;
+		initial-value: #eee;
+	}
+	--color-main: var(--color-neutral);
+	--color-main-hover: var(--color-neutral-hover);
+	--color-on-main: var(--color-on-neutral);
+	--color-on-main-hover: var(--color-on-neutral-hover);
 	/* --_color-main: var(--color-main, blue); */
 	/* --_color-on-main: var(--color-on-main, white); */
 
+	--color-neutral: var(--black, black);
+	--color-neutral-hover: color-mix(in srgb, var(--color-neutral) 80%, var(--color-on-neutral));
+	--color-on-neutral: var(--white, #fff);
+	--color-on-neutral-hover: color-mix(in srgb, var(--color-neutral), var(--color-on-neutral) 95%);
+
 	--color-primary: var(--ehi-blue-600);
-	--color-primary-hover: var(--ehi-blue-500);
+	--color-primary-hover: var(
+		--ehi-blue-500,
+		color-mix(in srgb, var(--color-primary) 90%, var(--color-on-primary))
+	);
 	--color-on-primary: var(--white);
+	--color-on-primary-hover: color-mix(in srgb, var(--color-primary), var(--color-on-primary) 95%);
 
 	--color-secondary: var(--ehi-gold-400);
-	--color-secondary-hover: var(--ehi-gold-300);
+	--color-secondary-hover: var(
+		--ehi-gold-300,
+		color-mix(in srgb, var(--color-secondary) 90%, var(--color-on-secondary))
+	);
 	--color-on-secondary: var(--white);
+	--color-on-secondary-hover: color-mix(
+		in srgb,
+		var(--color-secondary),
+		var(--color-on-secondary) 95%
+	);
 
-	--color-danger: var(--ehi-danger-600);
-	--color-danger-hover: var(--ehi-danger-500);
-	--color-on-danger: var(--white);
+	--color-danger: var(--ehi-danger-600, red);
+	--color-danger-hover: var(
+		--ehi-danger-400,
+		color-mix(in srgb, var(--color-danger) 80%, var(--black))
+	);
+	--color-on-danger: var(--white, #fff);
+	--color-on-danger-hover: color-mix(in srgb, var(--color-danger), var(--color-on-danger) 95%);
 
-	--color-success: var(--ehi-success-700);
-	--color-success-hover: var(--ehi-success-600);
-	--color-on-success: var(--white);
+	--color-success: var(--ehi-success-700, green);
+	--color-success-hover: var(
+		--ehi-success-600,
+		color-mix(in srgb, var(--color-success) 90%, var(--color-on-success))
+	);
+	--color-on-success: var(--white, #fff);
+	--color-on-success-hover: color-mix(in srgb, var(--color-success), var(--color-on-success) 95%);
 
-	--link-color: var(--ehi-blue-600);
-	--link-color-hover: var(--ehi-blue-500);
+	--link-color: var(--ehi-blue-600, #0000ee);
+	--link-color-hover: var(
+		--ehi-blue-500,
+		color-mix(in srgb, var(--link-color) 90%, var(--color-on-main))
+	);
+
+	--accordion-border-radius: var(--gap-xs, 0px);
+	--accordion-border-width: 1px;
+	--accordion-label-padding-block: var(--gap-md, 1rem);
+	--accordion-label-padding-inline: var(--gap-md, 1rem);
+	--accordion-content-padding-block: var(--gap-md, 1rem);
+	--accordion-content-padding-inline: var(--gap-md, 1rem);
 
 	--button-border-radius: var(--gap-xxs-relative);
 	--button-border-width: 2px;
@@ -137,16 +194,91 @@ body {
 
 @tailwind components;
 
-summary.accordion-label {
-	@apply flex cursor-pointer list-none items-center justify-between;
+.prose {
+	@apply !max-w-none;
+}
 
-	&::after {
-		content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' d='M7.733 4.207a.75.75 0 0 1 1.06.026l5.001 5.25a.75.75 0 0 1 0 1.035l-5 5.25a.75.75 0 1 1-1.087-1.034L12.216 10l-4.51-4.734a.75.75 0 0 1 .027-1.06'/%3E%3C/svg%3E");
-		@apply transition-all;
+.accordion-group {
+	display: grid;
+	background-color: var(--color-on-main);
+	border: var(--accordion-border-width) solid var(--color-main);
+	border-radius: var(--accordion-border-radius);
+	color: var(--color-main);
+	overflow: hidden;
+
+	/* border between accordions */
+	& > * + * {
+		border-top: var(--accordion-border-width) solid var(--color-main);
 	}
-	details[open] &::after {
+
+	&.variant-filled,
+	&.variant-filled > * + * {
+		border-color: var(--color-on-main);
+	}
+}
+
+.accordion-label {
+	display: flex;
+	cursor: pointer;
+	list-style: none;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--color-on-main);
+	padding-left: var(--accordion-label-padding-inline);
+	padding-right: var(--accordion-label-padding-inline);
+	padding-top: var(--accordion-label-padding-block);
+	padding-bottom: var(--accordion-label-padding-block);
+	color: var(--color-main);
+	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 300ms;
+	&:hover {
+		background-color: var(--color-on-main-hover);
+	}
+	&::after {
+		content: '';
+		width: 1em;
+		height: 1em;
+		background-color: currentColor;
+		mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 20 20'%3E%3Cpath fill='%23000' d='M7.733 4.207a.75.75 0 0 1 1.06.026l5.001 5.25a.75.75 0 0 1 0 1.035l-5 5.25a.75.75 0 1 1-1.087-1.034L12.216 10l-4.51-4.734a.75.75 0 0 1 .027-1.06'/%3E%3C/svg%3E");
+		mask-repeat: no-repeat;
+		mask-position: center;
+		mask-size: contain;
+		@apply transition-transform;
+	}
+	.accordion[open] &::after {
 		transform: rotate(90deg);
 	}
+
+	.variant-filled &,
+	&.variant-filled {
+		@apply bg-[--color-main] text-[--color-on-main];
+		&:hover {
+			background-color: var(--color-main-hover);
+		}
+	}
+
+	&.variant-outlined {
+		@apply rounded-[--accordion-border-radius] border-[length:--accordion-border-width] border-solid border-[--color-main];
+		&:hover {
+			background-color: var(--color-on-main-hover);
+		}
+	}
+}
+
+.accordion-content {
+	@apply px-[--accordion-content-padding-inline] py-[--accordion-content-padding-block];
+
+	.variant-filled &,
+	&.variant-filled {
+		background-color: var(--color-main);
+		color: var(--color-on-main);
+	}
+	/* &.variant-filled,
+	.variant-filled & {
+		background-color: var(--color-main);
+		color: var(--color-on-main);
+	} */
 }
 
 .button {
@@ -174,8 +306,8 @@ summary.accordion-label {
 
 	&.variant-filled {
 		background-color: var(--color-main);
-	&:hover {
-		background-color: var(--color-main-hover);
+		&:hover {
+			background-color: var(--color-main-hover);
 			border-color: var(--color-main-hover);
 		}
 	}
@@ -230,7 +362,40 @@ summary.accordion-label {
 	}
 }
 
-/* Variants */
+/* Color schemes */
+.neutral {
+	--color-main: var(--color-neutral);
+	--color-main-hover: var(--color-neutral-hover);
+	--color-on-main: var(--color-on-neutral);
+	--color-on-main-hover: var(--color-on-neutral-hover);
+}
+.primary {
+	--color-main: var(--color-primary);
+	--color-main-hover: var(--color-primary-hover);
+	--color-on-main: var(--color-on-primary);
+	--color-on-main-hover: var(--color-on-primary-hover);
+}
+.secondary {
+	--color-main: var(--color-secondary);
+	--color-main-hover: var(--color-secondary-hover);
+	--color-on-main: var(--color-on-secondary);
+	--color-on-main-hover: var(--color-on-secondary-hover);
+}
+.danger {
+	--color-main: var(--color-danger);
+	--color-main-hover: var(--color-danger-hover);
+	--color-on-main: var(--color-on-danger);
+	--color-on-main-hover: var(--color-on-danger-hover);
+}
+.success {
+	--color-main: var(--color-success);
+	--color-main-hover: var(--color-success-hover);
+	--color-on-main: var(--color-on-success);
+	--color-on-main-hover: var(--color-on-success-hover);
+}
+/* END Color Schemes */
+
+/* Styled Variants */
 .variant-filled {
 	background-color: var(--color-main);
 	color: var(--color-on-main);
@@ -239,30 +404,8 @@ summary.accordion-label {
 .variant-outlined {
 	background-color: var(--color-on-main);
 	border-color: var(--color-main);
+	color: var(--color-main);
 }
-/* END Variants */
-
-/* Color schemes */
-.primary {
-	--color-main: var(--color-primary);
-	--color-main-hover: var(--color-primary-hover);
-	--color-on-main: var(--color-on-primary);
-}
-.secondary {
-	--color-main: var(--color-secondary);
-	--color-main-hover: var(--color-secondary-hover);
-	--color-on-main: var(--color-on-secondary);
-}
-.danger {
-	--color-main: var(--color-danger);
-	--color-main-hover: var(--color-danger-hover);
-	--color-on-main: var(--color-on-danger);
-}
-.success {
-	--color-main: var(--color-success);
-	--color-main-hover: var(--color-success-hover);
-	--color-on-main: var(--color-on-success);
-}
-/* END Color Schemes */
+/* END Styled Variants */
 
 @tailwind utilities;
