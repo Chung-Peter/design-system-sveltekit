@@ -1,144 +1,109 @@
 @tailwind base;
 
 :root {
-	/* Color constants */
-	--black: #262626;
-	--white: #ffffff;
+	/* User-defined constants */
+	/* Add any custom color constants here like specific brand colors to be used in the Semantic Colors section */
 
-	--ehi-neutral-50: #f4f4f4;
-	--ehi-neutral-100: #eceded;
-	--ehi-neutral-200: #dedede;
-	--ehi-neutral-400: #8c8c8c;
-	--ehi-neutral-600: #595959;
+	/* Branding Standards */
+	--ehi-bs-black: #262626;
+	--ehi-bs-neutral-100: #595959;
+	--ehi-bs-neutral-80: #8c8c8c;
+	--ehi-bs-neutral-60: #dedede;
+	--ehi-bs-neutral-40: #eceded;
+	--ehi-bs-neutral-20: #f4f4f4;
+	--ehi-bs-navy-100: #003270;
+	--ehi-bs-navy-80: #005395;
+	--ehi-bs-blue-100: #0073ba;
+	--ehi-bs-blue-20: #e5eaf6;
+	--ehi-bs-blue-10: #eef1f9;
+	--ehi-bs-gold-100: #f4af23;
+	--ehi-bs-mint-100: #addc91;
+	--ehi-bs-mint-20: #ebf5e6;
+	--ehi-bs-mint-10: #f5faf2;
+	--ehi-bs-turquoise-100: #00a5ab;
+	--ehi-bs-turquoise-10: #eaf6f5;
+	--ehi-bs-orange-100: #f76736;
+	--ehi-bs-danger: #dc3545;
+	--ehi-bs-success: #198754;
 
-	--ehi-danger-600: #dc3545;
-	--ehi-danger-500: #ec474f;
+	--ehi-bars: #bbbbbb;
+	--ehi-inactive: #949494;
+	--ehi-lines: #707070;
+	/* END Branding Standards */
 
-	--ehi-success-700: #198754;
-	--ehi-success-600: #19a061;
+	/* END Color constants */
 
-	--ehi-blue-50: #eef1f9;
-	--ehi-blue-100: #e5eaf6;
-	--ehi-blue-500: #0c9deb;
-	--ehi-blue-600: #0073ba;
-	--ehi-blue-800: #005395;
-	--ehi-blue-900: #003270;
-
-	--ehi-gold-300: #f8c74c;
-	--ehi-gold-400: #f4af23;
-
-	--ehi-orange-400: #f76736;
-
-	--ehi-mint-50: #f5faf2;
-	--ehi-mint-100: #ebf5e6;
-	--ehi-mint-300: #addc91;
-
-	--ehi-turquoise-50: #eaf6f5;
-	--ehi-turquoise-600: #00a5ab;
-
-	/* Design Intents */
+	/* Declare theme customization variables */
+	--black: var(--ehi-bs-black);
+	/* --white: #ffffff; */
 
 	/* Semantic Colors */
+	/* Only uncomment the colors you want to override */
 
-	/* Defaults */
-	@property --color-main {
-		syntax: '<color>';
-		inherit: true;
-		initial-value: #000;
-	}
-	@property --color-main-hover {
-		syntax: '<color>';
-		inherit: true;
-		initial-value: #333;
-	}
-	@property --color-on-main {
-		syntax: '<color>';
-		inherit: true;
-		initial-value: #fff;
-	}
-	@property --color-on-main-hover {
-		syntax: '<color>';
-		inherit: true;
-		initial-value: #eee;
-	}
-	--color-main: var(--color-neutral);
-	--color-main-hover: var(--color-neutral-hover);
-	--color-on-main: var(--color-on-neutral);
-	--color-on-main-hover: var(--color-on-neutral-hover);
-	/* --_color-main: var(--color-main, blue); */
-	/* --_color-on-main: var(--color-on-main, white); */
+	/* Default color for font, background, borders, etc. */
+	/* --color-base: var(--black); */
+	/* --color-base-hover: #555; */
+	/* --color-on-base: var(--white); */
+	/* --color-on-base-hover: color-mix(in srgb, var(--color-base), var(--color-on-base) 95%); */
 
-	--color-neutral: var(--black, black);
-	--color-neutral-hover: color-mix(in srgb, var(--color-neutral) 80%, var(--color-on-neutral));
-	--color-on-neutral: var(--white, #fff);
-	--color-on-neutral-hover: color-mix(in srgb, var(--color-neutral), var(--color-on-neutral) 95%);
+	--color-primary: var(--ehi-bs-blue-100);
+	--color-primary-hover: var(--ehi-bs-navy-80);
+	/* --color-on-primary: var(--white); */
+	/* --color-on-primary-hover: color-mix(in srgb, var(--color-primary), var(--color-on-primary) 95%); */
 
-	--color-primary: var(--ehi-blue-600);
-	--color-primary-hover: var(
-		--ehi-blue-500,
-		color-mix(in srgb, var(--color-primary) 90%, var(--color-on-primary))
-	);
-	--color-on-primary: var(--white);
-	--color-on-primary-hover: color-mix(in srgb, var(--color-primary), var(--color-on-primary) 95%);
-
-	--color-secondary: var(--ehi-gold-400);
-	--color-secondary-hover: var(
-		--ehi-gold-300,
-		color-mix(in srgb, var(--color-secondary) 90%, var(--color-on-secondary))
-	);
-	--color-on-secondary: var(--white);
+	--color-secondary: var(--ehi-bs-gold-100);
+	/* --color-secondary-hover: var(--ehi-gold-300); */
+	--color-on-secondary: var(--black);
 	--color-on-secondary-hover: color-mix(
 		in srgb,
 		var(--color-secondary),
-		var(--color-on-secondary) 95%
+		var(--color-on-secondary) 75%
 	);
 
-	--color-danger: var(--ehi-danger-600, red);
-	--color-danger-hover: var(
-		--ehi-danger-400,
-		color-mix(in srgb, var(--color-danger) 80%, var(--black))
-	);
-	--color-on-danger: var(--white, #fff);
-	--color-on-danger-hover: color-mix(in srgb, var(--color-danger), var(--color-on-danger) 95%);
+	--color-danger: var(--ehi-bs-danger);
+	/* --color-danger-hover: color-mix(in srgb, var(--ehi-bs-danger) 80%, var(--_black)); */
+	/* --color-on-danger: var(--white); */
+	/* --color-on-danger-hover: color-mix(in srgb, var(--color-danger), var(--color-on-danger) 95%); */
 
-	--color-success: var(--ehi-success-700, green);
-	--color-success-hover: var(
-		--ehi-success-600,
-		color-mix(in srgb, var(--color-success) 90%, var(--color-on-success))
-	);
-	--color-on-success: var(--white, #fff);
-	--color-on-success-hover: color-mix(in srgb, var(--color-success), var(--color-on-success) 95%);
+	--color-success: var(--ehi-bs-success);
+	/* --color-success-hover: #00ff00; */
+	/* --color-on-success: var(--white); */
+	/* --color-on-success-hover: color-mix(in srgb, var(--color-success), var(--color-on-success) 95%); */
 
-	--link-color: var(--ehi-blue-600, #0000ee);
-	--link-color-hover: var(
-		--ehi-blue-500,
-		color-mix(in srgb, var(--link-color) 90%, var(--color-on-main))
-	);
+	--color-disabled: var(--ehi-bs-neutral-80);
+	/* --color-on-disabled: var(--_white); */
 
-	--accordion-border-radius: var(--gap-xs, 0px);
+	--link-color: var(--ehi-bs-blue-100);
+	/* --link-color-hover: var(--ehi-blue-500); */
+
+	/* END Semantic Colors */
+
+	/* Component Variables */
+	--accordion-border-radius: var(--space-xs, 0px);
 	--accordion-border-width: 1px;
-	--accordion-label-padding-block: var(--gap-md, 1rem);
-	--accordion-label-padding-inline: var(--gap-md, 1rem);
-	--accordion-content-padding-block: var(--gap-md, 1rem);
-	--accordion-content-padding-inline: var(--gap-md, 1rem);
+	--accordion-label-padding-block: var(--space-md, 1rem);
+	--accordion-label-padding-inline: var(--space-md, 1rem);
+	--accordion-content-padding-block: var(--space-md, 1rem);
+	--accordion-content-padding-inline: var(--space-md, 1rem);
 
-	--button-border-radius: var(--gap-xxs-relative);
+	--button-border-radius: 0.25rem;
 	--button-border-width: 2px;
-	--button-padding-block: var(--gap-xxs-relative);
-	--button-padding-inline: var(--gap-sm-relative);
-	/* --_border-radius: var(--border-radius, 0px); */
-	/* --_border-width: var(--border-width, 1px); */
+	--button-padding-block: var(--space-sm-relative);
+	--button-padding-inline: var(--space-lg-relative);
 
 	/* --card-border-radius: 0px; */
-	--card-border-radius: var(--gap-xs);
+	--card-border-radius: 0.25rem;
 	--card-border-width: 2px;
-	--card-padding-block: var(--gap-md);
-	--card-padding-inline: var(--gap-md);
+	--card-padding-block: var(--space-md);
+	--card-padding-inline: var(--space-md);
 
 	--grid-min-col-width: 20rem;
 
-	/* END Design Intents */
+	/* END Component Variables */
 
+	/* END theme customization variables */
+
+	/* Typography */
 	--font-base: 1rem;
 	--leading-base: 1.5rem;
 	--font-lg: 1.125rem;
@@ -153,25 +118,126 @@
 	--leading-4xl: 4.063rem;
 
 	/* Spacing */
-	/* fixed values - not affected by --gap-unit or --text-base-size */
-	--gap-unit: 1rem;
-	--gap-xxs: calc(0.25 * var(--gap-unit));
-	--gap-xs: calc(0.5 * var(--gap-unit));
-	--gap-sm: calc(0.75 * var(--gap-unit));
-	--gap-md: calc(1.25 * var(--gap-unit));
-	--gap-lg: calc(2 * var(--gap-unit));
-	--gap-xl: calc(3.25 * var(--gap-unit));
-	--gap-xxl: calc(5.25 * var(--gap-unit));
+	--space-unit: 1rem;
+	--space-sm: calc(0.25 * var(--space-unit));
+	--space-md: calc(0.5 * var(--space-unit));
+	--space-lg: calc(1 * var(--space-unit));
+	/* --space-xxs: calc(0.25 * var(--space-unit));
+	--space-xs: calc(0.5 * var(--space-unit));
+	--space-sm: calc(0.75 * var(--space-unit));
+	--space-md: calc(1.25 * var(--space-unit));
+	--space-lg: calc(2 * var(--space-unit));
+	--space-xl: calc(3.25 * var(--space-unit));
+	--space-xxl: calc(5.25 * var(--space-unit)); */
 
 	/* relative values */
-	--gap-unit-relative: 1em;
-	--gap-xxs-relative: calc(0.25 * var(--gap-unit-relative));
-	--gap-xs-relative: calc(0.5 * var(--gap-unit-relative));
-	--gap-sm-relative: calc(0.75 * var(--gap-unit-relative));
-	--gap-md-relative: calc(1.25 * var(--gap-unit-relative));
-	--gap-lg-relative: calc(2 * var(--gap-unit-relative));
-	--gap-xl-relative: calc(3.25 * var(--gap-unit-relative));
-	--gap-xxl-relative: calc(5.25 * var(--gap-unit-relative));
+	--space-unit-relative: 1em;
+	--space-sm-relative: calc(0.25 * var(--space-unit-relative));
+	--space-md-relative: calc(0.5 * var(--space-unit-relative));
+	--space-lg-relative: calc(1 * var(--space-unit-relative));
+	/* --space-xxs-relative: calc(0.25 * var(--space-unit-relative));
+	--space-xs-relative: calc(0.5 * var(--space-unit-relative));
+	--space-sm-relative: calc(0.75 * var(--space-unit-relative));
+	--space-md-relative: calc(1.25 * var(--space-unit-relative));
+	--space-lg-relative: calc(2 * var(--space-unit-relative));
+	--space-xl-relative: calc(3.25 * var(--space-unit-relative));
+	--space-xxl-relative: calc(5.25 * var(--space-unit-relative)); */
+
+	/* Pseudo-private CSS variables. Do not modify as these set defaults and are used in the CSS. */
+
+	--_black: var(--black, #262626);
+	--_white: var(--white, #ffffff);
+
+	/* Default color for font, background, borders, etc. */
+	--_color-base: var(--color-base, var(--_black));
+	--_color-on-base: var(--color-on-base, var(--_white));
+	--_color-base-hover: var(
+		--color-base-hover,
+		color-mix(in srgb, var(--_color-base) 80%, var(--_color-on-base))
+	);
+	--_color-on-base-hover: var(
+		--color-on-base-hover,
+		color-mix(in srgb, var(--_color-base), var(--_color-on-base) 95%)
+	);
+
+	--_color-primary: var(--color-primary, var(--_color-base));
+	--_color-on-primary: var(--color-on-primary, var(--_color-on-base));
+	--_color-primary-hover: var(
+		--color-primary-hover,
+		color-mix(in srgb, var(--_color-primary) 90%, var(--_color-on-primary))
+	);
+	--_color-on-primary-hover: var(
+		--color-on-primary-hover,
+		color-mix(in srgb, var(--_color-primary), var(--_color-on-primary) 95%)
+	);
+
+	--_color-secondary: var(--color-secondary, var(--_color-base));
+	--_color-on-secondary: var(--color-on-secondary, var(--_color-on-base));
+	--_color-secondary-hover: var(
+		--color-secondary-hover,
+		color-mix(in srgb, var(--_color-secondary) 90%, var(--_color-on-secondary))
+	);
+	--_color-on-secondary-hover: var(
+		--color-on-secondary-hover,
+		color-mix(in srgb, var(--_color-secondary), var(--_color-on-secondary) 95%)
+	);
+
+	--_color-danger: var(--color-danger, rgb(239, 68, 68));
+	--_color-on-danger: var(--color-on-danger, var(--_color-on-base));
+	--_color-danger-hover: var(
+		--color-danger-hover,
+		color-mix(in srgb, var(--_color-danger) 80%, var(--_color-on-danger))
+	);
+	--_color-on-danger-hover: var(
+		--color-on-danger-hover,
+		color-mix(in srgb, var(--_color-danger), var(--_color-on-danger) 95%)
+	);
+
+	--_color-success: var(--color-success, rgb(22, 163, 74));
+	--_color-on-success: var(--color-on-success, var(--_color-on-base));
+	--_color-success-hover: var(
+		--color-success-hover,
+		color-mix(in srgb, var(--color-success) 90%, var(--_color-on-success))
+	);
+	--_color-on-success-hover: var(
+		--color-on-success-hover,
+		color-mix(in srgb, var(--color-success), var(--_color-on-success) 95%)
+	);
+
+	--_color-disabled: var(--color-disabled, #8c8c8c);
+	--_color-on-disabled: var(--color-on-disabled, var(--_white));
+
+	--_link-color: var(--link-color, rgb(14, 165, 233));
+	--_link-color-hover: var(
+		--link-color-hover,
+		color-mix(in srgb, var(--_link-color) 90%, var(--_color-on-base))
+	);
+
+	/* Defaults */
+	@property --_color-main {
+		syntax: '<color>';
+		inherit: true;
+		initial-value: #000;
+	}
+	@property --_color-main-hover {
+		syntax: '<color>';
+		inherit: true;
+		initial-value: #333;
+	}
+	@property --_color-on-main {
+		syntax: '<color>';
+		inherit: true;
+		initial-value: #fff;
+	}
+	@property --_color-on-main-hover {
+		syntax: '<color>';
+		inherit: true;
+		initial-value: #eee;
+	}
+	--_color-main: var(--_color-base);
+	--_color-on-main: var(--_color-on-base);
+	--_color-main-hover: var(--_color-base-hover);
+	--_color-on-main-hover: var(--_color-on-base-hover);
 }
 
 body {
@@ -183,12 +249,12 @@ body {
 }
 
 :is(a, a:visited, .link) {
-	color: var(--link-color);
+	color: var(--_link-color);
 	cursor: pointer;
 	text-decoration: underline;
 
 	&:hover {
-		color: var(--link-color-hover);
+		color: var(--_link-color-hover);
 	}
 }
 
@@ -200,20 +266,20 @@ body {
 
 .accordion-group {
 	display: grid;
-	background-color: var(--color-on-main);
-	border: var(--accordion-border-width) solid var(--color-main);
+	/* background-color: var(--_color-on-main); */
+	border: var(--accordion-border-width) solid var(--_color-main);
 	border-radius: var(--accordion-border-radius);
-	color: var(--color-main);
+	color: var(--_color-main);
 	overflow: hidden;
 
 	/* border between accordions */
 	& > * + * {
-		border-top: var(--accordion-border-width) solid var(--color-main);
+		border-top: var(--accordion-border-width) solid var(--_color-main);
 	}
 
-	&.variant-filled,
-	&.variant-filled > * + * {
-		border-color: var(--color-on-main);
+	&.style-filled,
+	&.style-filled > * + * {
+		border-color: var(--_color-on-main);
 	}
 }
 
@@ -223,17 +289,17 @@ body {
 	list-style: none;
 	align-items: center;
 	justify-content: space-between;
-	background-color: var(--color-on-main);
+	/* background-color: var(--_color-on-main); */
 	padding-left: var(--accordion-label-padding-inline);
 	padding-right: var(--accordion-label-padding-inline);
 	padding-top: var(--accordion-label-padding-block);
 	padding-bottom: var(--accordion-label-padding-block);
-	color: var(--color-main);
+	color: var(--_color-main);
 	transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 300ms;
 	&:hover {
-		background-color: var(--color-on-main-hover);
+		background-color: var(--_color-on-main-hover);
 	}
 	&::after {
 		content: '';
@@ -250,18 +316,18 @@ body {
 		transform: rotate(90deg);
 	}
 
-	.variant-filled &,
-	&.variant-filled {
-		@apply bg-[--color-main] text-[--color-on-main];
+	.style-filled &,
+	&.style-filled {
+		@apply bg-[--_color-main] text-[--_color-on-main];
 		&:hover {
-			background-color: var(--color-main-hover);
+			background-color: var(--_color-main-hover);
 		}
 	}
 
-	&.variant-outlined {
-		@apply rounded-[--accordion-border-radius] border-[length:--accordion-border-width] border-solid border-[--color-main];
+	&.style-outlined {
+		@apply rounded-[--accordion-border-radius] border-[length:--accordion-border-width] border-solid border-[--_color-main];
 		&:hover {
-			background-color: var(--color-on-main-hover);
+			background-color: var(--_color-on-main-hover);
 		}
 	}
 }
@@ -269,142 +335,160 @@ body {
 .accordion-content {
 	@apply px-[--accordion-content-padding-inline] py-[--accordion-content-padding-block];
 
-	.variant-filled &,
-	&.variant-filled {
-		background-color: var(--color-main);
-		color: var(--color-on-main);
+	.style-filled &,
+	&.style-filled {
+		background-color: var(--_color-main);
+		color: var(--_color-on-main);
 	}
-	/* &.variant-filled,
-	.variant-filled & {
+	/* &.style-filled,
+	.style-filled & {
 		background-color: var(--color-main);
 		color: var(--color-on-main);
 	} */
 }
 
 .button {
-	background-color: var(--color-on-main);
-	border-color: var(--color-main);
-	border-radius: var(--button-border-radius);
-	border-width: var(--button-border-width);
-	color: var(--color-main);
+	--_button-border-radius: var(--button-border-radius, 0.5em);
+	--_button-border-width: var(--button-border-width, 2px);
+	--_button-padding-block: var(--button-padding-block, 0.25em);
+	--_button-padding-inline: var(--button-padding-inline, 0.75em);
+	/* background-color: var(--_color-on-main); */
+	border-color: var(--_color-main);
+	border-radius: var(--_button-border-radius);
+	border-width: var(--_button-border-width);
+	color: var(--_color-main);
 	cursor: pointer;
 	/* display: flex; */
 	/* align-items: center; */
-	padding-block: var(--button-padding-block);
-	padding-inline: var(--button-padding-inline);
+	padding-block: var(--_button-padding-block);
+	padding-inline: var(--_button-padding-inline);
 	transition: all 0.3s;
 	white-space: nowrap;
 
+	&:not(:disabled):active {
+		transform: scale(0.95);
+	}
+
 	&,
-	&.variant-outlined {
-		/* color: var(--color-main); */
+	&.style-outlined {
+		/* color: var(--_color-main); */
 		&:hover {
-			background-color: var(--color-main);
-			color: var(--color-on-main);
+			background-color: var(--_color-main);
+			color: var(--_color-on-main);
 		}
 	}
 
-	&.variant-filled {
-		background-color: var(--color-main);
+	&.style-filled {
+		background-color: var(--_color-main);
 		&:hover {
-			background-color: var(--color-main-hover);
-			border-color: var(--color-main-hover);
+			background-color: var(--_color-main-hover);
+			border-color: var(--_color-main-hover);
 		}
 	}
 
-	&:disabled {
-		@apply cursor-not-allowed border-gray-300 bg-gray-100 text-gray-300;
+	&:disabled,
+	&:disabled:hover {
+		@apply cursor-not-allowed border-[--_color-disabled] bg-[--_color-on-disabled] text-[--_color-disabled];
+
+		&.style-filled {
+			@apply bg-[--_color-disabled] text-[--_color-on-disabled];
+		}
 	}
 }
 
 /* TODO: Add card-content class */
 .card {
-	border-color: var(--color-main);
-	border-radius: var(--card-border-radius);
-	border-width: var(--card-border-width);
+	--_card-border-radius: var(--card-border-radius, 0.5rem);
+	--_card-border-width: var(--card-border-width, 2px);
+	--_card-padding-block: var(--card-padding-block, 1rem);
+	--_card-padding-inline: var(--card-padding-inline, 1rem);
+	border-color: var(--_color-main);
+	border-radius: var(--_card-border-radius);
+	border-width: var(--_card-border-width);
 	overflow: hidden;
-	padding-block: var(--card-padding-block);
-	padding-inline: var(--card-padding-inline);
+	padding-block: var(--_card-padding-block);
+	padding-inline: var(--_card-padding-inline);
 
 	& > .stretch {
-		margin-inline: calc(var(--card-padding-inline) * -1);
+		margin-inline: calc(var(--_card-padding-inline) * -1);
 
 		img {
 			width: 100%;
 		}
 
 		&:first-child {
-			margin-top: calc(var(--card-padding-block) * -1);
+			margin-top: calc(var(--_card-padding-block) * -1);
 		}
 
 		&:last-child {
-			margin-bottom: calc(var(--card-padding-block) * -1);
+			margin-bottom: calc(var(--_card-padding-block) * -1);
 		}
 	}
 
 	& > .no-padding-inline {
-		margin-inline: calc(var(--card-padding-inline) * -1);
+		margin-inline: calc(var(--_card-padding-inline) * -1);
 	}
 	& > .no-padding-left {
-		margin-left: calc(var(--card-padding-inline) * -1);
+		margin-left: calc(var(--_card-padding-inline) * -1);
 	}
 	& > .no-padding-right {
-		margin-right: calc(var(--card-padding-inline) * -1);
+		margin-right: calc(var(--_card-padding-inline) * -1);
 	}
 	& > .no-padding-block {
-		margin-block: calc(var(--card-padding-block) * -1);
+		margin-block: calc(var(--_card-padding-block) * -1);
 	}
 	& > .no-padding-top {
-		margin-top: calc(var(--card-padding-block) * -1);
+		margin-top: calc(var(--_card-padding-block) * -1);
 	}
 	& > .no-padding-bottom {
-		margin-bottom: calc(var(--card-padding-block) * -1);
+		margin-bottom: calc(var(--_card-padding-block) * -1);
 	}
 }
 
 /* Color schemes */
-.neutral {
-	--color-main: var(--color-neutral);
-	--color-main-hover: var(--color-neutral-hover);
-	--color-on-main: var(--color-on-neutral);
-	--color-on-main-hover: var(--color-on-neutral-hover);
+.colors-base {
+	--_color-main: var(--_color-base);
+	--_color-main-hover: var(--_color-base-hover);
+	--_color-on-main: var(--_color-on-base);
+	--_color-on-main-hover: var(--_color-on-base-hover);
 }
-.primary {
-	--color-main: var(--color-primary);
-	--color-main-hover: var(--color-primary-hover);
-	--color-on-main: var(--color-on-primary);
-	--color-on-main-hover: var(--color-on-primary-hover);
+.colors-primary {
+	--_color-main: var(--_color-primary);
+	--_color-main-hover: var(--_color-primary-hover);
+	--_color-on-main: var(--_color-on-primary);
+	--_color-on-main-hover: var(--_color-on-primary-hover);
 }
-.secondary {
-	--color-main: var(--color-secondary);
-	--color-main-hover: var(--color-secondary-hover);
-	--color-on-main: var(--color-on-secondary);
-	--color-on-main-hover: var(--color-on-secondary-hover);
+.colors-secondary {
+	--_color-main: var(--_color-secondary);
+	--_color-main-hover: var(--_color-secondary-hover);
+	--_color-on-main: var(--_color-on-secondary);
+	--_color-on-main-hover: var(--_color-on-secondary-hover);
 }
-.danger {
-	--color-main: var(--color-danger);
-	--color-main-hover: var(--color-danger-hover);
-	--color-on-main: var(--color-on-danger);
-	--color-on-main-hover: var(--color-on-danger-hover);
+.colors-danger {
+	--_color-main: var(--_color-danger);
+	--_color-main-hover: var(--_color-danger-hover);
+	--_color-on-main: var(--_color-on-danger);
+	--_color-on-main-hover: var(--_color-on-danger-hover);
 }
-.success {
-	--color-main: var(--color-success);
-	--color-main-hover: var(--color-success-hover);
-	--color-on-main: var(--color-on-success);
-	--color-on-main-hover: var(--color-on-success-hover);
+.colors-success {
+	--_color-main: var(--_color-success);
+	--_color-main-hover: var(--_color-success-hover);
+	--_color-on-main: var(--_color-on-success);
+	--_color-on-main-hover: var(--_color-on-success-hover);
 }
 /* END Color Schemes */
 
 /* Styled Variants */
-.variant-filled {
-	background-color: var(--color-main);
-	color: var(--color-on-main);
+.style-filled {
+	background-color: var(--_color-main);
+	border-color: var(--_color-main);
+	color: var(--_color-on-main);
 }
 
-.variant-outlined {
-	background-color: var(--color-on-main);
-	border-color: var(--color-main);
-	color: var(--color-main);
+.style-outlined {
+	/* background-color: var(--_color-on-main); */
+	border-color: var(--_color-main);
+	color: var(--_color-main);
 }
 /* END Styled Variants */
 

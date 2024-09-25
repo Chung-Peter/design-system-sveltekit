@@ -76,7 +76,7 @@
 				title="Clear sort"
 				onclick={() => onSortKeyChange('')}
 				disabled={!filterSortOptions.sortColumn}
-				class="button variant-outlined border px-1"
+				class="button style-outlined border px-1"
 			>
 				<ClearSortIcon />
 			</button>
@@ -86,7 +86,7 @@
 				title="Clear filters"
 				onclick={clearFilters}
 				disabled={Object.keys(filterSortOptions.columnFilters).length === 0}
-				class="button variant-outlined border px-1"
+				class="button style-outlined border px-1"
 			>
 				<ClearFilterIcon />
 			</button>

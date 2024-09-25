@@ -1,7 +1,7 @@
 <script lang="ts">
 	const component = 'accordion'
-	const variants = ['', 'variant-filled', 'variant-outlined']
-	const colorVariants = ['', 'primary', 'secondary', 'danger', 'success']
+	const styleVariants = ['', 'style-filled', 'style-outlined']
+	const colorSchemes = ['', 'colors-primary', 'colors-secondary', 'colors-danger', 'colors-success']
 
 	type AccordionOptions = {
 		accordionClass?: string
@@ -43,39 +43,39 @@
 
 <hr />
 
-{#each variants as variant}
-	{#each colorVariants as colorVariant}
+{#each styleVariants as styling}
+	{#each colorSchemes as colorScheme}
 		<h3>
-			A single accordion on its own with class="{['accordion-label', variant, colorVariant]
+			A single accordion on its own with class="{['accordion-label', styling, colorScheme]
 				.join(' ')
 				.trim()}"
 		</h3>
 		{@html accordionHtml('A lone accordion', {
-			accordionLabelClass: [variant, colorVariant].join(' '),
+			accordionLabelClass: [styling, colorScheme].join(' '),
 		})}
 	{/each}
 {/each}
 
-{#each variants as variant}
-	{#each colorVariants as colorVariant}
+{#each styleVariants as styling}
+	{#each colorSchemes as colorScheme}
 		<h3>
 			An accordion group with a single accordion with class="{[
 				'accordion-group',
-				variant,
-				colorVariant,
+				styling,
+				colorScheme,
 			]
 				.join(' ')
 				.trim()}"
 		</h3>
-		<div class={['accordion-group', variant, colorVariant].join(' ').trim()}>
+		<div class={['accordion-group', styling, colorScheme].join(' ').trim()}>
 			{@html accordionHtml(
-				`Accordion 1 in an accordion group, class="${['accordion-group', variant, colorVariant].join(' ').trim()}"`,
+				`Accordion 1 in an accordion group, class="${['accordion-group', styling, colorScheme].join(' ').trim()}"`,
 			)}
 			{@html accordionHtml(
-				`Accordion 2 in an accordion group, class="${['accordion-group', variant, colorVariant].join(' ').trim()}"`,
+				`Accordion 2 in an accordion group, class="${['accordion-group', styling, colorScheme].join(' ').trim()}"`,
 			)}
 			{@html accordionHtml(
-				`Accordion 3 in an accordion group, class="${['accordion-group', variant, colorVariant].join(' ').trim()}"`,
+				`Accordion 3 in an accordion group, class="${['accordion-group', styling, colorScheme].join(' ').trim()}"`,
 			)}
 		</div>
 	{/each}

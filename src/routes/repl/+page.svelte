@@ -12,7 +12,7 @@
 	// Initial state
 	const initialState: EditorState = {
 		html: `<div class="grid gap-4 p-2">
-	<div class="card variant-outlined primary" style="--card-border-width: 5px; --card-border-radius: 2em;">
+	<div class="card colors-primary style-outlined" style="--card-border-width: 5px; --card-border-radius: 2em;">
 		<div class="stretch">
 			<img src="https://picsum.photos/id/908/800">
 		</div>
@@ -27,7 +27,7 @@
 		<p>This grid has a dynamic number of columns based on the screen size. Try resizing the window to see the effect.</p>
 	</div>
 	<div class="grid dynamic-grid gap-2">
-		<a href="#" class="card variant-outlined primary hover:!no-underline">
+		<a href="#" class="card colors-primary style-outlined hover:!no-underline">
 			<div class="stretch">
 				<img src="https://picsum.photos/id/918/800/400">
 			</div>
@@ -40,12 +40,12 @@
 				<img src="https://picsum.photos/id/520/800/400">
 			</div>
 		</a>
-		<div class="card variant-filled secondary">
+		<div class="card colors-secondary style-filled">
 			<div class="stretch">
 				<img src="https://picsum.photos/id/918/800/400">
 			</div>
 			<div class="content prose">
-				<p>This is a card with a secondary variant-filled with the 'prose' class applied to make the typography look nicer (from tailwindcss).</p>
+				<p>This is a card with a secondary style-filled with the 'prose' class applied to make the typography look nicer (from tailwindcss).</p>
 				<p>This is a normal paragraph.</p>
 				<p >For good measure, the image below has the 'stretch' class applied to it.</p>
 			</div>

@@ -1,11 +1,17 @@
 <script lang="ts">
 	const component = 'card'
-	const variants = ['', 'variant-filled']
-	const colorVariants = ['', 'primary', 'secondary', 'danger', 'success']
+	const variants = ['', 'style-filled']
+	const colorVariants = [
+		'',
+		'colors-primary',
+		'colors-secondary',
+		'colors-danger',
+		'colors-success',
+	]
 </script>
 
 <div class="prose mb-4">
-	<p>The default styling for a card is the same as "variant-outlined".</p>
+	<p>The default styling for a card is the same as "style-outlined".</p>
 </div>
 
 <div class="flex flex-col gap-4">
