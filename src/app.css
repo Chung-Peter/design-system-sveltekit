@@ -51,11 +51,7 @@
 
 	--color-secondary: var(--ehi-bs-gold-100);
 	--color-secondary-hover: color-mix(in srgb, var(--color-secondary) 80%, var(--_white));
-	--color-on-secondary-hover: color-mix(
-		in srgb,
-		var(--color-secondary),
-		var(--_white) 75%
-	);
+	/* --color-on-secondary-hover: color-mix(in srgb, var(--color-secondary), var(--_white) 75%); */
 
 	--color-danger: var(--ehi-bs-danger);
 	--color-danger-hover: color-mix(in srgb, var(--ehi-bs-danger) 80%, var(--_black));
@@ -212,23 +208,12 @@
 		inherit: true;
 		initial-value: #333;
 	}
-	/* @property --_color-on-main {
-		syntax: '<color>';
-		inherit: true;
-		initial-value: #fff;
-	} */
 	@property --_color-on-main-hover {
 		syntax: '<color>';
 		inherit: true;
 		initial-value: #eee;
 	}
 	--_color-main: var(--_color-base);
-	/* --contrast-color-l-threshold: 0.61; */
-	/*--_contrast-color-l: clamp(0, (var(--contrast-color-l-threshold) / l - 1) * infinity, 1); */
-	/* --_contrast-color-l: clamp(0, (0.7 - l) * infinity, 1); */
-	/* --_contrast-color: oklch(from var(--_color-main) var(--_contrast-color-l) 0 0); */
-	/* --_color-on-main: var(--_color-on-base); */
-	/* --_color-on-main: var(--_contrast-color); */
 	--_color-main-hover: var(--_color-base-hover);
 	--_color-on-main-hover: var(--_color-on-base-hover);
 }
@@ -259,7 +244,6 @@ body {
 
 .accordion-group {
 	display: grid;
-	/* background-color: var(--_color-on-main); */
 	border: var(--accordion-border-width) solid var(--_color-main);
 	border-radius: var(--accordion-border-radius);
 	color: var(--_color-main);
@@ -282,7 +266,6 @@ body {
 	list-style: none;
 	align-items: center;
 	justify-content: space-between;
-	/* background-color: var(--_color-on-main); */
 	padding-left: var(--accordion-label-padding-inline);
 	padding-right: var(--accordion-label-padding-inline);
 	padding-top: var(--accordion-label-padding-block);
@@ -328,13 +311,6 @@ body {
 
 .accordion-content {
 	@apply px-[--accordion-content-padding-inline] py-[--accordion-content-padding-block];
-
-	.style-filled &,
-	&.style-filled {
-		/* @apply contrast-color; */
-		/* background-color: var(--_color-main); */
-		/* color: var(--_color-on-main); */
-	}
 }
 
 .button {
@@ -342,7 +318,6 @@ body {
 	--_button-border-width: var(--button-border-width, 2px);
 	--_button-padding-block: var(--button-padding-block, 0.25em);
 	--_button-padding-inline: var(--button-padding-inline, 0.75em);
-	/* background-color: var(--_color-on-main); */
 	border-color: var(--_color-main);
 	border-radius: var(--_button-border-radius);
 	border-width: var(--_button-border-width);
@@ -361,11 +336,9 @@ body {
 
 	&,
 	&.style-outlined {
-		/* color: var(--_color-main); */
 		&:hover {
 			@apply contrast-color;
 			background-color: var(--_color-main);
-			/* color: var(--_color-on-main); */
 		}
 	}
 
@@ -440,46 +413,26 @@ body {
 .colors-base {
 	--_color-main: var(--_color-base);
 	--_color-main-hover: var(--_color-base-hover);
-	/* --_color-on-main: var(--_color-on-base); */
-	/* --_contrast-color: oklch(from var(--_color-main) var(--_contrast-color-l) 0 0); */
-	/* --_color-on-main: var(--_contrast-color); */
-	/* --_color-on-main: oklch(from var(--_color-main) var(--_contrast-color-l) 0 0); */
 	--_color-on-main-hover: var(--_color-on-base-hover);
 }
 .colors-primary {
 	--_color-main: var(--_color-primary);
 	--_color-main-hover: var(--_color-primary-hover);
-	/* --_color-on-main: var(--_color-on-primary); */
-	/* --_contrast-color: oklch(from var(--_color-main) var(--_contrast-color-l) 0 0); */
-	/* --_color-on-main: var(--_contrast-color); */
-	/* --_color-on-main: oklch(from var(--_color-main) var(--_contrast-color-l) 0 0); */
 	--_color-on-main-hover: var(--_color-on-primary-hover);
 }
 .colors-secondary {
 	--_color-main: var(--_color-secondary);
 	--_color-main-hover: var(--_color-secondary-hover);
-	/* --_color-on-main: var(--_color-on-secondary); */
-	/* --_contrast-color: oklch(from var(--_color-main) var(--_contrast-color-l) 0 0); */
-	/* --_color-on-main: var(--_contrast-color); */
-	/* --_color-on-main: oklch(from var(--_color-main) var(--_contrast-color-l) 0 0); */
 	--_color-on-main-hover: var(--_color-on-secondary-hover);
 }
 .colors-danger {
 	--_color-main: var(--_color-danger);
 	--_color-main-hover: var(--_color-danger-hover);
-	/* --_color-on-main: var(--_color-on-danger); */
-	/* --_contrast-color: oklch(from var(--_color-main) var(--_contrast-color-l) 0 0); */
-	/* --_color-on-main: var(--_contrast-color); */
-	/* --_color-on-main: oklch(from var(--_color-main) var(--_contrast-color-l) 0 0); */
 	--_color-on-main-hover: var(--_color-on-danger-hover);
 }
 .colors-success {
 	--_color-main: var(--_color-success);
 	--_color-main-hover: var(--_color-success-hover);
-	/* --_color-on-main: var(--_color-on-success); */
-	/* --_contrast-color: oklch(from var(--_color-main) var(--_contrast-color-l) 0 0); */
-	/* --_color-on-main: var(--_contrast-color); */
-	/* --_color-on-main: oklch(from var(--_color-main) var(--_contrast-color-l) 0 0); */
 	--_color-on-main-hover: var(--_color-on-success-hover);
 }
 /* END Color Schemes */
@@ -535,11 +488,9 @@ body {
 	@apply contrast-color;
 	background-color: var(--_color-main);
 	border-color: var(--_color-main);
-	/* color: var(--_color-on-main); */
 }
 
 .style-outlined {
-	/* background-color: var(--_color-on-main); */
 	border-color: var(--_color-main);
 	color: var(--_color-main);
 }
