@@ -4,13 +4,14 @@
 	const colorSchemes = ['', 'colors-primary', 'colors-secondary', 'colors-danger', 'colors-success']
 
 	type AccordionOptions = {
+		open?: boolean
 		accordionClass?: string
 		accordionLabelClass?: string
 		accordionContentClass?: string
 	}
 
 	function accordionHtml(label: string, options: AccordionOptions = {}) {
-		return `<details class="accordion ${options.accordionClass ?? ''}">
+		return `<details ${options.open ? 'open' : ''} class="accordion ${options.accordionClass ?? ''}">
   <summary class="accordion-label ${options.accordionLabelClass ?? ''}">${label}</summary>
   <div class="accordion-content ${options.accordionContentClass ?? ''} prose">
     <p>That easy. Automatically, all of these beautiful, beautiful things will happen. I started painting as a hobby when I was little. I didn't know I had any talent. I believe talent is just a pursued interest. Anybody can do what I do.</p>
@@ -72,7 +73,8 @@
 				`Accordion 1 in an accordion group, class="${['accordion-group', styling, colorScheme].join(' ').trim()}"`,
 			)}
 			{@html accordionHtml(
-				`Accordion 2 in an accordion group, class="${['accordion-group', styling, colorScheme].join(' ').trim()}"`,
+				`Accordion 2 is open in an accordion group, class="${['accordion-group', styling, colorScheme].join(' ').trim()}"`,
+				{ open: true },
 			)}
 			{@html accordionHtml(
 				`Accordion 3 in an accordion group, class="${['accordion-group', styling, colorScheme].join(' ').trim()}"`,
