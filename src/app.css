@@ -272,7 +272,7 @@ body {
 
 	&.style-filled,
 	&.style-filled > * + * {
-		border-color: var(--_color-on-main);
+		@apply contrast-border-color;
 	}
 }
 
@@ -505,6 +505,27 @@ body {
 	/* Fallforward for when browsers support contrast-color() */
 	@supports (color: contrast-color(red)) {
 		color: contrast-color(var(--_color-main));
+		text-shadow: none;
+	}
+}
+.contrast-border-color {
+	/* Fallback for browsers that don't support RCS */
+	color: white;
+	text-shadow:
+		0 0 0.05em black,
+		0 0 0.05em black,
+		0 0 0.05em black,
+		0 0 0.05em black;
+
+	@supports (color: oklch(from red l c h)) {
+		--l: clamp(0, (var(--l-threshold, 0.623) / l - 1) * infinity, 1);
+		border-color: oklch(from var(--_color-main) var(--l) 0 h);
+		text-shadow: none;
+	}
+
+	/* Fallforward for when browsers support contrast-color() */
+	@supports (color: contrast-color(red)) {
+		border-color: contrast-color(var(--_color-main));
 		text-shadow: none;
 	}
 }
